@@ -119,7 +119,7 @@ const DocumentMetadata = ({ resumeData }) => {
               <Icon name="Mail" size={14} className="text-primary" />
               <span className="text-xs text-muted-foreground">Email</span>
             </div>
-            <p className="text-sm text-foreground">swaraj.ladke@email.com</p>
+            <p className="text-sm text-foreground">swarajladke20@gmail.com</p>
           </div>
           
           <div className="p-3 bg-muted/30 rounded-lg border border-border">
@@ -127,7 +127,7 @@ const DocumentMetadata = ({ resumeData }) => {
               <Icon name="Phone" size={14} className="text-primary" />
               <span className="text-xs text-muted-foreground">Phone</span>
             </div>
-            <p className="text-sm text-foreground">+91 98765 43210</p>
+            <p className="text-sm text-foreground">+91 9359123490</p>
           </div>
           
           <div className="p-3 bg-muted/30 rounded-lg border border-border">
@@ -135,7 +135,7 @@ const DocumentMetadata = ({ resumeData }) => {
               <Icon name="MapPin" size={14} className="text-primary" />
               <span className="text-xs text-muted-foreground">Location</span>
             </div>
-            <p className="text-sm text-foreground">Mumbai, India</p>
+            <p className="text-sm text-foreground">Pune, India</p>
           </div>
         </div>
       </div>

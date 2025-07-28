@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import Button from '../../../components/ui/Button';
 
-const ResumeViewer = ({ resumeUrl, onError }) => {
+const ResumeViewer = ({ "/resume.pdf/": onError }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages] = useState(2);
