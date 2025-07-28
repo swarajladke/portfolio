@@ -4,7 +4,7 @@ import Button from '../../../components/ui/Button';
 const ResumeViewer = ({ resumeUrl = "/resume.pdf", onError }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [zoomLevel, setZoomLevel] = useState(100);
-
+  
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -39,8 +39,12 @@ const ResumeViewer = ({ resumeUrl = "/resume.pdf", onError }) => {
       <div className="flex-1 overflow-auto bg-muted p-4">
         {isLoading ? (
           <p className="text-center text-muted">Loading resume...</p>
+        ) : hasError ? (
+          <p className="text-center text-red-500">
+             Failed to load resume preview. You can still download it.
+             </p>
         ) : (
-          <iframe
+         <iframe
             src="/resume.pdf"
             title="Resume"
             width="100%"

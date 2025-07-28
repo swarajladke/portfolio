@@ -6,8 +6,8 @@ const ModalHeader = ({ onClose, onDownload, onPrint, isLoading }) => {
   const handleDownload = () => {
     // Create a mock download
     const link = document.createElement('a');
-    link.href = "/assets/resume.pdf";
-    link.download = "/assets/resume.pdf";
+    link.href = "/resume.pdf";
+    link.download ="resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
