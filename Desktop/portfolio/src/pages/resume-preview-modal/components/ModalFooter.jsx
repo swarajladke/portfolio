@@ -13,7 +13,7 @@ const ModalFooter = ({ onClose, onDownload, documentStats }) => {
   const handleDownload = () => {
     // Create a mock download
     const link = document.createElement('a');
-    link.href = "/portfolio/resume.pdf";
+    link.href = "/resume.pdf";
     link.download = 'Swaraj_Ladke_Resume.pdf';
     document.body.appendChild(link);
     link.click();

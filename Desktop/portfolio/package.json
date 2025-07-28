@@ -1,5 +1,5 @@
 {
-  "name": "neon-portfolio",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "rocketCritical": {
@@ -17,6 +17,8 @@
       "build",
       "serve"
     ],
+    "deploy": "gh-pages -d dist",
+
     "warning": "🚨 CRITICAL: DO NOT REMOVE OR MODIFY ABOVE DEPENDENCIES - Required for app functionality",
     "homepage": "https://swarajladke.github.io/portfolio"
   },
