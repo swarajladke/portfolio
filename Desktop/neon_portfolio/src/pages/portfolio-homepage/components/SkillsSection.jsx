@@ -19,7 +19,7 @@ const SkillsSection = () => {
     { name: 'Next.js', category: 'frontend', level: 90, icon: 'Zap', color: '#000000' },
     { name: 'TypeScript', category: 'frontend', level: 88, icon: 'FileCode', color: '#3178C6' },
     { name: 'Tailwind CSS', category: 'frontend', level: 92, icon: 'Palette', color: '#06B6D4' },
-    { name: 'Vue.js', category: 'frontend', level: 80, icon: 'Layers', color: '#4FC08D' },
+    { name: 'Html', category: 'frontend', level: 95, icon: 'Layers', color: '#4FC08D' },
     { name: 'JavaScript', category: 'frontend', level: 95, icon: 'Code', color: '#F7DF1E' },
 
     // Backend
@@ -28,7 +28,7 @@ const SkillsSection = () => {
     { name: 'Express.js', category: 'backend', level: 88, icon: 'Zap', color: '#000000' },
     { name: 'Django', category: 'backend', level: 85, icon: 'Globe', color: '#092E20' },
     { name: 'FastAPI', category: 'backend', level: 82, icon: 'Rocket', color: '#009688' },
-    { name: 'GraphQL', category: 'backend', level: 78, icon: 'Share2', color: '#E10098' },
+    { name: 'Java', category: 'backend', level: 70, icon: 'Share2', color: '#E10098' },
 
     // Database
     { name: 'MongoDB', category: 'database', level: 90, icon: 'Database', color: '#47A248' },
@@ -45,7 +45,7 @@ const SkillsSection = () => {
 
     // Tools
     { name: 'Git', category: 'tools', level: 95, icon: 'GitBranch', color: '#F05032' },
-    { name: 'Docker', category: 'tools', level: 85, icon: 'Package', color: '#2496ED' },
+    { name: 'Render', category: 'tools', level: 85, icon: 'Package', color: '#2496ED' },
     { name: 'AWS', category: 'tools', level: 80, icon: 'Cloud', color: '#FF9900' },
     { name: 'Vercel', category: 'tools', level: 88, icon: 'Triangle', color: '#000000' },
     { name: 'Figma', category: 'tools', level: 82, icon: 'Figma', color: '#F24E1E' }

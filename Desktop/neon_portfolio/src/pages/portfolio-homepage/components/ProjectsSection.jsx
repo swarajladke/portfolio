@@ -45,24 +45,24 @@ const ProjectsSection = () => {
       id: 2,
       title: 'Elora',
       category: 'web',
-      description: 'An elegant e-commerce platform built with modern web technologies, featuring advanced product management and seamless user experience.',
+      description: 'Elora is a next-gen dynamic glowing theme engine for Visual Studio Code. It brings your editor to life with real-time glowing animations that respond to your current theme color — adding an aesthetic and immersive coding experience.',
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe API'],
+      technologies: ['VS-code-api', 'Javascript', 'Typescript', 'Stripe API'],
       githubUrl: 'https://github.com/swarajladke/elora',
-      liveUrl: 'https://elora-ecommerce.vercel.app',
+      liveUrl: 'https://marketplace.visualstudio.com/items?itemName=swarajladke.elora',
       status: 'Live',
       features: [
-        'Responsive design',
-        'Payment integration',
+        'Glowing UI that adapts to your current Elora theme color',
+        'Animated glowing borders inside a webview (simulating file explorer glow)',
         'Product catalog',
-        'User authentication',
-        'Order management',
-        'Admin dashboard'
+        'Smooth animations with customizable colors',
+        'Designed to match your theme dynamically (e.g. Pink glow for Elora Pink)',
+      
       ],
       stats: {
-        users: '500+',
-        transactions: '1.2K+',
-        uptime: '99.9%',
+        users: 'Growing',
+        Activation: '8ms',
+        version: '0.0.4',
         performance: '95/100'
       }
     },

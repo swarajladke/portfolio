@@ -76,19 +76,19 @@ const AIProjectsSection = () => {
     },
     {
       id: 3,
-      title: 'Neural Style Transfer for Real-time Video',
-      category: 'Computer Vision',
+      title: 'EMOIFY',
+      category: 'AI',
       status: 'Completed',
-      description: 'Optimized neural style transfer algorithms for real-time video processing, enabling artistic style application to live video streams with minimal computational overhead.',
+      description: 'An Emotion-Based Music Recommendation System with Adaptive Training Capabilities.',
       image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
-      technologies: ['Python', 'TensorFlow', 'OpenCV', 'CUDA', 'WebGL'],
+      technologies: ['Python', 'TensorFlow', 'OpenCV', 'MongoDB', 'Keras','Html', 'CSS', 'JavaScript'],
       keyFeatures: [
-        'Real-time style transfer',
-        'Multiple style blending',
-        'GPU acceleration',
-        'Mobile optimization',
-        'Custom style training',
-        'Batch processing support'
+        'Webcam-based emotion detection',
+        'Real-time music recommendations',
+        'Adaptive training for personalized suggestions',
+        'Multi-platform support',
+        'User-friendly interface',
+        'Integration with popular music services',
       ],
       challenges: [
         'Performance optimization',
@@ -96,10 +96,10 @@ const AIProjectsSection = () => {
         'Quality preservation',
         'Cross-device compatibility'
       ],
-      impact: 'Enables creative content generation for social media, live streaming, and digital art applications.',
+      impact: 'Revolutionizing music discovery by providing personalized recommendations based on real-time emotional analysis, enhancing user engagement and satisfaction.',
       publications: [
-        'Computer Vision and Pattern Recognition (Published)',
-        'Journal of Visual Computing (Accepted)'
+        'International Journal of Scientific Research in Computer Science, Engineering and Information Technology (Published)',
+        'Available Online at : www.ijsrcseit.com'
       ],
       metrics: {
         fps: '30+ FPS',
