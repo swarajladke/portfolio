@@ -31,7 +31,7 @@ const ResumeViewer = ({ resumeUrl = "/resume.pdf", onError }) => {
           <Button onClick={handleZoomIn} disabled={zoomLevel >= 200}>Zoom In</Button>
           <Button onClick={handleResetZoom}>Reset</Button>
         </div>
-        <a href={resumeUrl} download>
+        <a href="/resume.pdf" download>
           <Button>Download</Button>
         </a>
       </div>
