@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../../../components/ui/Button';
 
-const ResumeViewer = ({ resumeUrl = "/resume.pdf", onError }) => {
+const ResumeViewer = ({ resumeUrl ="https://swarajladke.github.io/portfolio/resume.pdf", onError }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [zoomLevel, setZoomLevel] = useState(100);
   const [hasError, setHasError] = useState(false); // ✅ You missed declaring this state

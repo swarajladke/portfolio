@@ -6,7 +6,7 @@ const ModalHeader = ({ onClose, onDownload, onPrint, isLoading }) => {
   const handleDownload = () => {
     // Create a mock download
     const link = document.createElement('a');
-    link.href ="https://swarajladke.github.io/portfolio/resume.pdf";
+    link.href =`${import.meta.env.BASE_URL}resume.pdf`;
     link.download ="resume.pdf";
     document.body.appendChild(link);
     link.click();
