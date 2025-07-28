@@ -45,7 +45,7 @@ const ResumeViewer = ({ resumeUrl = "/resume.pdf", onError }) => {
              </p>
         ) : (
          <iframe
-            src="/resume.pdf"
+            src={resumeUrl}
             title="Resume"
             width="100%"
             height="1000px"
