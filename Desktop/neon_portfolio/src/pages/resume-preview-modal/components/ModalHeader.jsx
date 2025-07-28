@@ -6,7 +6,7 @@ const ModalHeader = ({ onClose, onDownload, onPrint, isLoading }) => {
   const handleDownload = () => {
     // Create a mock download
     const link = document.createElement('a');
-    link.href = 'resume.pdf';
+    link.href = "/assets/resume.pdf";
     link.download = 'Swaraj_Ladke_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -41,7 +41,7 @@ const ModalHeader = ({ onClose, onDownload, onPrint, isLoading }) => {
             </p>
             <div className="flex items-center space-x-2 text-xs text-muted-foreground">
               <Icon name="Calendar" size={12} />
-              <span>Updated: January 15, 2025</span>
+              <span>Updated: July 28, 2025</span>
             </div>
           </div>
         </div>
