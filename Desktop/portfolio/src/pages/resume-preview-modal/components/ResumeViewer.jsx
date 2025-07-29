@@ -33,9 +33,17 @@ const ResumeViewer = ({ resumeUrl ="https://swarajladke.github.io/portfolio/resu
           <Button onClick={handleZoomIn} disabled={zoomLevel >= 200}>Zoom In</Button>
           <Button onClick={handleResetZoom}>Reset</Button>
         </div>
-        <a href={resumeUrl} download>
-          <Button>Download</Button>
-        </a>
+        <Button onClick={() => {
+            const link = document.createElement('a');
+            link.href = resumeUrl;
+            link.download = 'Swaraj_Ladke_Resume.pdf'; // Give it a clean filename
+            document.body.appendChild(link);
+            link.click();
+             document.body.removeChild(link);
+          }}>
+           Download
+        </Button>
+
       </div>
 
       <div className="flex-1 overflow-auto bg-muted p-4">

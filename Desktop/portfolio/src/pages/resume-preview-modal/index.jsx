@@ -118,7 +118,7 @@ const ResumePreviewModal = () => {
                     <div className="flex flex-col sm:flex-row gap-3 justify-center">
                       <Button
                         variant="default"
-                        onClick="swarajladke.github.io/portfolio/resume.pdf"
+                        onClick={handleDownload}
                         iconName="Download"
                         iconPosition="left"
                         className="btn-glow"

@@ -7,7 +7,7 @@ const ResumeSection = () => {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
   const resumeData = {
-    lastUpdated: 'January 2024',
+    lastUpdated: 'July 28 2025',
     fileSize: '2.4 MB',
     format: 'PDF',
     sections: [
@@ -24,8 +24,8 @@ const ResumeSection = () => {
   const handleDownload = () => {
     // Create a mock download
     const link = document.createElement('a');
-    link.href = '/assets/resume.pdf';
-    link.download = 'Swaraj_Ladke_Resume.pdf';
+    link.href = 'swarajladke.github.io/portfolio/resume.pdf';
+    link.download = 'resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
