@@ -8,7 +8,7 @@ const AchievementsSection = () => {
   const tabs = [
     { id: 'hackathons', label: 'Hackathons', icon: 'Trophy' },
     { id: 'certifications', label: 'Certifications', icon: 'Award' },
-    { id: 'recognitions', label: 'Recognitions', icon: 'Star' }
+    { id: 'recognitions', label: 'Publications', icon: 'Star' }
   ];
 
   const hackathons = [
@@ -158,8 +158,8 @@ const AchievementsSection = () => {
         return hackathons;
       case 'certifications':
         return certifications;
-      case 'recognitions':
-        return recognitions;
+      case 'Publications':
+        return Publications;
       default:
         return hackathons;
     }

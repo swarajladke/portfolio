@@ -16,7 +16,7 @@ const ContactSection = () => {
     {
       name: 'LinkedIn',
       icon: 'Linkedin',
-      url: 'https://linkedin.com/in/swarajladke',
+      url: 'https://www.linkedin.com/in/swaraj-ladke-868387315/',
       color: '#0077B5',
       description: 'Professional network and career updates'
     },
@@ -30,28 +30,28 @@ const ContactSection = () => {
     {
       name: 'Email',
       icon: 'Mail',
-      url: 'mailto:swaraj.ladke@example.com',
+      url: 'mailto:swarajladke20@gmail.com',
       color: '#EA4335',
       description: 'Direct email communication'
     },
     {
       name: 'Devpost',
       icon: 'Trophy',
-      url: 'https://devpost.com/swarajladke',
+      url: 'https://devpost.com/swarajladke20?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav',
       color: '#003E54',
       description: 'Hackathon projects and achievements'
     },
     {
       name: 'Replit',
       icon: 'Code',
-      url: 'https://replit.com/@swarajladke',
+      url: 'https://replit.com/account#profile',
       color: '#F26207',
       description: 'Code snippets and quick prototypes'
     },
     {
-      name: 'Twitter',
-      icon: 'Twitter',
-      url: 'https://twitter.com/swarajladke',
+      name: 'Instagram',
+      icon: 'Instagram',
+      url: 'https://www.instagram.com/itz_swaraj_4399/',
       color: '#1DA1F2',
       description: 'Tech thoughts and industry insights'
     }
@@ -61,7 +61,7 @@ const ContactSection = () => {
     {
       icon: 'MapPin',
       label: 'Location',
-      value: 'Mumbai, Maharashtra, India',
+      value: 'Pune, Maharashtra, India',
       description: 'Available for remote work globally'
     },
     {
@@ -287,7 +287,7 @@ const ContactSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 variant="default"
-                onClick={() => window.open('https://linkedin.com/in/swarajladke', '_blank')}
+                onClick={() => window.open('https://www.linkedin.com/in/swaraj-ladke-868387315/', '_blank')}
                 iconName="Linkedin"
                 iconPosition="left"
                 className="btn-glow"
@@ -296,7 +296,7 @@ const ContactSection = () => {
               </Button>
               <Button
                 variant="outline"
-                onClick={() => window.open('mailto:swaraj.ladke@example.com', '_blank')}
+                onClick={() => window.open('mailto:swarajladke20@gmail.com', '_blank')}
                 iconName="Mail"
                 iconPosition="left"
                 className="btn-glow"
