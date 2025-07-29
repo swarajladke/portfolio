@@ -260,7 +260,9 @@ const ResumeSection = () => {
       <ResumePreviewModal
         isOpen={isPreviewOpen}
         onClose={() => setIsPreviewOpen(false)}
-        resumeUrl="https://swarajladke.github.io/portfolio/resume.pdf"
+        resumeUrl="https://drive.google.com/file/d/1W0K0HMEB7HTBu06Z7ZW6VF2pOSy9mVTg/preview"
+
+
       />
     </>
   );
