@@ -70,7 +70,7 @@ const StickyNavBar = () => {
 
   return (
     <>
-      {/* Theme Switcher */}
+      {/* Theme Switcher  */}
       <div className="theme-switcher">
         {themeOptions.map((theme) => (
           <button
@@ -82,7 +82,7 @@ const StickyNavBar = () => {
             aria-label={`Switch to ${theme.label} theme`}
           />
         ))}
-      </div>
+      </div> 
 
       {/* Navigation Bar */}
       <nav className="sticky top-0 z-100 bg-background/80 backdrop-blur-md border-b border-border">
@@ -97,7 +97,7 @@ const StickyNavBar = () => {
                 <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
                   <Icon name="Code2" size={20} color="currentColor" />
                 </div>
-                <span className="gradient-text">Neon Portfolio</span>
+                <span className="gradient-text">Swaraj's Portfolio</span>
               </button>
             </div>
 
