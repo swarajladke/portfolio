@@ -55,7 +55,7 @@ const ResumeViewer = ({ resumeUrl ="https://swarajladke.github.io/portfolio/resu
           </p>
         ) : (
           <iframe
-            src={resumeUrl}
+            src={`https://docs.google.com/gview?embedded=true&url=${encodeURIComponent(resumeUrl)}`}
             title="Resume"
             width="100%"
             height="1000px"
