@@ -14,9 +14,9 @@ const Footer = () => {
 
   const socialLinks = [
     { name: 'GitHub', icon: 'Github', url: 'https://github.com/swarajladke' },
-    { name: 'LinkedIn', icon: 'Linkedin', url: 'https://linkedin.com/in/swarajladke' },
-    { name: 'Twitter', icon: 'Twitter', url: 'https://twitter.com/swarajladke' },
-    { name: 'Email', icon: 'Mail', url: 'mailto:swaraj.ladke@example.com' }
+    { name: 'LinkedIn', icon: 'Linkedin', url: 'https://www.linkedin.com/in/swaraj-ladke-868387315/' },
+    { name: 'Instagram', icon: 'Instagram', url: 'https://twitter.com/swarajladke' },
+    { name: 'Email', icon: 'Mail', url: 'mailto:swarajladke20@gmail.com' }
   ];
 
   const handleLinkClick = (href) => {
@@ -96,7 +96,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-muted-foreground">
                 <Icon name="MapPin" size={16} className="text-primary flex-shrink-0" />
-                <span className="text-sm">Mumbai, Maharashtra</span>
+                <span className="text-sm">Pune, Maharashtra</span>
               </div>
               <div className="flex items-center space-x-3 text-muted-foreground">
                 <Icon name="Mail" size={16} className="text-primary flex-shrink-0" />
@@ -104,7 +104,7 @@ const Footer = () => {
                   onClick={() => handleLinkClick('mailto:swaraj.ladke@example.com')}
                   className="text-sm hover:text-primary transition-colors duration-300"
                 >
-                  swaraj.ladke@example.com
+                  swarajladke20@gmail.com
                 </button>
               </div>
               <div className="flex items-center space-x-3 text-muted-foreground">
