@@ -15,7 +15,7 @@ const Footer = () => {
   const socialLinks = [
     { name: 'GitHub', icon: 'Github', url: 'https://github.com/swarajladke' },
     { name: 'LinkedIn', icon: 'Linkedin', url: 'https://www.linkedin.com/in/swaraj-ladke-868387315/' },
-    { name: 'Instagram', icon: 'Instagram', url: 'https://twitter.com/swarajladke' },
+    { name: 'Instagram', icon: 'Instagram', url: 'https://www.instagram.com/itz_swaraj_4399/' },
     { name: 'Email', icon: 'Mail', url: 'mailto:swarajladke20@gmail.com' }
   ];
 
