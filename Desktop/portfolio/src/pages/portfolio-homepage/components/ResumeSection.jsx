@@ -24,7 +24,7 @@ const ResumeSection = () => {
   const handleDownload = () => {
     // Create a mock download
     const link = document.createElement('a');
-    link.href = 'swarajladke.github.io/portfolio/resume.pdf';
+    link.href = 'https://swarajladke.github.io/portfolio/resume.pdf';
     link.download = 'resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -260,7 +260,7 @@ const ResumeSection = () => {
       <ResumePreviewModal
         isOpen={isPreviewOpen}
         onClose={() => setIsPreviewOpen(false)}
-        resumeUrl="/assets/resume.pdf"
+        resumeUrl="https://swarajladke.github.io/portfolio/resume.pdf"
       />
     </>
   );
