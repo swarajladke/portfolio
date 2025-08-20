@@ -62,7 +62,7 @@ const HeroSection = () => {
               <Icon name="User" size={64} className="text-primary" />
             </div>
           </div>
-          <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-success rounded-full border-4 border-background animate-pulse"></div>
+          {/*<div className="absolute -bottom-2 -right-2 w-8 h-8 bg-success rounded-full border-4 border-background animate-pulse"></div>*/}
         </div>
 
         {/* Name */}

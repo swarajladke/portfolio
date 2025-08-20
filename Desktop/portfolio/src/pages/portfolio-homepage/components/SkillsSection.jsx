@@ -23,12 +23,11 @@ const SkillsSection = () => {
     { name: 'JavaScript', category: 'frontend', level: 95, icon: 'Code', color: '#F7DF1E' },
 
     // Backend
-    { name: 'Node.js', category: 'backend', level: 90, icon: 'Server', color: '#339933' },
     { name: 'Python', category: 'backend', level: 92, icon: 'FileCode2', color: '#3776AB' },
-    { name: 'Express.js', category: 'backend', level: 88, icon: 'Zap', color: '#000000' },
     { name: 'Django', category: 'backend', level: 85, icon: 'Globe', color: '#092E20' },
     { name: 'FastAPI', category: 'backend', level: 82, icon: 'Rocket', color: '#009688' },
     { name: 'Java', category: 'backend', level: 70, icon: 'Share2', color: '#E10098' },
+    { name: 'Flask', category: 'backend', level: 90, icon: 'Server', color: '#8CC84B' },
 
     // Database
     { name: 'MongoDB', category: 'database', level: 90, icon: 'Database', color: '#47A248' },
@@ -48,7 +47,8 @@ const SkillsSection = () => {
     { name: 'Render', category: 'tools', level: 85, icon: 'Package', color: '#2496ED' },
     { name: 'AWS', category: 'tools', level: 80, icon: 'Cloud', color: '#FF9900' },
     { name: 'Vercel', category: 'tools', level: 88, icon: 'Triangle', color: '#000000' },
-    { name: 'Figma', category: 'tools', level: 82, icon: 'Figma', color: '#F24E1E' }
+    { name: 'Figma', category: 'tools', level: 82, icon: 'Figma', color: '#F24E1E' },
+    { name: 'Azure Devops', category: 'tools', level: 80, icon: 'Docker', color: '#2496ED' }
   ];
 
   const filteredSkills = activeCategory === 'all' 
