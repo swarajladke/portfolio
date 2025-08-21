@@ -35,10 +35,10 @@ const ProjectsSection = () => {
         'Performance optimization hints'
       ],
       stats: {
-        downloads: '10K+',
+        Installs: 'Growing',
         rating: '4.8/5',
-        users: '2.5K+',
-        updates: '15+'
+        users: 'Growing',
+        updates: '7+'
       }
     },
     {
@@ -46,7 +46,7 @@ const ProjectsSection = () => {
       title: 'Elora',
       category: 'web',
       description: 'Elora is a next-gen dynamic glowing theme engine for Visual Studio Code. It brings your editor to life with real-time glowing animations that respond to your current theme color — adding an aesthetic and immersive coding experience.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
+      image: 'https://www.gitkraken.com/wp-content/uploads/2024/04/Best-VS-Code-themes-hero-2.png',
       technologies: ['VS-code-api', 'Javascript', 'Typescript', 'Stripe API'],
       githubUrl: 'https://github.com/swarajladke/elora',
       liveUrl: 'https://marketplace.visualstudio.com/items?itemName=swarajladke.elora',
@@ -71,7 +71,7 @@ const ProjectsSection = () => {
       title: 'EduTwin',
       category: 'ai',
       description: 'AI-powered educational platform that creates personalized learning experiences through adaptive content delivery and intelligent tutoring systems.',
-      image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop',
+      image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.datasciencecentral.com%2F5-growth-pillars-of-smart-learning-and-education%2F&psig=AOvVaw2izhjeCnXikNtEPw__2El7&ust=1755774923144000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMiMoLehmY8DFQAAAAAdAAAAABAE',
       technologies: ['Python', 'TensorFlow', 'React', 'FastAPI'],
       githubUrl: 'https://github.com/swarajladke/edutwin',
       liveUrl: 'https://edutwin-ai.vercel.app',
