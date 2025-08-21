@@ -71,7 +71,7 @@ const ProjectsSection = () => {
       title: 'EduTwin',
       category: 'ai',
       description: 'AI-powered educational platform that creates personalized learning experiences through adaptive content delivery and intelligent tutoring systems.',
-      image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.datasciencecentral.com%2F5-growth-pillars-of-smart-learning-and-education%2F&psig=AOvVaw2izhjeCnXikNtEPw__2El7&ust=1755774923144000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMiMoLehmY8DFQAAAAAdAAAAABAE',
+      image: 'https://knowledgeworks.org/wp-content/uploads/2023/08/kate-goodman-smart-technologies-covid-19-scaled-1.jpg',
       technologies: ['Python', 'TensorFlow', 'React', 'FastAPI'],
       githubUrl: 'https://github.com/swarajladke/edutwin',
       liveUrl: 'https://edutwin-ai.vercel.app',
@@ -85,10 +85,10 @@ const ProjectsSection = () => {
         'Multi-modal learning support'
       ],
       stats: {
-        students: '1K+',
-        courses: '50+',
-        accuracy: '92%',
-        engagement: '85%'
+        students: 'TO be updated',
+        courses: 'TO be updated',
+        accuracy: 'TO be updated',
+        engagement: 'TO be updated'
       }
     },
     {
