@@ -14,29 +14,29 @@ const AchievementsSection = () => {
   const hackathons = [
     {
       id: 1,
-      title: 'Smart India Hackathon 2023',
-      position: '1st Place - Winner',
-      date: 'December 2023',
+      title: 'OpenAI Open Model Hackathon 2025',
+      position: 'To be updated',
+      date: 'Aug to Sep 2025',
       category: 'AI/ML Track',
-      description: 'Developed an AI-powered solution for smart city traffic management using computer vision and predictive analytics.',
+      description: 'Developing an AI-powered solution for smart city traffic management using computer vision and predictive analytics.',
       image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop',
-      technologies: ['Python', 'TensorFlow', 'OpenCV', 'React'],
-      prize: '₹1,00,000',
-      team: '4 Members',
-      participants: '10,000+'
+      technologies: ['Python', 'TensorFlow', 'OpenCV', 'React', 'flask'],
+      prize: '$30,000',
+      team: 'solo',
+      participants: '6000+'
     },
     {
       id: 2,
-      title: 'HackIndia 2023',
-      position: '2nd Place - Runner Up',
-      date: 'October 2023',
-      category: 'Web Development',
-      description: 'Built a comprehensive e-learning platform with AI-powered personalized learning paths and real-time collaboration features.',
+      title: 'Proof of Concept Hackathon 2025',
+      position: 'To be updated',
+      date: 'Jul to Sep 2025',
+      category: 'Android Development',
+      description: 'Creating a proof of concept for a decentralized application using blockchain technology and smart contracts.',
       image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=300&fit=crop',
-      technologies: ['Next.js', 'Node.js', 'MongoDB', 'Socket.io'],
-      prize: '₹50,000',
-      team: '3 Members',
-      participants: '5,000+'
+      technologies: ['Solidity', 'React Native', 'Node.js', 'MongoDB'],
+      prize: '$25,000',
+      team: 'solo',
+      participants: '1500+'
     },
     {
       id: 3,
@@ -53,16 +53,16 @@ const AchievementsSection = () => {
     },
     {
       id: 4,
-      title: 'CodeChef SnackDown 2023',
-      position: 'Top 100 - Finalist',
-      date: 'August 2023',
-      category: 'Competitive Programming',
-      description: 'Achieved top 100 ranking in the global competitive programming contest with complex algorithmic problem solving.',
+      title: 'BatchHacks 2025 - Hackathon',
+      position: 'To be updated',
+      date: 'Aug to Dec 2025',
+      category: 'Web Development',
+      description: 'Developing a universal application for real-time language translation using AI and NLP techniques.',
       image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=400&h=300&fit=crop',
-      technologies: ['C++', 'Algorithms', 'Data Structures'],
-      prize: 'Recognition',
-      team: 'Individual',
-      participants: '50,000+'
+      technologies: ['JavaScript', 'Node.js', 'Express', 'MongoDB', 'React'],
+      prize: '$1400',
+      team: 'solo',
+      participants: '100+'
     }
   ];
 
