@@ -228,29 +228,29 @@ const ResumeSection = () => {
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
                 <Icon name="Briefcase" size={24} className="text-primary" />
               </div>
-              <div className="text-2xl font-bold text-foreground mb-1">3+</div>
-              <div className="text-sm text-muted-foreground">Years Experience</div>
+              <div className="text-2xl font-bold text-foreground mb-1">4+</div>
+              <div className="text-sm text-muted-foreground">Package Managers & Builds</div>
             </div>
             <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
               <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
                 <Icon name="Code" size={24} className="text-accent" />
               </div>
-              <div className="text-2xl font-bold text-foreground mb-1">25+</div>
-              <div className="text-sm text-muted-foreground">Projects Completed</div>
+              <div className="text-2xl font-bold text-foreground mb-1">2</div>
+              <div className="text-sm text-muted-foreground">Extensions & Plugins</div>
             </div>
             <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
               <div className="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-3">
                 <Icon name="Award" size={24} className="text-success" />
               </div>
-              <div className="text-2xl font-bold text-foreground mb-1">8</div>
-              <div className="text-sm text-muted-foreground">Certifications</div>
+              <div className="text-2xl font-bold text-foreground mb-1">3+</div>
+              <div className="text-sm text-muted-foreground">API Integrations Mastered</div>
             </div>
             <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
               <div className="w-12 h-12 bg-warning/10 rounded-full flex items-center justify-center mx-auto mb-3">
                 <Icon name="Trophy" size={24} className="text-warning" />
               </div>
-              <div className="text-2xl font-bold text-foreground mb-1">5</div>
-              <div className="text-sm text-muted-foreground">Awards Won</div>
+              <div className="text-2xl font-bold text-foreground mb-1">2</div>
+              <div className="text-sm text-muted-foreground">Backend Services</div>
             </div>
           </div>
         </div>
