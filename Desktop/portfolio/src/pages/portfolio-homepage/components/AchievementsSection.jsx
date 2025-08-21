@@ -40,16 +40,16 @@ const AchievementsSection = () => {
     },
     {
       id: 3,
-      title: 'TechFest Mumbai 2023',
-      position: '3rd Place - Bronze',
-      date: 'September 2023',
-      category: 'Innovation Challenge',
-      description: 'Created an innovative IoT-based solution for smart agriculture with predictive crop monitoring and automated irrigation.',
+      title: 'Gen AI Chakra 4 Smart Cities Hackathon 2025',
+      position: 'To be updated',
+      date: 'Aug to Sep 2025',
+      category: 'AI/ML Track',
+      description: 'Developing a smart waste management system using AI and IoT technologies to optimize city cleanliness and resource allocation.',
       image: 'https://images.unsplash.com/photo-1574192324001-ee41e18ed679?w=400&h=300&fit=crop',
-      technologies: ['Arduino', 'Python', 'React', 'Firebase'],
-      prize: '₹25,000',
-      team: '5 Members',
-      participants: '8,000+'
+      technologies: [ 'Python', 'TensorFlow', 'IoT', 'React', 'Django'],
+      prize: '$380',
+      team: 'solo',
+      participants: '300+'
     },
     {
       id: 4,
@@ -69,36 +69,36 @@ const AchievementsSection = () => {
   const certifications = [
     {
       id: 1,
-      title: 'Machine Learning Specialization',
-      issuer: 'Stanford University (Coursera)',
-      date: 'November 2023',
-      credentialId: 'ML-2023-SL-001',
-      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop',
-      skills: ['Machine Learning', 'Python', 'TensorFlow', 'Neural Networks'],
-      description: 'Comprehensive specialization covering supervised learning, unsupervised learning, and neural networks with practical implementations.',
-      verifyUrl: 'https://coursera.org/verify/ML-2023-SL-001'
+      title: 'Web Development in React.js:',
+      issuer: 'Coursera',
+      date: 'July 2025',
+      credentialId: '3ZF9EFXTT23Q',
+      image: 'https://www.mbloging.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fyynr1uml%2Fproduction%2Fd3f0ff2ab5398aaffb00fa0b3afcb238772f42e7-1024x576.jpg%3Fw%3D1024%26auto%3Dformat&w=3840&q=75',
+      skills: [ 'React', 'JavaScript', 'Web Development', 'Frontend Development'],
+      description: 'Professional certificate covering advanced web development concepts using React.js, including state management, routing, and performance optimization.',
+      verifyUrl: 'https://coursera.org/verify/3ZF9EFXTT23Q'
     },
     {
       id: 2,
-      title: 'AWS Certified Solutions Architect',
-      issuer: 'Amazon Web Services',
-      date: 'October 2023',
-      credentialId: 'AWS-SAA-2023-001',
-      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop',
-      skills: ['AWS', 'Cloud Architecture', 'DevOps', 'Scalability'],
-      description: 'Professional certification demonstrating expertise in designing distributed systems on AWS platform.',
-      verifyUrl: 'https://aws.amazon.com/verification/AWS-SAA-2023-001'
+      title: 'Technology Job Simulation-Deloitte',
+      issuer: 'Forage',
+      date: 'June 2025',
+      credentialId: 'bPckrErRrGvhebJW5 ',
+      image: 'https://intersectjobsims.com/wp-content/uploads/2018/05/adults-chairs-colleagues-5151661.jpg?w=656&h=300&crop=1',
+      skills: ['Deloitte', 'Technology Consulting', 'Problem Solving', 'Team Collaboration'],
+      description: 'A hands-on simulation experience with Deloitte, focusing on technology consulting and problem-solving in real-world scenarios.',
+      verifyUrl: 'https://forage.com/verify/GB2Xz4HZs8htWcxGM'
     },
     {
       id: 3,
-      title: 'Full Stack Web Development',
-      issuer: 'Meta (Coursera)',
-      date: 'September 2023',
-      credentialId: 'META-FSWD-2023-001',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop',
-      skills: ['React', 'Node.js', 'Database Design', 'API Development'],
-      description: 'Professional certificate covering modern full-stack development with React, Node.js, and database technologies.',
-      verifyUrl: 'https://coursera.org/verify/META-FSWD-2023-001'
+      title: 'Developer and Technology Job Simulation-Accenture',
+      issuer: 'Forage',
+      date: 'June 2025',
+      credentialId: '2JHoWMZC7Y6aNWQ8',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7_klSz5NLV1-BfwMGU1AoOLWR8loaLRWJtImgncdxhY8B7xDu91evzHQdSJ6CMqdHqRA&usqp=CAU',
+      skills: ['Software Development', 'Problem Solving', 'Team Collaboration', 'Technology Consulting'],
+      description: 'A comprehensive simulation experience focusing on software development and technology consulting, providing insights into real-world challenges and solutions.',
+      verifyUrl: 'https://forage.com/verify/GB2Xz4HZs8htWcxGM'
     },
     {
       id: 4,
@@ -116,40 +116,14 @@ const AchievementsSection = () => {
   const recognitions = [
     {
       id: 1,
-      title: 'Outstanding Student Developer Award',
-      issuer: 'University Tech Department',
-      date: 'December 2023',
-      description: 'Recognized for exceptional contributions to open-source projects and innovative solutions in AI/ML domain.',
+      title: 'Elora-Dynamic glowing VS code theme engine',
+      issuer: 'GitHub-VS code themes.com(open source community)',
+      date: 'July 2025',
+      description: 'Developed a dynamic glowing VS Code theme engine that adapts to user preferences and enhances coding experience with customizable glow effects.',
       image: 'https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=400&h=300&fit=crop',
-      category: 'Academic Excellence'
-    },
-    {
-      id: 2,
-      title: 'GitHub Campus Expert',
-      issuer: 'GitHub Education',
-      date: 'November 2023',
-      description: 'Selected as a GitHub Campus Expert for promoting open-source culture and technical education in the community.',
-      image: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=400&h=300&fit=crop',
-      category: 'Community Leadership'
-    },
-    {
-      id: 3,
-      title: 'Best Innovation Project',
-      issuer: 'National Tech Symposium',
-      date: 'October 2023',
-      description: 'Awarded for developing an innovative AI-powered educational platform that enhances personalized learning experiences.',
-      image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&h=300&fit=crop',
-      category: 'Innovation'
-    },
-    {
-      id: 4,
-      title: 'Top Contributor - Open Source',
-      issuer: 'DevCommunity India',
-      date: 'September 2023',
-      description: 'Recognized as a top contributor to open-source projects with significant impact on developer community.',
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop',
-      category: 'Open Source'
+      category: 'VS Code Theme Development',
     }
+    
   ];
 
   const getTabContent = () => {
@@ -158,8 +132,8 @@ const AchievementsSection = () => {
         return hackathons;
       case 'certifications':
         return certifications;
-      case 'Publications':
-        return Publications;
+      case 'recognitions':
+        return recognitions;
       default:
         return hackathons;
     }
