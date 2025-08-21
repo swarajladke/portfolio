@@ -278,19 +278,19 @@ const AchievementsSection = () => {
         {/* Achievement Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
-            <div className="text-3xl font-bold text-primary mb-2">15+</div>
+            <div className="text-3xl font-bold text-primary mb-2">10+</div>
             <div className="text-sm text-muted-foreground">Hackathons Participated</div>
           </div>
           <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
-            <div className="text-3xl font-bold text-accent mb-2">8</div>
+            <div className="text-3xl font-bold text-accent mb-2">5+</div>
             <div className="text-sm text-muted-foreground">Certifications Earned</div>
           </div>
           <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
-            <div className="text-3xl font-bold text-success mb-2">5</div>
-            <div className="text-sm text-muted-foreground">Awards Won</div>
+            <div className="text-3xl font-bold text-success mb-2">2</div>
+            <div className="text-sm text-muted-foreground">projects in production</div>
           </div>
           <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
-            <div className="text-3xl font-bold text-warning mb-2">12</div>
+            <div className="text-3xl font-bold text-warning mb-2">1</div>
             <div className="text-sm text-muted-foreground">Recognition Received</div>
           </div>
         </div>
