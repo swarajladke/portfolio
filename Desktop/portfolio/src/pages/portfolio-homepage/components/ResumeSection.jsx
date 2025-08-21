@@ -226,7 +226,7 @@ const ResumeSection = () => {
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Icon name="Briefcase" size={24} className="text-primary" />
+                <Icon name="package" size={24} className="text-primary" />
               </div>
               <div className="text-2xl font-bold text-foreground mb-1">4+</div>
               <div className="text-sm text-muted-foreground">Package Managers & Builds</div>
@@ -240,14 +240,14 @@ const ResumeSection = () => {
             </div>
             <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
               <div className="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Icon name="Award" size={24} className="text-success" />
+                <Icon name="API" size={24} className="text-success" />
               </div>
               <div className="text-2xl font-bold text-foreground mb-1">3+</div>
               <div className="text-sm text-muted-foreground">API Integrations Mastered</div>
             </div>
             <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
               <div className="w-12 h-12 bg-warning/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Icon name="Trophy" size={24} className="text-warning" />
+                <Icon name="services" size={24} className="text-warning" />
               </div>
               <div className="text-2xl font-bold text-foreground mb-1">2</div>
               <div className="text-sm text-muted-foreground">Backend Services</div>
