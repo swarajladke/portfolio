@@ -93,79 +93,78 @@ const ProjectsSection = () => {
     },
     {
       id: 4,
-      title: 'AI Portfolio Builder',
+      title: 'Agnis AI',
       category: 'ai',
-      description: 'Intelligent portfolio generation tool that creates professional portfolios using AI analysis of user skills, projects, and career goals.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
-      technologies: ['Next.js', 'OpenAI API', 'Tailwind CSS', 'Vercel'],
+      description: 'Agnis AI is an advanced self-adaptive AI system designed to push beyond the limits of traditional Large Language Models. Its goal is not only to understand and respond, but also to evolve over time, adapt its behavior, and operate as a multi-capability intelligence layer..',
+      image: 'https://cdn.mos.cms.futurecdn.net/v2/t:0,l:240,cw:1440,ch:1080,q:80,w:1440/VFLt5vHV7aCoLrLGjP9Qwm.jpg',
+      technologies: ['To be updated'],
       githubUrl: 'https://github.com/swarajladke/ai-portfolio-builder',
-      liveUrl: 'https://ai-portfolio-builder.vercel.app',
-      status: 'Live',
+      liveUrl: 'To be updated',
+      status: 'In Development',
       features: [
-        'AI-generated content',
-        'Template customization',
-        'SEO optimization',
-        'Real-time preview',
-        'Export functionality',
-        'Analytics integration'
+        'Multi-capability intelligence',
+        'Self-adaptive learning',
+        'Context-aware responses',
+        'Real-time data integration',
+        'Scalable architecture',
+        'Continuous improvement'
       ],
       stats: {
-        portfolios: '2K+',
-        templates: '25+',
-        satisfaction: '4.7/5',
-        exports: '5K+'
+        capabilities: 'To be updated',
+        performance: 'To be updated',
+        adaptability: 'To be updated',
+        userEngagement: 'To be updated'
       }
     },
     {
       id: 5,
-      title: 'Smart Task Manager',
+      title: 'Emoify',
       category: 'web',
-      description: 'Intelligent task management application with AI-powered priority suggestions and automated workflow optimization.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop',
-      technologies: ['Vue.js', 'Node.js', 'PostgreSQL', 'Redis'],
-      githubUrl: 'https://github.com/swarajladke/smart-task-manager',
-      liveUrl: 'https://smart-tasks.vercel.app',
-      status: 'Live',
+      description: 'An AI-powered music recommender that detects your real-time emotions via webcam using CNN + OpenCV and instantly curates YouTube songs to match your mood.',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe2wTRoc3vW-YSoCJ9_P7SQwqSitIXgZ9ZfixBOs61XecUJJShxTvLJnRKfR8B41sp-Xw&usqp=CAU',
+      technologies: ['TensorFlow', 'OpenCV', 'Flask', 'YouTube API', 'React','keras'],
+      githubUrl: 'https://github.com/swarajladke/emoify',
+      liveUrl: 'To be updated',
+      status: 'Completed',
       features: [
-        'AI priority suggestions',
-        'Team collaboration',
-        'Time tracking',
-        'Progress analytics',
-        'Deadline predictions',
-        'Integration support'
+        'Real-time emotion detection',
+        'Personalized music recommendations',
+        'YouTube integration',
+        'User-friendly interface',
+        'Multi-platform support'
       ],
       stats: {
-        tasks: '50K+',
-        teams: '200+',
-        productivity: '+35%',
-        satisfaction: '4.6/5'
+        averageResponseTime: '1-2 seconds',
+        accuracy: '85% emotion detection accuracy (based on test cases)',
+        users: 'Growing',
+        playlists: '100+ curated playlists'
       }
     },
     {
       id: 6,
-      title: 'DevTools Extension',
+      title: 'Chrome Extension',
       category: 'extensions',
-      description: 'Comprehensive browser extension for developers with debugging tools, performance monitoring, and code analysis features.',
-      image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800&h=600&fit=crop',
+      description: 'A Chrome extension that uses AI to instantly summarize selected text or entire web pages into concise, easy-to-read summaries. Built with JavaScript, Flask, and LLM APIs (OpenAI/Groq/OpenRouter).',
+      image: 'https://www.csoonline.com/wp-content/uploads/2025/06/4003545-0-42272500-1749471344-shutterstock_2428301311.jpg?quality=50&strip=all&w=1024',
       technologies: ['JavaScript', 'Chrome APIs', 'React', 'Webpack'],
-      githubUrl: 'https://github.com/swarajladke/devtools-extension',
-      marketplaceUrl: 'https://chrome.google.com/webstore/detail/devtools-pro',
-      status: 'Live',
+      githubUrl: 'To be updated',
+      marketplaceUrl: 'To be updated',
+      status: 'In Development',
       features: [
-        'Performance monitoring',
-        'Network analysis',
-        'Console enhancements',
-        'Element inspection',
-        'Storage management',
-        'API testing tools'
+        'Instant text summarization',
+        'Web page summarization',
+        'AI-powered insights',
+        'User-friendly interface',
+        'Customizable settings',
+        'Multi-language support',
       ],
       stats: {
-        installs: '25K+',
-        rating: '4.9/5',
-        reviews: '500+',
-        updates: '20+'
-      }
-    }
+        averageSpeed: '2-3 seconds per request',
+        accuracy: '85-90% relevance retention compared to original text (based on test cases)',
+        modes: 'Short, Medium, and Bullet-point summaries'
+}
+    },
+
   ];
 
   const filteredProjects = activeFilter === 'all' 
