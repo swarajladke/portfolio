@@ -30,48 +30,47 @@ const AIProjectsSection = () => {
       ],
       impact: 'Potential to revolutionize remote education by providing immersive learning experiences that closely mimic physical classroom interactions.',
       publications: [
-        'IEEE Conference on Virtual Reality (Submitted)',
-        'ACM Digital Learning Symposium (In Review)'
+       'To be published in the Journal of Educational Technology (Draft)',
+       'International Conference on Virtual Learning Environments (Planned)'
       ],
       metrics: {
-        accuracy: '94%',
-        latency: '<100ms',
-        users: '50+ Beta',
-        satisfaction: '4.8/5'
+        accuracy: 'To be updated',
+        latency: 'To be updated',
+        users: 'To be updated',
+        satisfaction: 'To be updated'
       }
     },
     {
       id: 2,
-      title: 'Autonomous Drone Swarm Coordination',
-      category: 'Robotics & AI',
+      title: 'Agnis AI',
+      category: 'AI',
       status: 'Research Phase',
-      description: 'Research project focused on developing intelligent coordination algorithms for autonomous drone swarms using reinforcement learning and distributed computing principles.',
-      image: 'https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800&h=600&fit=crop',
-      technologies: ['Python', 'PyTorch', 'ROS', 'OpenCV', 'Reinforcement Learning'],
+      description: 'Agnis AI is an advanced self-adaptive AI system designed to push beyond the limits of traditional Large Language Models. Its goal is not only to understand and respond, but also to evolve over time, adapt its behavior, and operate as a multi-capability intelligence layer.',
+      image: 'https://cdn.mos.cms.futurecdn.net/v2/t:0,l:240,cw:1440,ch:1080,q:80,w:1440/VFLt5vHV7aCoLrLGjP9Qwm.jpg',
+      technologies: ['To be updated'],
       keyFeatures: [
-        'Distributed decision making',
-        'Collision avoidance algorithms',
-        'Dynamic task allocation',
-        'Real-time communication protocols',
-        'Adaptive formation control',
-        'Emergency response systems'
+        'Self-adaptive learning algorithms',
+        'Multi-modal data processing',
+        'Contextual understanding and reasoning',
+        'Dynamic knowledge graph integration',
+        'Real-time decision making',
+        'Multi-agent coordination',
       ],
       challenges: [
-        'Complex multi-agent coordination',
-        'Real-time decision making',
-        'Communication reliability',
-        'Safety and fail-safe mechanisms'
+        'Scalability of learning algorithms',
+        'Data privacy and security',
+        'Bias mitigation in AI models',
+        'Interoperability with existing systems'
       ],
-      impact: 'Applications in search and rescue operations, environmental monitoring, and large-scale surveillance systems.',
+      impact: 'Agnis AI aims to redefine the capabilities of AI systems, enabling them to operate autonomously across various domains, enhancing efficiency and decision-making processes in real-world applications.',
       publications: [
-        'Robotics and Autonomous Systems Journal (Draft)',
-        'International Conference on Robotics (Planned)'
+        'To be published in the Journal of Artificial Intelligence Research (Draft)',
+        'International Conference on Advanced AI Systems (Planned)'
       ],
       metrics: {
-        drones: '10+ Swarm',
-        efficiency: '87%',
-        response: '<2s',
-        reliability: '99.2%'
+        adaptability: 'To be updated',
+        performance: 'To be updated',
+        capabilities: 'To be updated',
       }
     },
     {
@@ -79,8 +78,8 @@ const AIProjectsSection = () => {
       title: 'EMOIFY',
       category: 'AI',
       status: 'Completed',
-      description: 'An Emotion-Based Music Recommendation System with Adaptive Training Capabilities.',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+      description: 'EMOIFY is an innovative AI-driven music recommendation system that analyzes real-time emotional states through webcam input, providing personalized music suggestions to enhance user experience.',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe2wTRoc3vW-YSoCJ9_P7SQwqSitIXgZ9ZfixBOs61XecUJJShxTvLJnRKfR8B41sp-Xw&usqp=CAU',
       technologies: ['Python', 'TensorFlow', 'OpenCV', 'MongoDB', 'Keras','Html', 'CSS', 'JavaScript'],
       keyFeatures: [
         'Webcam-based emotion detection',
@@ -107,41 +106,8 @@ const AIProjectsSection = () => {
         latency: '<50ms',
         devices: '15+ Tested'
       }
-    },
-    {
-      id: 4,
-      title: 'Predictive Healthcare Analytics Platform',
-      category: 'Healthcare AI',
-      status: 'Prototype',
-      description: 'AI-driven platform for predictive healthcare analytics, utilizing machine learning models to forecast patient outcomes and optimize treatment plans.',
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop',
-      technologies: ['Python', 'Scikit-learn', 'Pandas', 'FastAPI', 'PostgreSQL'],
-      keyFeatures: [
-        'Patient outcome prediction',
-        'Treatment optimization',
-        'Risk assessment algorithms',
-        'Data visualization dashboard',
-        'HIPAA compliance',
-        'Integration APIs'
-      ],
-      challenges: [
-        'Data privacy and security',
-        'Model interpretability',
-        'Regulatory compliance',
-        'Clinical validation'
-      ],
-      impact: 'Potential to improve patient outcomes and reduce healthcare costs through predictive insights.',
-      publications: [
-        'Journal of Medical Internet Research (Under Review)',
-        'Healthcare AI Conference (Accepted)'
-      ],
-      metrics: {
-        accuracy: '92%',
-        patients: '1K+ Records',
-        predictions: '5K+',
-        validation: '89%'
-      }
     }
+    
   ];
 
   const toggleExpanded = (projectId) => {
