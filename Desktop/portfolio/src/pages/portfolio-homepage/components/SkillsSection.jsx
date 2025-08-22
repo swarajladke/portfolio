@@ -39,7 +39,7 @@ const SkillsSection = () => {
     { name: 'TensorFlow', category: 'ai', level: 88, icon: 'Brain', color: '#FF6F00' },
     { name: 'PyTorch', category: 'ai', level: 85, icon: 'Cpu', color: '#EE4C2C' },
     { name: 'Scikit-learn', category: 'ai', level: 90, icon: 'BarChart3', color: '#F7931E' },
-    { name: 'OpenAI API', category: 'ai', level: 92, icon: 'MessageSquare', color: '#412991' },
+    { name: 'API', category: 'ai', level: 92, icon: 'MessageSquare', color: '#412991' },
     { name: 'Hugging Face', category: 'ai', level: 85, icon: 'Heart', color: '#FFD21E' },
 
     // Tools
