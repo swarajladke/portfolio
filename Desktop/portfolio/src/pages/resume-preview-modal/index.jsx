@@ -139,7 +139,7 @@ const ResumePreviewModal = () => {
                 </div>
               ) : (
                 <ResumeViewer
-                  resumeUrl="/assets/resume.pdf"
+                  resumeUrl="/assets/Myresume.pdf"
                   onError={handleError}
                 />
               )}
