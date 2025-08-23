@@ -24,8 +24,8 @@ const ResumeSection = () => {
   const handleDownload = () => {
     // Create a mock download
     const link = document.createElement('a');
-    link.href = 'https://swarajladke.github.io/portfolio/resume.pdf';
-    link.download = 'resume.pdf';
+    link.href = 'https://swarajladke.github.io/portfolio/Myresume.pdf';
+    link.download = 'Myresume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
