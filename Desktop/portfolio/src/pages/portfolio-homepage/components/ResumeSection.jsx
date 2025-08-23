@@ -7,7 +7,7 @@ const ResumeSection = () => {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
   const resumeData = {
-    lastUpdated: 'July 28 2025',
+    lastUpdated: 'August 23 2025',
     fileSize: '2.4 MB',
     format: 'PDF',
     sections: [
