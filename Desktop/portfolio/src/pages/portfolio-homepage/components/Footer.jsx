@@ -125,18 +125,18 @@ const Footer = () => {
 
             {/* Additional Links */}
             <div className="flex items-center space-x-6 text-sm">
-              <button
-                onClick={() => window.open('pages/NotFound', '_blank')}
-                className="text-muted-foreground hover:text-primary transition-colors duration-300"
-              >
-                Privacy Policy
-              </button>
-              <button
-                onClick={() => window.open('pages/TermsOfService', '_blank')}
-                className="text-muted-foreground hover:text-primary transition-colors duration-300"
-              >
-                Terms of Service
-              </button>
+              <a
+               href="#/privacy-policy"
+               className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                >
+                 Privacy Policy
+                   </a>
+              <a
+                   href="#/terms-of-service"
+                     className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                >
+                 Terms of Service
+                   </a>
               <button
                 onClick={scrollToTop}
                 className="flex items-center space-x-1 text-muted-foreground hover:text-primary transition-colors duration-300"
