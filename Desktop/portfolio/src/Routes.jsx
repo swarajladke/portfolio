@@ -6,6 +6,8 @@ import ErrorBoundary from "components/ErrorBoundary";
 import PortfolioHomepage from "pages/portfolio-homepage";
 import ProjectDetailModal from "pages/project-detail-modal";
 import ResumePreviewModal from "pages/resume-preview-modal";
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 import NotFound from "pages/NotFound";
 
 const Routes = () => {
@@ -16,6 +18,8 @@ const Routes = () => {
       <RouterRoutes>
         {/* Define your routes here */}
         <Route path="/" element={<PortfolioHomepage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/portfolio-homepage" element={<PortfolioHomepage />} />
         <Route path="/project-detail-modal" element={<ProjectDetailModal />} />
         <Route path="/resume-preview-modal" element={<ResumePreviewModal />} />
