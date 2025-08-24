@@ -126,13 +126,13 @@ const Footer = () => {
             {/* Additional Links */}
             <div className="flex items-center space-x-6 text-sm">
               <button
-                onClick={() => window.open('/privacy-policy', '_blank')}
+                onClick={() => window.open('/PrivacyPolicy', '_blank')}
                 className="text-muted-foreground hover:text-primary transition-colors duration-300"
               >
                 Privacy Policy
               </button>
               <button
-                onClick={() => window.open('/terms-of-service', '_blank')}
+                onClick={() => window.open('/TermsOfService', '_blank')}
                 className="text-muted-foreground hover:text-primary transition-colors duration-300"
               >
                 Terms of Service
