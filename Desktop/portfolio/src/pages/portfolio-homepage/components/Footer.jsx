@@ -126,13 +126,13 @@ const Footer = () => {
             {/* Additional Links */}
             <div className="flex items-center space-x-6 text-sm">
               <button
-                onClick={() => window.open('/PrivacyPolicy', '_blank')}
+                onClick={() => window.open('/https://www.termsfeed.com/live/68ee85a5-d192-44e9-88d3-443c36e99e2a', '_blank')}
                 className="text-muted-foreground hover:text-primary transition-colors duration-300"
               >
                 Privacy Policy
               </button>
               <button
-                onClick={() => window.open('/TermsOfService', '_blank')}
+                onClick={() => window.open('/https://www.termsfeed.com/live/68ee85a5-d192-44e9-88d3-443c36e99e2a', '_blank')}
                 className="text-muted-foreground hover:text-primary transition-colors duration-300"
               >
                 Terms of Service
