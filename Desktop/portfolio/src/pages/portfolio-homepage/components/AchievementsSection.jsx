@@ -122,6 +122,7 @@ const AchievementsSection = () => {
       description: 'Developed a dynamic glowing VS Code theme engine that adapts to user preferences and enhances coding experience with customizable glow effects.',
       image: 'https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=400&h=300&fit=crop',
       category: 'VS Code Theme Development',
+      View:'https://vscodethemes.com/e/swarajladke.elora/elora-cyan'
     }
     
   ];
