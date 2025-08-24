@@ -10,7 +10,7 @@ export default function PrivacyPolicy() {
           Last Updated: August 24, 2025
         </p>
 
-        <div className="bg-red-600 rounded-lg px-5 py-3 mb-8 text-white text-sm font-semibold text-center animate-ping">
+        <div className="bg-red-600 rounded-lg px-5 py-3 mb-8 text-white text-sm font-semibold text-center animate-bounce">
           This Privacy Policy explains how personal data is collected, used, and protected.
         </div>
 

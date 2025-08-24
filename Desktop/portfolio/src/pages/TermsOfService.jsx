@@ -10,7 +10,7 @@ export default function TermsOfService() {
           Last Updated: August 24, 2025
         </p>
 
-        <div className="bg-red-600 rounded-lg px-5 py-3 mb-8 text-white text-sm font-semibold text-center animate-ping">
+        <div className="bg-red-600 rounded-lg px-5 py-3 mb-8 text-white text-sm font-semibold text-center animate-bounce">
           These terms govern your use of this personal portfolio website and its content.
         </div>
 
