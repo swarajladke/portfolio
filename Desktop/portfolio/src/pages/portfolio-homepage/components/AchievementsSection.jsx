@@ -87,7 +87,7 @@ const AchievementsSection = () => {
       image: 'https://intersectjobsims.com/wp-content/uploads/2018/05/adults-chairs-colleagues-5151661.jpg?w=656&h=300&crop=1',
       skills: ['Deloitte', 'Technology Consulting', 'Problem Solving', 'Team Collaboration'],
       description: 'A hands-on simulation experience with Deloitte, focusing on technology consulting and problem-solving in real-world scenarios.',
-      View: 'https://drive.google.com/file/d/1ZlsgW31luqVJeYQS7ULwww9OV4U-vQdU/preview'
+      verifyUrl: 'https://drive.google.com/file/d/1ZlsgW31luqVJeYQS7ULwww9OV4U-vQdU/preview'
     },
     {
       id: 3,
@@ -98,7 +98,7 @@ const AchievementsSection = () => {
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7_klSz5NLV1-BfwMGU1AoOLWR8loaLRWJtImgncdxhY8B7xDu91evzHQdSJ6CMqdHqRA&usqp=CAU',
       skills: ['Software Development', 'Problem Solving', 'Team Collaboration', 'Technology Consulting'],
       description: 'A comprehensive simulation experience focusing on software development and technology consulting, providing insights into real-world challenges and solutions.',
-      View: 'https://drive.google.com/file/d/1ipWwwLKsk6PNJCtJOiz1mBhaQPG4RbdU/preview'
+      verifyUrl: 'https://drive.google.com/file/d/1ipWwwLKsk6PNJCtJOiz1mBhaQPG4RbdU/preview'
     },
     {
       id: 4,
