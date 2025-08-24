@@ -8,7 +8,7 @@ const AchievementsSection = () => {
   const tabs = [
     { id: 'hackathons', label: 'Hackathons', icon: 'Trophy' },
     { id: 'certifications', label: 'Certifications', icon: 'Award' },
-    { id: 'recognitions', label: 'Publications', icon: 'Star' }
+    { id: 'recognitions', label: 'recognitions', icon: 'Star' }
   ];
 
   const hackathons = [
@@ -102,14 +102,14 @@ const AchievementsSection = () => {
     },
     {
       id: 4,
-      title: 'Google Cloud Professional Developer',
-      issuer: 'Google Cloud',
-      date: 'August 2023',
-      credentialId: 'GCP-PD-2023-001',
-      image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=300&fit=crop',
-      skills: ['Google Cloud', 'Kubernetes', 'Microservices', 'CI/CD'],
-      description: 'Professional certification for designing, building, and deploying applications on Google Cloud Platform.',
-      verifyUrl: 'https://cloud.google.com/certification/verify/GCP-PD-2023-001'
+      title: 'Introduction to Git and GitHub',
+      issuer: 'coursera',
+      date: 'Nov 2024',
+      credentialId: 'LJ9FNITVL8EQ',
+      image: 'https://ilkinvaliyev.com/uploads/HNbj1yLc4ZaIpapLYdTUghp4jH7zie6OBC9yQQHP.jpg',
+      skills: ['Git', 'GitHub', 'Version Control', 'Collaboration'],
+      description: 'Comprehensive introduction to Git and GitHub, covering version control, branching, merging, and collaboration workflows for software development projects.',
+      verifyUrl: 'https://coursera.org/verify/LJ9FNITVL8EQ'
     }
   ];
 
