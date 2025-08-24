@@ -6,8 +6,8 @@ import ErrorBoundary from "components/ErrorBoundary";
 import PortfolioHomepage from "pages/portfolio-homepage";
 import ProjectDetailModal from "pages/project-detail-modal";
 import ResumePreviewModal from "pages/resume-preview-modal";
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsOfService from './pages/TermsOfService';
+import PrivacyPolicy from "/pages/PrivacyPolicy";
+import TermsOfService from "/pages/TermsOfService";
 import NotFound from "pages/NotFound";
 
 const Routes = () => {
