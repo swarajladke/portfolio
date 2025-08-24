@@ -270,6 +270,15 @@ const AchievementsSection = () => {
                       <span>Verify</span>
                     </button>
                   )}
+                  {item.View && (
+                    <button
+                      onClick={() => window.open(item.View, '_blank')}
+                      className="flex items-center space-x-1 text-primary hover:text-accent transition-colors duration-300"
+                    >
+                      <Icon name="ExternalLink" size={14} />
+                      <span>View</span>
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
