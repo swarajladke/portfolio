@@ -142,26 +142,26 @@ const ProjectsSection = () => {
     },
     {
       id: 6,
-      title: 'Chrome Extension',
-      category: 'extensions',
-      description: 'A Chrome extension that uses AI to instantly summarize selected text or entire web pages into concise, easy-to-read summaries. Built with JavaScript, Flask, and LLM APIs (OpenAI/Groq/OpenRouter).',
-      image: 'https://www.csoonline.com/wp-content/uploads/2025/06/4003545-0-42272500-1749471344-shutterstock_2428301311.jpg?quality=50&strip=all&w=1024',
-      technologies: ['JavaScript', 'Chrome APIs', 'React', 'Webpack'],
+      title: 'Content-repurser',
+      category: 'AI',
+      description: 'Turn any video into multiple content formats instantly! 🎬Generate shorts, captions, blog posts, hashtags, and social media threads in seconds.',
+      image: 'https://cms.rightblogger.com/wp-content/uploads/2024/05/repurposing-content-with-ai.jpg',
+      technologies: ['JavaScript', 'python', 'React', 'Webpack','FastAPI','AI/ML',],
       githubUrl: 'To be updated',
       marketplaceUrl: 'To be updated',
       status: 'In Development',
       features: [
-        'Instant text summarization',
-        'Web page summarization',
+        'Video-to-text transcription',
+        'Multi-format content generation',
         'AI-powered insights',
         'User-friendly interface',
         'Customizable settings',
-        'Multi-language support',
+        'Multi-format export',
       ],
       stats: {
-        averageSpeed: '2-3 seconds per request',
-        accuracy: '85-90% relevance retention compared to original text (based on test cases)',
-        modes: 'Short, Medium, and Bullet-point summaries'
+        averageSpeed: 'Under 30 seconds per video',
+        accuracy: 'To be updated',
+        modes: 'Multiple (text, video, audio)'
 }
     },
 
