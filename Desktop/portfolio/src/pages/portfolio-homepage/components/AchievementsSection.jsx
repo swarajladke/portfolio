@@ -131,7 +131,7 @@ const AchievementsSection = () => {
       issuer: 'Oracle',
       date: 'August 2025',
       description: 'Achieved Oracle Cloud Infrastructure 2025 Certified Generative AI Professional certification, demonstrating expertise in generative AI concepts and Oracle Cloud services.',
-      image: 'https://e0.pxfuel.com/wallpapers/786/243/desktop-wallpaper-worldwide-oracle-cloud.jpg',
+      image: 'https://revistayume.com/wp-content/uploads/2023/06/Oracle.jpg',
       category: 'Generative AI',
       View:'https://drive.google.com/file/d/1SlMy-_3kPjxeOiHzoJ5ct2bYwsYqC82W/preview'
 
@@ -312,7 +312,7 @@ const AchievementsSection = () => {
             <div className="text-sm text-muted-foreground">projects in production</div>
           </div>
           <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
-            <div className="text-3xl font-bold text-warning mb-2">1</div>
+            <div className="text-3xl font-bold text-warning mb-2">2</div>
             <div className="text-sm text-muted-foreground">Recognition Received</div>
           </div>
         </div>
