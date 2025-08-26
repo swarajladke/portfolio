@@ -102,14 +102,14 @@ const AchievementsSection = () => {
     },
     {
       id: 4,
-      title: 'Introduction to Git and GitHub',
-      issuer: 'coursera',
-      date: 'Nov 2024',
-      credentialId: 'LJ9FNITVL8EQ',
-      image: 'https://ilkinvaliyev.com/uploads/HNbj1yLc4ZaIpapLYdTUghp4jH7zie6OBC9yQQHP.jpg',
-      skills: ['Git', 'GitHub', 'Version Control', 'Collaboration'],
-      description: 'Comprehensive introduction to Git and GitHub, covering version control, branching, merging, and collaboration workflows for software development projects.',
-      verifyUrl: 'https://coursera.org/verify/LJ9FNITVL8EQ'
+      title: 'Oracle Cloud Infrastructure 2025 Certified Generative AI Professional',
+      issuer: 'Oracle',
+      date: 'August 2025',
+      credentialId: '102407713OCI25GAIOCP',
+      image: 'https://blogs.cloudare.in/wp-content/uploads/2025/01/4765971.jpg',
+      skills: [ 'Generative AI', 'Oracle Cloud', 'AI Models', 'AI Integration'],
+      description: 'Certification validating expertise in generative AI concepts, Oracle Cloud Infrastructure, and the ability to design and deploy AI-driven solutions.',
+      verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=90D1726627922C232F12843FBCFC54577E5DFE3C7E10B0C29FA5726D815F110E'
     }
   ];
 
