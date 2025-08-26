@@ -123,6 +123,18 @@ const AchievementsSection = () => {
       image: 'https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=400&h=300&fit=crop',
       category: 'VS Code Theme Development',
       View:'https://vscodethemes.com/e/swarajladke.elora/elora-cyan'
+    },
+
+    {
+      id: 2,
+      title: 'Oracle certified generative AI professional',
+      issuer: 'Oracle',
+      date: 'August 2025',
+      description: 'Achieved Oracle Cloud Infrastructure 2025 Certified Generative AI Professional certification, demonstrating expertise in generative AI concepts and Oracle Cloud services.',
+      image: 'https://e0.pxfuel.com/wallpapers/786/243/desktop-wallpaper-worldwide-oracle-cloud.jpg',
+      category: 'Generative AI',
+      View:'https://drive.google.com/file/d/1SlMy-_3kPjxeOiHzoJ5ct2bYwsYqC82W/preview'
+
     }
     
   ];
