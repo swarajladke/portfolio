@@ -179,7 +179,9 @@ const ProjectsSection = () => {
   const getStatusColor = (status) => {
     switch (status) {
       case 'Live': return 'text-success bg-success/10 border-success/20';
-      case 'Development': return 'text-warning bg-warning/10 border-warning/20';
+      case 'In Development': return 'text-warning bg-warning/10 border-warning/20';
+      case 'Completed': return 'text-primary bg-primary/10 border-primary/20';
+
       default: return 'text-muted-foreground bg-muted/10 border-border';
     }
   };
