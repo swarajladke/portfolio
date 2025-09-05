@@ -24,7 +24,7 @@ const ProjectsSection = () => {
       image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop',
       technologies: ['TypeScript', 'VS Code API', 'Node.js', 'AI/ML'],
       githubUrl: 'https://github.com/swarajladke/codelixer',
-      marketplaceUrl: 'https://marketplace.visualstudio.com/items?itemName=swaraj.codelixer',
+      liveUrl: 'https://marketplace.visualstudio.com/items?itemName=swarajladke.codelixer',
       status: 'Live',
       features: [
         'AI-powered code completion',
@@ -74,7 +74,7 @@ const ProjectsSection = () => {
       image: 'https://knowledgeworks.org/wp-content/uploads/2023/08/kate-goodman-smart-technologies-covid-19-scaled-1.jpg',
       technologies: ['Python', 'TensorFlow', 'React', 'FastAPI'],
       githubUrl: 'https://github.com/swarajladke/edutwin',
-      liveUrl: 'https://edutwin-ai.vercel.app',
+      liveUrl: 'To be updated',
       status: 'Beta',
       features: [
         'Personalized learning paths',
@@ -148,7 +148,7 @@ const ProjectsSection = () => {
       image: 'https://cms.rightblogger.com/wp-content/uploads/2024/05/repurposing-content-with-ai.jpg',
       technologies: ['JavaScript', 'python', 'React', 'Webpack','FastAPI','AI/ML',],
       githubUrl: 'To be updated',
-      marketplaceUrl: 'To be updated',
+      liveUrl: 'To be updated',
       status: 'In Development',
       features: [
         'Video-to-text transcription',
