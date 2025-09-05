@@ -75,7 +75,7 @@ const ProjectsSection = () => {
       technologies: ['Python', 'TensorFlow', 'React', 'FastAPI'],
       githubUrl: 'https://github.com/swarajladke/edutwin',
       liveUrl: 'To be updated',
-      status: 'Beta',
+      status: 'In Development',
       features: [
         'Personalized learning paths',
         'AI-powered content recommendations',
@@ -179,8 +179,7 @@ const ProjectsSection = () => {
   const getStatusColor = (status) => {
     switch (status) {
       case 'Live': return 'text-success bg-success/10 border-success/20';
-      case 'Beta': return 'text-warning bg-warning/10 border-warning/20';
-      case 'Development': return 'text-primary bg-primary/10 border-primary/20';
+      case 'Development': return 'text-warning bg-warning/10 border-warning/20';
       default: return 'text-muted-foreground bg-muted/10 border-border';
     }
   };
