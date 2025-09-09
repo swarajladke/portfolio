@@ -142,7 +142,7 @@ const ProjectsSection = () => {
     },
     {
       id: 6,
-      title: 'Content-repurser',
+      title: 'Casper-(Content Repurposing with AI)',
       category: 'AI',
       description: 'Turn any video into multiple content formats instantly! 🎬Generate shorts, captions, blog posts, hashtags, and social media threads in seconds.',
       image: 'https://cms.rightblogger.com/wp-content/uploads/2024/05/repurposing-content-with-ai.jpg',
@@ -164,6 +164,56 @@ const ProjectsSection = () => {
         modes: 'Multiple (text, video, audio)'
 }
     },
+
+    {
+      id: 7,
+      title: 'AgilePulse',
+      category: 'AI',
+      description: 'AgilePulse is an AI-driven Agile automation tool that acts as a virtual Scrum Master for modern development teams. It streamlines Agile ceremonies, automates sprint tracking, and provides intelligent insights to keep teams aligned and productive.',
+      image: 'https://www.xavor.com/wp-content/uploads/2023/04/Agile-Software-Development-%E2%80%93-A-Comprehensive-Overview-min.webp',
+      technologies: ['React18','vite5','react router v6','Python','Redux','Axios','JWT','AI/ML','Docker'],
+      githubUrl: 'To be updated',
+      liveUrl: 'To be updated',
+      status: 'In Development',
+      features: [
+        'AI Scrum Master - Facilitates stand-ups, retrospectives, and sprint planning',
+        'Sprint Intelligence - Auto-generated burndown charts, velocity, and workload balance',
+        'Task Automation - AI-powered task prioritization and assignment',
+        'Real-time Insights - Predictive analytics for sprint success and risk mitigation',
+        'Collaboration Hub - Centralized communication and document sharing',
+        ' Customizable Workflows - Tailor Agile processes to team needs',
+      ],
+      stats: {
+        averageSpeed: ' To be updated',
+        accuracy: 'To be updated'
+}
+    
+    },
+
+     {
+      id: 8,
+      title: 'Agnis-IDE',
+      category: 'AI',
+      description: 'An AI-powered IDE that can autonomously code, debug, test, and deploy applications with minimal human guidance.',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmR_T5avUt4e9RN0_0OzObnQINutPmBVohXhDiLODKHs3J8rDPeh_b4jwuRIhGZL235BU&usqp=CAU',
+      technologies: ['Electron','monaco editor','LLMs-To be updated','Agent Orchestration-To be updated','Memory Management-To be updated'],
+      githubUrl: 'To be updated',
+      liveUrl: 'To be updated',
+      status: 'In Development',
+      features: [
+        'AI Code Generation → Build modules & apps from plain English.',
+        'AI Debugging → Identify & fix bugs autonomously.',
+        'AI Testing → Generate & run test cases automatically.',
+        'AI Deployment → One-click deploy to cloud platforms.',
+        'Real-time Insights - Predictive analytics for sprint success and risk mitigation',
+        'Collaboration Hub - Centralized communication and document sharing',],
+      stats: {
+        averageSpeed: ' To be updated',
+        accuracy: 'To be updated'
+}
+    
+    },
+
 
   ];
 
