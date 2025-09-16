@@ -14,9 +14,9 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="heading-lg mb-4 gradient-text">About Me</h2>
+          <h2 className="section-heading animate-underline">About Me</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Passionate developer crafting digital experiences with cutting-edge technology
+            Building thoughtful, performant experiences across web and AI
           </p>
         </div>
 
@@ -82,7 +82,7 @@ const AboutSection = () => {
 
         {/* Personal Touch */}
         <div className="mt-16 text-center">
-          <div className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border max-w-3xl mx-auto">
+          <div className="p-8 rounded-2xl max-w-3xl mx-auto bg-transparent">
             <Icon name="Quote" size={32} className="text-primary mx-auto mb-4" />
             <blockquote className="text-lg text-muted-foreground italic mb-4">
               "The best way to predict the future is to create it. Every line of code I write is a step towards building tomorrow's solutions today."

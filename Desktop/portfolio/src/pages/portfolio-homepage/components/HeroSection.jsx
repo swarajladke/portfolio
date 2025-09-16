@@ -85,7 +85,7 @@ const HeroSection = () => {
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
           <button
             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             className="px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold btn-glow hover:scale-105 transition-all duration-300 flex items-center space-x-2"
@@ -101,6 +101,8 @@ const HeroSection = () => {
             <span>Get In Touch</span>
           </button>
         </div>
+        {/* Move horizontal line further down */}
+        <div className="w-full h-0.5 bg-primary/40 mx-auto mt-16 mb-12" />
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">

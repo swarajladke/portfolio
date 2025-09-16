@@ -1,5 +1,33 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import Icon from '../../../components/AppIcon';
+import SkillCard from '../../../components/SkillCard';
+
+const categoryIconMap = {
+  frontend: 'Monitor',
+  backend: 'ServerCog',
+  database: 'Database',
+  ai: 'Brain',
+  tools: 'Wrench',
+  all: 'Grid3X3'
+};
+
+const categoryLabel = (id) => {
+  switch (id) {
+    case 'frontend': return 'Frontend';
+    case 'backend': return 'Backend';
+    case 'database': return 'Database';
+    case 'ai': return 'AI/ML';
+    case 'tools': return 'Tools';
+    default: return id;
+  }
+};
+
+const levelLabelAndStars = (level) => {
+  if (level >= 90) return { label: 'Expert', stars: 5 };
+  if (level >= 75) return { label: 'Advanced', stars: 4 };
+  if (level >= 50) return { label: 'Intermediate', stars: 3 };
+  return { label: 'Beginner', stars: 2 };
+};
 
 const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -7,7 +35,7 @@ const SkillsSection = () => {
   const skillCategories = [
     { id: 'all', label: 'All Skills', icon: 'Grid3X3' },
     { id: 'frontend', label: 'Frontend', icon: 'Monitor' },
-    { id: 'backend', label: 'Backend', icon: 'Server' },
+    { id: 'backend', label: 'Backend', icon: 'ServerCog' },
     { id: 'database', label: 'Database', icon: 'Database' },
     { id: 'ai', label: 'AI/ML', icon: 'Brain' },
     { id: 'tools', label: 'Tools', icon: 'Wrench' }
@@ -51,112 +79,60 @@ const SkillsSection = () => {
     { name: 'Azure Devops', category: 'tools', level: 80, icon: 'Docker', color: '#2496ED' }
   ];
 
-  const filteredSkills = activeCategory === 'all' 
-    ? skills 
-    : skills.filter(skill => skill.category === activeCategory);
+  const filteredSkills = useMemo(() => (
+    activeCategory === 'all' ? skills : skills.filter(skill => skill.category === activeCategory)
+  ), [activeCategory]);
 
   return (
-    <section id="skills" className="section-padding section-margin">
+    <section id="skills" className="section-padding section-margin bg-transparent">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="heading-lg mb-4 gradient-text">Technical Skills</h2>
+        <div className="text-center mb-8">
+          <h2 className="section-heading animate-underline">Technical Skills</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             A comprehensive toolkit for building modern, scalable applications
           </p>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {skillCategories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center space-x-2 ${
-                activeCategory === category.id
-                  ? 'bg-primary text-primary-foreground shadow-elevation-1'
-                  : 'bg-card text-muted-foreground hover:text-foreground hover:bg-muted border border-border'
-              }`}
-            >
-              <Icon name={category.icon} size={18} />
-              <span>{category.label}</span>
-            </button>
-          ))}
+        {/* Controls */}
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-10">
+          <div className="flex flex-wrap gap-3">
+            {skillCategories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`px-4 py-2 rounded-xl font-medium transition-all duration-300 flex items-center space-x-2 ${
+                  activeCategory === category.id
+                    ? 'bg-primary text-primary-foreground shadow-elevation-1'
+                    : 'bg-card text-muted-foreground hover:text-foreground hover:bg-muted border border-border'
+                }`}
+                aria-pressed={activeCategory === category.id}
+              >
+                <Icon name={categoryIconMap[category.id] || category.icon} size={16} />
+                <span>{category.label}</span>
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filteredSkills.map((skill, index) => (
-            <div
-              key={skill.name}
-              className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevation-1 group animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {/* Skill Header */}
-              <div className="flex items-center space-x-3 mb-4">
-                <div 
-                  className="w-10 h-10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-                  style={{ backgroundColor: `${skill.color}20` }}
-                >
-                  <Icon name={skill.icon} size={20} style={{ color: skill.color }} />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground">{skill.name}</h3>
-                  <p className="text-sm text-muted-foreground capitalize">{skill.category}</p>
-                </div>
-              </div>
-
-              {/* Progress Bar */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-muted-foreground">Proficiency</span>
-                  <span className="text-sm font-medium text-foreground">{skill.level}%</span>
-                </div>
-                <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 ease-out group-hover:animate-pulse"
-                    style={{ 
-                      width: `${skill.level}%`,
-                      animationDelay: `${index * 0.1}s`
-                    }}
-                  ></div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Skills Summary */}
-        <div className="mt-16 grid md:grid-cols-3 gap-8">
-          <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="Code" size={32} className="text-primary" />
-            </div>
-            <h3 className="text-xl font-semibold text-foreground mb-2">Full-Stack Development</h3>
-            <p className="text-muted-foreground">
-              End-to-end application development with modern frameworks and best practices
-            </p>
-          </div>
-
-          <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
-            <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="Brain" size={32} className="text-accent" />
-            </div>
-            <h3 className="text-xl font-semibold text-foreground mb-2">AI & Machine Learning</h3>
-            <p className="text-muted-foreground">
-              Intelligent solutions using cutting-edge AI technologies and frameworks
-            </p>
-          </div>
-
-          <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
-            <div className="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="Rocket" size={32} className="text-success" />
-            </div>
-            <h3 className="text-xl font-semibold text-foreground mb-2">Performance & Scale</h3>
-            <p className="text-muted-foreground">
-              Optimized applications built for performance, scalability, and reliability
-            </p>
-          </div>
+        {/* Skills Grid using SkillCard */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+          {filteredSkills.map((skill) => {
+            const { label, stars } = levelLabelAndStars(skill.level);
+            return (
+              <SkillCard
+                key={skill.name}
+                icon={<div className="w-7 h-7 rounded-md flex items-center justify-center" style={{ backgroundColor: `${skill.color}22` }}>
+                  <Icon name={skill.icon} size={18} style={{ color: skill.color }} />
+                </div>}
+                name={skill.name}
+                category={categoryLabel(skill.category)}
+                level={label}
+                stars={stars}
+                proficiency={skill.level}
+              />
+            );
+          })}
         </div>
       </div>
     </section>

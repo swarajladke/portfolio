@@ -125,11 +125,11 @@ const AIProjectsSection = () => {
   };
 
   return (
-    <section id="ai-projects" className="section-padding section-margin">
+    <section id="ai-projects" className="section-padding section-margin bg-transparent">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="heading-lg mb-4 gradient-text">AI Research & Projects</h2>
+          <h2 className="section-heading animate-underline">AI Research & Projects</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Exploring the frontiers of artificial intelligence through innovative research and practical applications
           </p>
@@ -140,11 +140,11 @@ const AIProjectsSection = () => {
           {aiProjects.map((project, index) => (
             <div
               key={project.id}
-              className="bg-card rounded-2xl border border-border overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-elevation-2 animate-fade-in"
+              className="bg-transparent rounded-2xl border border-transparent overflow-hidden transition-all duration-300 animate-fade-in shadow-lg shadow-black/30 hover:shadow-cyan-500/40 hover:border-white/20 hover:-translate-y-0.5"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Project Header */}
-              <div className="p-6 border-b border-border">
+              <div className="p-6 border-b border-white/10">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-center space-x-3 mb-2">
@@ -166,7 +166,7 @@ const AIProjectsSection = () => {
                     </span>
                     <button
                       onClick={() => toggleExpanded(project.id)}
-                      className="p-2 rounded-lg bg-muted hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                      className="p-2 rounded-lg bg-muted/40 hover:bg-primary/10 hover:text-primary transition-all duration-300"
                     >
                       <Icon 
                         name={expandedProject === project.id ? "ChevronUp" : "ChevronDown"} 
@@ -183,16 +183,18 @@ const AIProjectsSection = () => {
                   <div className="grid lg:grid-cols-2 gap-8">
                     {/* Project Image */}
                     <div className="space-y-6">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-64 object-cover rounded-xl border border-border"
-                      />
-                      
+                      <div className="relative">
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-64 object-cover rounded-xl"
+                        />
+                        <div className="absolute inset-0 rounded-xl ring-0 hover:ring-2 hover:ring-cyan-300/40 transition-all duration-300 pointer-events-none" />
+                      </div>
                       {/* Metrics */}
                       <div className="grid grid-cols-2 gap-4">
                         {Object.entries(project.metrics).map(([key, value]) => (
-                          <div key={key} className="text-center p-4 bg-muted/50 rounded-xl border border-border">
+                          <div key={key} className="text-center p-4 bg-muted/50 rounded-xl border border-white/10">
                             <div className="text-lg font-bold text-primary">{value}</div>
                             <div className="text-sm text-muted-foreground capitalize">
                               {key.replace(/([A-Z])/g, ' $1')}
@@ -257,7 +259,7 @@ const AIProjectsSection = () => {
                   </div>
 
                   {/* Impact & Publications */}
-                  <div className="mt-8 pt-6 border-t border-border">
+                  <div className="mt-8 pt-6 border-t border-white/10">
                     <div className="grid md:grid-cols-2 gap-8">
                       <div>
                         <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center">
@@ -292,7 +294,7 @@ const AIProjectsSection = () => {
 
         {/* Research Interests */}
         <div className="mt-16 text-center">
-          <div className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border max-w-4xl mx-auto">
+          <div className="bg-transparent p-8 rounded-2xl border border-transparent max-w-4xl mx-auto shadow-lg shadow-black/30 hover:shadow-cyan-500/40 hover:border-white/20 hover:-translate-y-0.5 transition-all duration-300">
             <Icon name="Lightbulb" size={32} className="text-primary mx-auto mb-4" />
             <h3 className="text-2xl font-semibold text-foreground mb-4">Current Research Interests</h3>
             <div className="flex flex-wrap justify-center gap-4 mb-6">

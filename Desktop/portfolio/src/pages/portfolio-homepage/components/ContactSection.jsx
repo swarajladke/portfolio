@@ -113,11 +113,11 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="section-padding section-margin bg-muted/30">
+    <section id="contact" className="section-padding section-margin bg-transparent">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="heading-lg mb-4 gradient-text">Get In Touch</h2>
+          <h2 className="section-heading animate-underline">Get In Touch</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Let's collaborate on innovative projects and create something amazing together
           </p>
@@ -146,7 +146,7 @@ const ContactSection = () => {
               {contactInfo.map((info, index) => (
                 <div
                   key={index}
-                  className="flex items-start space-x-4 p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border hover:border-primary/50 transition-all duration-300"
+                  className="flex items-start space-x-4 p-4 rounded-2xl bg-transparent border border-transparent shadow-lg shadow-black/30 hover:border-white/20 hover:shadow-cyan-500/40 transition-all duration-300"
                 >
                   <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Icon name={info.icon} size={20} className="text-primary" />
@@ -171,7 +171,7 @@ const ContactSection = () => {
                   <button
                     key={index}
                     onClick={() => window.open(social.url, '_blank')}
-                    className="flex items-center space-x-3 p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevation-1 group text-left"
+                    className="flex items-center space-x-3 p-4 rounded-2xl bg-transparent border border-transparent shadow-lg shadow-black/30 hover:border-white/20 hover:shadow-cyan-500/40 transition-all duration-300 group text-left"
                   >
                     <div 
                       className="w-10 h-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
@@ -194,7 +194,7 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-card rounded-2xl border border-border p-8 shadow-elevation-2">
+          <div className="rounded-2xl p-8 bg-transparent border border-transparent shadow-lg shadow-black/30 hover:border-white/20 hover:shadow-cyan-500/40 transition-all duration-300">
             <h3 className="text-2xl font-semibold text-foreground mb-6 flex items-center">
               <Icon name="Send" size={24} className="mr-3 text-primary" />
               Send Me a Message
@@ -243,7 +243,7 @@ const ContactSection = () => {
                   placeholder="Tell me about your project, ideas, or how we can work together..."
                   rows={6}
                   required
-                  className="w-full px-4 py-3 bg-input border border-border rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 bg-input border border-transparent rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none"
                 />
               </div>
 
@@ -261,7 +261,7 @@ const ContactSection = () => {
             </form>
 
             {/* Additional Info */}
-            <div className="mt-8 pt-6 border-t border-border">
+            <div className="mt-8 pt-6">
               <div className="flex items-start space-x-3">
                 <Icon name="Clock" size={16} className="text-primary flex-shrink-0 mt-1" />
                 <div>
@@ -277,7 +277,7 @@ const ContactSection = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <div className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border max-w-3xl mx-auto">
+          <div className="p-8 rounded-2xl max-w-3xl mx-auto bg-transparent border border-transparent shadow-lg shadow-black/30 hover:border-white/20 hover:shadow-cyan-500/40 transition-all duration-300">
             <Icon name="Rocket" size={32} className="text-primary mx-auto mb-4" />
             <h3 className="text-2xl font-semibold text-foreground mb-4">Ready to Build Something Amazing?</h3>
             <p className="text-muted-foreground mb-6">

@@ -12,9 +12,6 @@ import Footer from './components/Footer';
 
 const PortfolioHomepage = () => {
   useEffect(() => {
-    // Smooth scroll behavior for the entire page
-    document.documentElement.style.scrollBehavior = 'smooth';
-    
     // Add scroll-triggered animations
     const observerOptions = {
       threshold: 0.1,
@@ -44,7 +41,7 @@ const PortfolioHomepage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-black text-foreground">
       {/* Sticky Navigation */}
       <StickyNavBar />
 

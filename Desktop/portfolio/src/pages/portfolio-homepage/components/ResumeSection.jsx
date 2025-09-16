@@ -55,7 +55,7 @@ const ResumeSection = () => {
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="heading-lg mb-4 gradient-text">Resume & CV</h2>
+            <h2 className="section-heading animate-underline">Resume & CV</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Comprehensive overview of my professional journey, skills, and achievements
             </p>

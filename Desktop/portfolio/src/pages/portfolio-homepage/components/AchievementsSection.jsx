@@ -120,7 +120,7 @@ const AchievementsSection = () => {
       issuer: 'GitHub-VS code themes.com(open source community)',
       date: 'July 2025',
       description: 'Developed a dynamic glowing VS Code theme engine that adapts to user preferences and enhances coding experience with customizable glow effects.',
-      image: 'https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=400&h=300&fit=crop',
+      image: 'https://www.gitkraken.com/wp-content/uploads/2024/04/Best-VS-Code-themes-hero-2.png',
       category: 'VS Code Theme Development',
       View:'https://vscodethemes.com/e/swarajladke.elora/elora-cyan'
     },
@@ -164,11 +164,11 @@ const AchievementsSection = () => {
   };
 
   return (
-    <section id="achievements" className="section-padding section-margin bg-muted/30">
+    <section id="achievements" className="section-padding section-margin bg-transparent">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="heading-lg mb-4 gradient-text">Achievements & Recognition</h2>
+          <h2 className="section-heading animate-underline">Achievements & Recognition</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Celebrating milestones and recognitions earned through dedication and innovation
           </p>
@@ -176,20 +176,23 @@ const AchievementsSection = () => {
 
         {/* Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center space-x-2 ${
-                activeTab === tab.id
-                  ? 'bg-primary text-primary-foreground shadow-elevation-1'
-                  : 'bg-card text-muted-foreground hover:text-foreground hover:bg-muted border border-border'
-              }`}
-            >
-              <Icon name={tab.icon} size={18} />
-              <span>{tab.label}</span>
-            </button>
-          ))}
+          {tabs.map((tab) => {
+            const isActive = activeTab === tab.id;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center space-x-2 shadow-lg ${
+                  isActive
+                    ? 'bg-transparent border border-white/20 text-primary hover:shadow-cyan-500/40'
+                    : 'bg-transparent border border-transparent text-muted-foreground hover:text-foreground hover:border-white/20 hover:shadow-cyan-500/40'
+                }`}
+              >
+                <Icon name={tab.icon} size={18} />
+                <span>{tab.label}</span>
+              </button>
+            );
+          })}
         </div>
 
         {/* Content */}
@@ -197,7 +200,7 @@ const AchievementsSection = () => {
           {getTabContent().map((item, index) => (
             <div
               key={item.id}
-              className="bg-card rounded-2xl border border-border overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-elevation-2 animate-fade-in"
+              className="bg-transparent rounded-2xl border border-transparent overflow-hidden transition-all duration-300 animate-fade-in shadow-lg shadow-black/30 hover:shadow-cyan-500/40 hover:border-white/20 hover:-translate-y-0.5"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Image */}
@@ -205,9 +208,10 @@ const AchievementsSection = () => {
                 <Image
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-cover rounded-t-2xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute inset-0 rounded-t-2xl ring-0 group-hover:ring-2 group-hover:ring-cyan-300/40 transition-all duration-300 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-t-2xl"></div>
                 {item.position && (
                   <div className="absolute top-4 right-4">
                     <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getPositionColor(item.position)}`}>
@@ -243,7 +247,7 @@ const AchievementsSection = () => {
                     {(item.technologies || item.skills).map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 bg-muted text-muted-foreground rounded text-xs border border-border"
+                        className="px-2 py-1 bg-muted/50 text-muted-foreground rounded text-xs border border-white/10"
                       >
                         {tech}
                       </span>
@@ -299,19 +303,19 @@ const AchievementsSection = () => {
 
         {/* Achievement Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
+          <div className="text-center p-6 bg-transparent rounded-2xl border border-transparent hover:border-white/20 shadow-lg shadow-black/30 hover:shadow-cyan-500/40 transition-all duration-300">
             <div className="text-3xl font-bold text-primary mb-2">10+</div>
             <div className="text-sm text-muted-foreground">Hackathons Participated</div>
           </div>
-          <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
+          <div className="text-center p-6 bg-transparent rounded-2xl border border-transparent hover:border-white/20 shadow-lg shadow-black/30 hover:shadow-cyan-500/40 transition-all duration-300">
             <div className="text-3xl font-bold text-accent mb-2">5+</div>
             <div className="text-sm text-muted-foreground">Certifications Earned</div>
           </div>
-          <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
+          <div className="text-center p-6 bg-transparent rounded-2xl border border-transparent hover:border-white/20 shadow-lg shadow-black/30 hover:shadow-cyan-500/40 transition-all duration-300">
             <div className="text-3xl font-bold text-success mb-2">2</div>
             <div className="text-sm text-muted-foreground">projects in production</div>
           </div>
-          <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
+          <div className="text-center p-6 bg-transparent rounded-2xl border border-transparent hover:border-white/20 shadow-lg shadow-black/30 hover:shadow-cyan-500/40 transition-all duration-300">
             <div className="text-3xl font-bold text-warning mb-2">2</div>
             <div className="text-sm text-muted-foreground">Recognition Received</div>
           </div>

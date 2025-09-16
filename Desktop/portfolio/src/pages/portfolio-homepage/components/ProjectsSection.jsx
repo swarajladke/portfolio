@@ -7,6 +7,7 @@ const ProjectsSection = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const projectFilters = [
     { id: 'all', label: 'All Projects', icon: 'Grid3X3' },
@@ -206,7 +207,7 @@ const ProjectsSection = () => {
         'AI Testing → Generate & run test cases automatically.',
         'AI Deployment → One-click deploy to cloud platforms.',
         'Real-time Insights - Predictive analytics for sprint success and risk mitigation',
-        'Collaboration Hub - Centralized communication and document sharing',],
+        'Collaboration Hub - Centralized communication and document sharing'],
       stats: {
         averageSpeed: ' To be updated',
         accuracy: 'To be updated'
@@ -221,9 +222,66 @@ const ProjectsSection = () => {
     ? projects 
     : projects.filter(project => project.category === activeFilter);
 
-  const handleProjectClick = (project) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
+  const handleProjectClick = (project, event) => {
+    if (isAnimating) return;
+    const card = event?.currentTarget;
+    if (!card) {
+      setSelectedProject(project);
+      setIsModalOpen(true);
+      return;
+    }
+
+    setIsAnimating(true);
+    card.style.pointerEvents = 'none';
+
+    const rect = card.getBoundingClientRect();
+    const clone = card.cloneNode(true);
+
+    // Style the clone for a floating animation to center
+    const computed = window.getComputedStyle(card);
+    clone.style.position = 'fixed';
+    clone.style.left = `${rect.left}px`;
+    clone.style.top = `${rect.top}px`;
+    clone.style.width = `${rect.width}px`;
+    clone.style.height = `${rect.height}px`;
+    clone.style.margin = '0';
+    clone.style.zIndex = '9999';
+    clone.style.pointerEvents = 'none';
+    clone.style.borderRadius = computed.borderRadius || '16px';
+    clone.style.backfaceVisibility = 'visible';
+    clone.style.transformStyle = 'preserve-3d';
+    clone.style.transformOrigin = '50% 50%';
+    document.body.appendChild(clone);
+
+    // Compute delta to center of viewport
+    const targetX = window.innerWidth / 2 - (rect.left + rect.width / 2);
+    const targetY = window.innerHeight / 2 - (rect.top + rect.height / 2);
+
+    // Use CSS variables with keyframes to ensure animationend fires
+    clone.style.setProperty('--tx', `${targetX}px`);
+    clone.style.setProperty('--ty', `${targetY}px`);
+    clone.style.animation = 'moveFlipCenter 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards';
+
+    let done = false;
+    const cleanupAndOpen = () => {
+      if (done) return;
+      done = true;
+      clone.removeEventListener('animationend', onEnd);
+      if (clone && clone.parentNode) clone.parentNode.removeChild(clone);
+      card.style.pointerEvents = '';
+      setIsAnimating(false);
+      setSelectedProject(project);
+      setIsModalOpen(true);
+    };
+
+    const onEnd = (e) => {
+      if (e.target !== clone) return;
+      cleanupAndOpen();
+    };
+
+    const fallback = setTimeout(cleanupAndOpen, 1300);
+
+    clone.addEventListener('animationend', onEnd);
   };
 
   const getStatusColor = (status) => {
@@ -238,11 +296,11 @@ const ProjectsSection = () => {
 
   return (
     <>
-      <section id="projects" className="section-padding section-margin bg-muted/30">
+      <section id="projects" className="section-padding section-margin bg-transparent">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="heading-lg mb-4 gradient-text">Featured Projects</h2>
+            <h2 className="section-heading animate-underline">Featured Projects</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Showcasing innovative solutions built with cutting-edge technologies
             </p>
@@ -271,9 +329,9 @@ const ProjectsSection = () => {
             {filteredProjects.map((project, index) => (
               <div
                 key={project.id}
-                className="bg-card rounded-2xl border border-border overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-elevation-2 group cursor-pointer animate-fade-in"
+                className="bg-transparent rounded-2xl border border-transparent overflow-hidden transition-all duration-300 group cursor-pointer animate-fade-in shadow-lg shadow-black/30 hover:shadow-cyan-500/40 hover:border-white/20 hover:-translate-y-0.5"
                 style={{ animationDelay: `${index * 0.1}s` }}
-                onClick={() => handleProjectClick(project)}
+                onClick={(e) => handleProjectClick(project, e)}
               >
                 {/* Project Image */}
                 <div className="relative overflow-hidden">
@@ -282,7 +340,9 @@ const ProjectsSection = () => {
                     alt={project.title}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  {/* Glow overlay */}
+                  <div className="absolute inset-0 rounded-t-2xl ring-0 group-hover:ring-2 group-hover:ring-cyan-300/40 transition-all duration-300 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-2xl"></div>
                   <div className="absolute top-4 right-4">
                     <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(project.status)}`}>
                       {project.status}
@@ -308,7 +368,7 @@ const ProjectsSection = () => {
                     {project.technologies.slice(0, 3).map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 bg-muted text-muted-foreground rounded text-xs border border-border"
+                        className="px-2 py-1 bg-muted/50 text-muted-foreground rounded text-xs border border-white/10"
                       >
                         {tech}
                       </span>
@@ -368,7 +428,7 @@ const ProjectsSection = () => {
           <div className="text-center mt-12">
             <button
               onClick={() => window.open('https://github.com/swarajladke', '_blank')}
-              className="px-8 py-4 bg-card border border-border text-foreground rounded-xl font-semibold hover:border-primary hover:text-primary transition-all duration-300 btn-glow flex items-center space-x-2 mx-auto"
+              className="px-8 py-4 bg-transparent border border-transparent text-foreground rounded-xl font-semibold transition-all duration-300 btn-glow flex items-center space-x-2 mx-auto shadow-lg shadow-black/30 hover:shadow-cyan-500/40 hover:border-white/20 hover:-translate-y-0.5"
             >
               <Icon name="Github" size={20} />
               <span>View All Projects on GitHub</span>

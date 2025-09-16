@@ -85,7 +85,7 @@ const StickyNavBar = () => {
       </div> 
 
       {/* Navigation Bar */}
-      <nav className="sticky top-0 z-100 bg-background/80 backdrop-blur-md border-b border-border">
+      <nav className="sticky top-0 z-100 bg-background/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
@@ -136,7 +136,7 @@ const StickyNavBar = () => {
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
           <div className="md:hidden animate-slide-in">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-card/95 backdrop-blur-md border-t border-border">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-card/95 backdrop-blur-md">
               {navigationItems.map((item) => (
                 <button
                   key={item.anchor}

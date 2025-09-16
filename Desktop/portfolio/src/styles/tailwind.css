@@ -9,12 +9,13 @@
     /* Core System Colors */
     --color-background: #000000; /* pure black for darker background */
     --color-foreground: #FFFFFF; /* white */
-    --color-border: rgba(255, 255, 255, 0.1); /* white-10 */
+    --color-border: rgba(255, 255, 255, 0.15); /* slightly stronger edge for glass */
     --color-input: #16213E; /* elevated-blue-gray */
     --color-ring: #00BFFF; /* neon-blue */
-    --color-card: #16213E; /* elevated-blue-gray */
+    /* Make cards fully transparent across the site */
+    --color-card: transparent;
     --color-card-foreground: #FFFFFF; /* white */
-    --color-popover: #16213E; /* elevated-blue-gray */
+    --color-popover: transparent;
     --color-popover-foreground: #FFFFFF; /* white */
     --color-muted: #1A1A2E; /* deep-space-blue */
     --color-muted-foreground: #B8BCC8; /* cool-gray */
@@ -38,7 +39,7 @@
     --color-destructive-foreground: #FFFFFF; /* white */
 
     /* Surface Colors */
-    --color-surface: #16213E; /* elevated-blue-gray */
+    --color-surface: transparent;
     --color-text-primary: #FFFFFF; /* white */
     --color-text-secondary: #B8BCC8; /* cool-gray */
 
@@ -140,44 +141,27 @@
     transform: translateY(-2px);
   }
 
-  /* Theme Switcher Styles */
-.theme-switcher  {
-    @apply fixed top-4 right-4 z-40 flex gap-2 p-2 backdrop-blur-sm border border-border rounded-xl;
+  /* Hover Card - lift + scale + glow + sheen */
+  .hover-card {
+    position: relative;
+    transition: transform var(--animation-normal) var(--animation-spring), box-shadow var(--animation-normal) ease, border-color var(--animation-normal) ease;
   }
-
-  .theme-option {
-    @apply w-8 h-8 rounded-full border-2 border-transparent cursor-pointer transition-all duration-300;
+  .hover-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: var(--shadow-elevation-2);
+    border-color: rgba(0,191,255,0.4);
   }
-
-  .theme-option.active {
-    @apply border-white shadow-glow;
+  .hover-card::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.08) 40%, transparent 60%);
+    transform: translateX(-120%);
+    transition: transform 600ms ease;
   }
-
-  /* Responsive Typography */
-  .heading-xl {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
-  }
-
-  .heading-lg {
-    @apply text-3xl md:text-4xl font-bold tracking-tight;
-  }
-
-  .heading-md {
-    @apply text-2xl md:text-3xl font-semibold tracking-tight;
-  }
-
-  .heading-sm {
-    @apply text-xl md:text-2xl font-semibold tracking-tight;
-  }
-
-  /* Code Styles */
-  .code-text {
-    @apply font-mono text-sm bg-muted px-2 py-1 rounded border;
-  }
-
-  /* Gradient Text */
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
+  .hover-card:hover::after {
+    transform: translateX(120%);
   }
 }
 
@@ -210,37 +194,24 @@
   }
 
   /* Backdrop Blur Utilities */
-  .backdrop-blur-xs {
-    backdrop-filter: blur(2px);
-  }
+  .backdrop-blur-xs { backdrop-filter: blur(2px); }
+  .backdrop-blur-sm { backdrop-filter: blur(4px); }
+  .backdrop-blur-md { backdrop-filter: blur(8px); }
+  .backdrop-blur-lg { backdrop-filter: blur(12px); }
 
-  .backdrop-blur-sm {
-    backdrop-filter: blur(4px);
-  }
+  /* Ensure no blur on card backgrounds even if blur utilities are present */
+  .bg-card, .bg-card\/50 { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background-color: transparent !important; }
 
-  .backdrop-blur-md {
-    backdrop-filter: blur(8px);
-  }
+  /* Optional helpers (unused if transparency only) */
+  .glass-strong { @apply bg-white/0 border border-white/20; }
+  .glass-soft { @apply bg-white/0 border border-white/10; }
 
   /* Shadow Utilities */
-  .shadow-elevation-1 {
-    box-shadow: var(--shadow-elevation-1);
-  }
-
-  .shadow-elevation-2 {
-    box-shadow: var(--shadow-elevation-2);
-  }
-
-  .shadow-elevation-3 {
-    box-shadow: var(--shadow-elevation-3);
-  }
+  .shadow-elevation-1 { box-shadow: var(--shadow-elevation-1); }
+  .shadow-elevation-2 { box-shadow: var(--shadow-elevation-2); }
+  .shadow-elevation-3 { box-shadow: var(--shadow-elevation-3); }
 
   /* Spacing Utilities */
-  .section-padding {
-    @apply px-4 md:px-8 lg:px-16;
-  }
-
-  .section-margin {
-    @apply py-16 md:py-24 lg:py-32;
-  }
+  .section-padding { @apply px-4 md:px-8 lg:px-16; }
+  .section-margin { @apply py-16 md:py-24 lg:py-32; }
 }
