@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Icon from '../../../components/AppIcon';
 
+const nameToType = 'Swaraj Ladke';
+
 const HeroSection = () => {
-  const [displayText, setDisplayText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  
+  const [titleIndex, setTitleIndex] = useState(0);
+  const [titleDisplay, setTitleDisplay] = useState('');
+  const [titleCharIndex, setTitleCharIndex] = useState(0);
+  const [isTitleDeleting, setIsTitleDeleting] = useState(false);
+
   const titles = [
     'Fullstack Developer',
     'AI/ML Enthusiast',
@@ -14,29 +17,33 @@ const HeroSection = () => {
   ];
 
   useEffect(() => {
-    const currentTitle = titles[currentIndex];
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        if (displayText.length < currentTitle.length) {
-          setDisplayText(currentTitle.slice(0, displayText.length + 1));
-        } else {
-          setTimeout(() => setIsDeleting(true), 2000);
-        }
+    const currentTitle = titles[titleIndex];
+    let timeout;
+    if (!isTitleDeleting) {
+      if (titleCharIndex < currentTitle.length) {
+        timeout = setTimeout(() => {
+          setTitleDisplay(currentTitle.slice(0, titleCharIndex + 1));
+          setTitleCharIndex(titleCharIndex + 1);
+        }, 100);
       } else {
-        if (displayText.length > 0) {
-          setDisplayText(displayText.slice(0, -1));
-        } else {
-          setIsDeleting(false);
-          setCurrentIndex((prev) => (prev + 1) % titles.length);
-        }
+        timeout = setTimeout(() => setIsTitleDeleting(true), 2000);
       }
-    }, isDeleting ? 50 : 100);
-
+    } else {
+      if (titleCharIndex > 0) {
+        timeout = setTimeout(() => {
+          setTitleDisplay(currentTitle.slice(0, titleCharIndex - 1));
+          setTitleCharIndex(titleCharIndex - 1);
+        }, 50);
+      } else {
+        setIsTitleDeleting(false);
+        setTitleIndex((prev) => (prev + 1) % titles.length);
+      }
+    }
     return () => clearTimeout(timeout);
-  }, [displayText, currentIndex, isDeleting, titles]);
+  }, [titleCharIndex, isTitleDeleting, titleIndex]);
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+    <section id="hero" className="relative min-h-[70vh] md:min-h-[60vh] lg:min-h-[65vh] flex items-center justify-center overflow-hidden bg-background">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/30 rounded-full blur-3xl animate-float"></div>
@@ -54,38 +61,31 @@ const HeroSection = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-2 md:px-4 max-w-4xl mx-auto">
         {/* Profile Image */}
-        <div className="mb-8 relative">
-          <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full bg-gradient-to-br from-primary to-accent p-1 animate-glow">
-            <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-              <Icon name="User" size={64} className="text-primary" />
-            </div>
-          </div>
-          {/*<div className="absolute -bottom-2 -right-2 w-8 h-8 bg-success rounded-full border-4 border-background animate-pulse"></div>*/}
+        <div className="mb-4 md:mb-6 relative rounded-full w-48 h-48 md:w-56 md:h-56 mx-auto glow-avatar overflow-visible">
+          {/* Glow is applied via ::after on this container; no extra wrapper elements */}
+          <img 
+            src="assets/images/photo.png" 
+            alt="Test"
+            className="relative z-10 w-full h-full rounded-full object-cover object-center"
+          />
         </div>
 
-        {/* Name */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 gradient-text animate-fade-in">
-          Swaraj Ladke
+        {/* Name static with bounce */}
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-2 md:mb-3 gradient-text animate-bounce">
+          {nameToType}
         </h1>
-
-        {/* Typing Animation */}
-        <div className="mb-8 h-16 flex items-center justify-center">
+        {/* Rotating Titles Typing Animation */}
+        <div className="mb-6 md:mb-8 h-12 md:h-14 flex items-center justify-center">
           <h2 className="text-xl md:text-2xl lg:text-3xl text-muted-foreground">
-            <span className="text-primary">&gt;</span> {displayText}
+            <span className="text-primary">&gt;</span> {titleDisplay}
             <span className="animate-pulse text-primary">|</span>
           </h2>
         </div>
 
-        {/* Description */}
-        <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-          Passionate about creating innovative solutions through code and artificial intelligence. 
-          Building the future, one project at a time.
-        </p>
-
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-6 md:mb-8">
           <button
             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             className="px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold btn-glow hover:scale-105 transition-all duration-300 flex items-center space-x-2"
@@ -102,13 +102,32 @@ const HeroSection = () => {
           </button>
         </div>
         {/* Move horizontal line further down */}
-        <div className="w-full h-0.5 bg-primary/40 mx-auto mt-16 mb-12" />
+        <div className="w-full h-0.5 bg-primary/40 mx-auto mt-10 md:mt-12 mb-8" />
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <Icon name="ChevronDown" size={24} className="text-primary animate-pulse" />
         </div>
       </div>
+      <style>{`
+        .glow-avatar::after {
+          content: '';
+          position: absolute;
+          inset: -6px;
+          border-radius: 9999px;
+          z-index: 0;
+          pointer-events: none;
+          box-shadow: 0 0 24px 8px rgba(0, 247, 255, 0.45);
+          background: radial-gradient(circle, rgba(0,247,255,0.35) 0%, rgba(0,247,255,0.18) 40%, transparent 70%);
+          filter: blur(10px);
+          animation: neonPulse 2.6s ease-in-out infinite;
+        }
+        @keyframes neonPulse {
+          0% { opacity: 0.5; box-shadow: 0 0 18px 6px rgba(0,247,255,0.35); }
+          50% { opacity: 1; box-shadow: 0 0 36px 14px rgba(0,247,255,0.7); }
+          100% { opacity: 0.5; box-shadow: 0 0 18px 6px rgba(0,247,255,0.35); }
+        }
+      `}</style>
     </section>
   );
 };
