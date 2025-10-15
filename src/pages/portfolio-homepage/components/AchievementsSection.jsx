@@ -110,6 +110,19 @@ const AchievementsSection = () => {
       skills: [ 'Generative AI', 'Oracle Cloud', 'AI Models', 'AI Integration'],
       description: 'Certification validating expertise in generative AI concepts, Oracle Cloud Infrastructure, and the ability to design and deploy AI-driven solutions.',
       verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=90D1726627922C232F12843FBCFC54577E5DFE3C7E10B0C29FA5726D815F110E'
+    },
+
+    {
+      id: 5,
+      title: 'Certificate of publication of research paper (AI Augmented DigitalTwin for personalized learning in virtual classrooms',
+      issuer: 'IJSCI',
+      date: 'October 2025',
+      credentialId: '518769296831',
+      image: 'https://knowledgeworks.org/wp-content/uploads/2023/08/kate-goodman-smart-technologies-covid-19-scaled-1.jpg',
+      skills: [ 'Python','tesorflow','reactjs','tailwind','FastAPI','Flask'],
+      description: 'Certification of publication of research paper of EduTwin(AI Augmented digital twin for personalized learning in virtual classrooms.).',
+      verifyUrl: 'https://drive.google.com/file/d/105yPGXKiwzQTe-BICyIxrlAOPq4k83cj/preview'
+
     }
   ];
 
