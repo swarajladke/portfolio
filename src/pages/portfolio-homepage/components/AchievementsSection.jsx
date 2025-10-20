@@ -19,7 +19,7 @@ const AchievementsSection = () => {
       date: 'Dec 4 2025',
       category: 'AI/ML Track',
       description: 'Developing an AI-powered solution for smart city traffic management using computer vision and predictive analytics.',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt3w2judwvgX_BlzBGkR33oEXiTybqCP0d0RT5P2S7tBtA-mSaDtJtYhvDrvFiom1x06Q&usqp=CAU',
+      image: 'https://www.arm.com/blogs/blueprint/wp-content/uploads/2023/08/Arm_Hero_Cortex_2020.jpg',
       technologies: ['Python', 'TensorFlow', 'OpenCV', 'React', 'flask'],
       prize: '$15,000',
       team: 'solo',
