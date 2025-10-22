@@ -69,7 +69,18 @@ const AchievementsSection = () => {
   const certifications = [
     {
       id: 1,
-      title: 'Web Development in React.js:',
+      title: 'Oracle APEX Cloud Developer Certified Professional',
+      issuer: 'Oracle',
+      date: 'Oct 2025',
+      credentialId: '102407713APEX24CDOCP',
+      image: 'https://images.surferseo.art/b775813f-af1a-4f57-a2b8-99484022e6ba.jpeg',
+      skills: [ 'Oracle APEX', 'SQL', 'PL/SQL', 'Oracle Cloud Infrastructure (OCI)', 'Low-Code Development', 'Application Deployment'],
+      description: 'Earned certification demonstrating advanced proficiency in Oracle Application Express (APEX) and Oracle Cloud Infrastructure (OCI) for developing, securing, and deploying enterprise-grade, low-code web applications.',
+      verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=7CC5C939C41DCF5E14FB14AA73C28227B67D6965287DE5E5BB1C743A7FE7B21F'
+    },
+    {
+      id: 2,
+      title: 'Web Development in React.js',
       issuer: 'Coursera',
       date: 'July 2025',
       credentialId: '3ZF9EFXTT23Q',
@@ -79,7 +90,7 @@ const AchievementsSection = () => {
       verifyUrl: 'https://coursera.org/verify/3ZF9EFXTT23Q'
     },
     {
-      id: 2,
+      id: 3,
       title: 'Technology Job Simulation-Deloitte',
       issuer: 'Forage',
       date: 'June 2025',
@@ -90,7 +101,7 @@ const AchievementsSection = () => {
       verifyUrl: 'https://drive.google.com/file/d/1ZlsgW31luqVJeYQS7ULwww9OV4U-vQdU/preview'
     },
     {
-      id: 3,
+      id: 4,
       title: 'Developer and Technology Job Simulation-Accenture',
       issuer: 'Forage',
       date: 'June 2025',
@@ -101,7 +112,7 @@ const AchievementsSection = () => {
       verifyUrl: 'https://drive.google.com/file/d/1ipWwwLKsk6PNJCtJOiz1mBhaQPG4RbdU/preview'
     },
     {
-      id: 4,
+      id: 5,
       title: 'Oracle Cloud Infrastructure 2025 Certified Generative AI Professional',
       issuer: 'Oracle',
       date: 'August 2025',
@@ -113,7 +124,7 @@ const AchievementsSection = () => {
     },
 
     {
-      id: 5,
+      id: 6,
       title: 'Certificate of publication of research paper (AI Augmented DigitalTwin for personalized learning in virtual classrooms',
       issuer: 'IJSCI',
       date: 'October 2025',
