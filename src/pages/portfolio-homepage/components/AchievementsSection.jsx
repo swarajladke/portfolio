@@ -142,7 +142,7 @@ const AchievementsSection = () => {
       issuer: 'Oracle',
       date: 'October 2025',
       credentialId: '518769296831',
-      image: 'https://knowledgeworks.org/wp-content/uploads/2023/08/kate-goodman-smart-technologies-covid-19-scaled-1.jpg',
+      image: 'https://www.xlncacademy.com/Blogs/admin/postimages/a02ef84e7525c7107f2f989197eb9d05.png',
       skills: [ 'Python','tesorflow','reactjs','tailwind','FastAPI','Flask'],
       description: 'Certification of publication of research paper of EduTwin(AI Augmented digital twin for personalized learning in virtual classrooms.).',
       verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=A9311F55024E089FCFD613862A051C576F4D325AAD6E4D6E80A3981B037041C1'
