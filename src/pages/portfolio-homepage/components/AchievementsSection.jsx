@@ -180,7 +180,8 @@ const AchievementsSection = () => {
       issuer: 'Oracle',
       date: 'October 2025',
       credentialId: '518769296831',
-      image: 'https://knowledgeworks.org/wp-content/uploads/2023/08/kate-goodman-smart-technologies-covid-19-scaled-1.jpg',
+      image: 'https://www.xlncacademy.com/Blogs/admin/postimages/a02ef84e7525c7107f2f989197eb9d05.png',
+      category: 'Artificial intelligence',
       skills: [ 'Python','tesorflow','reactjs','tailwind','FastAPI','Flask'],
       description: 'Certification of publication of research paper of EduTwin(AI Augmented digital twin for personalized learning in virtual classrooms.).',
       verifyUrl: 'https://drive.google.com/file/d/1A3tjLQ1v_irC4M2qxDBIcAVJaHmZ-4RW/view?usp=drive_link'
@@ -193,6 +194,7 @@ const AchievementsSection = () => {
       date: 'Oct 2025',
       credentialId: '102407713APEX24CDOCP',
       image: 'https://images.surferseo.art/b775813f-af1a-4f57-a2b8-99484022e6ba.jpeg',
+      category: 'Cloud',
       skills: [ 'Oracle APEX', 'SQL', 'PL/SQL', 'Oracle Cloud Infrastructure (OCI)', 'Low-Code Development', 'Application Deployment'],
       description: 'Earned certification demonstrating advanced proficiency in Oracle Application Express (APEX) and Oracle Cloud Infrastructure (OCI) for developing, securing, and deploying enterprise-grade, low-code web applications.',
       verifyUrl: 'https://drive.google.com/file/d/1bl5UUgK63kGLewh_TPPxeunR9kFCJzib/preview'
