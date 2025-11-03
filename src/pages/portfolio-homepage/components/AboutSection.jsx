@@ -5,8 +5,8 @@ const AboutSection = () => {
   const stats = [
     { label: 'Projects Completed', value: '5+', icon: 'FolderOpen' },
     { label: 'Technologies Mastered', value: '15+', icon: 'Code' },
-    { label: 'VS extensions', value: '2', icon: 'VS code' },
-    { label: 'Research Papers', value: '2', icon: 'Research' }
+    { label: 'VS extensions', value: '2', icon: 'IDE' },
+    { label: 'Research Papers', value: '2', icon: 'paper' }
   ];
 
   return (

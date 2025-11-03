@@ -79,7 +79,7 @@ const AchievementsSection = () => {
       verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=7CC5C939C41DCF5E14FB14AA73C28227B67D6965287DE5E5BB1C743A7FE7B21F'
     },
     {
-      id: 2,
+      id: 4,
       title: 'Web Development in React.js',
       issuer: 'Coursera',
       date: 'July 2025',
@@ -90,7 +90,7 @@ const AchievementsSection = () => {
       verifyUrl: 'https://coursera.org/verify/3ZF9EFXTT23Q'
     },
     {
-      id: 3,
+      id: 5,
       title: 'Technology Job Simulation-Deloitte',
       issuer: 'Forage',
       date: 'June 2025',
@@ -101,7 +101,7 @@ const AchievementsSection = () => {
       verifyUrl: 'https://drive.google.com/file/d/1ZlsgW31luqVJeYQS7ULwww9OV4U-vQdU/preview'
     },
     {
-      id: 4,
+      id: 6,
       title: 'Developer and Technology Job Simulation-Accenture',
       issuer: 'Forage',
       date: 'June 2025',
@@ -112,7 +112,7 @@ const AchievementsSection = () => {
       verifyUrl: 'https://drive.google.com/file/d/1ipWwwLKsk6PNJCtJOiz1mBhaQPG4RbdU/preview'
     },
     {
-      id: 5,
+      id: 2,
       title: 'Oracle Cloud Infrastructure 2025 Certified Generative AI Professional',
       issuer: 'Oracle',
       date: 'August 2025',
@@ -124,9 +124,22 @@ const AchievementsSection = () => {
     },
 
     {
-      id: 6,
+      id: 7,
       title: 'Certificate of publication of research paper (AI Augmented DigitalTwin for personalized learning in virtual classrooms',
       issuer: 'IJSCI',
+      date: 'October 2025',
+      credentialId: '323390829OCI25AICFA',
+      image: 'https://wallpapers.com/images/featured/cloud-storage-background-qnc7mnsd9pjxtquw.jpg',
+      skills: [ 'AI','Machine learning','LLMs','deep learning','FastAPI','RNNs, CNNs LSTMs'],
+      description: 'Oracle-certified in AI and ML fundamentals with hands-on knowledge of Oracle Cloud Infrastructure and intelligent solution development.)',
+      verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=A9311F55024E089FCFD613862A051C576F4D325AAD6E4D6E80A3981B037041C1'
+
+    },
+
+    {
+      id: 3,
+      title: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
+      issuer: 'Oracle',
       date: 'October 2025',
       credentialId: '518769296831',
       image: 'https://knowledgeworks.org/wp-content/uploads/2023/08/kate-goodman-smart-technologies-covid-19-scaled-1.jpg',
@@ -159,7 +172,31 @@ const AchievementsSection = () => {
       category: 'Generative AI',
       View:'https://drive.google.com/file/d/1SlMy-_3kPjxeOiHzoJ5ct2bYwsYqC82W/preview'
 
-    }
+    },
+    
+    {
+      id: 3,
+      title: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
+      issuer: 'Oracle',
+      date: 'October 2025',
+      credentialId: '518769296831',
+      image: 'https://knowledgeworks.org/wp-content/uploads/2023/08/kate-goodman-smart-technologies-covid-19-scaled-1.jpg',
+      skills: [ 'Python','tesorflow','reactjs','tailwind','FastAPI','Flask'],
+      description: 'Certification of publication of research paper of EduTwin(AI Augmented digital twin for personalized learning in virtual classrooms.).',
+      verifyUrl: 'https://drive.google.com/file/d/105yPGXKiwzQTe-BICyIxrlAOPq4k83cj/preview'
+    },
+
+    {
+      id: 4,
+      title: 'Oracle APEX Cloud Developer Certified Professional',
+      issuer: 'Oracle',
+      date: 'Oct 2025',
+      credentialId: '102407713APEX24CDOCP',
+      image: 'https://images.surferseo.art/b775813f-af1a-4f57-a2b8-99484022e6ba.jpeg',
+      skills: [ 'Oracle APEX', 'SQL', 'PL/SQL', 'Oracle Cloud Infrastructure (OCI)', 'Low-Code Development', 'Application Deployment'],
+      description: 'Earned certification demonstrating advanced proficiency in Oracle Application Express (APEX) and Oracle Cloud Infrastructure (OCI) for developing, securing, and deploying enterprise-grade, low-code web applications.',
+      verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=7CC5C939C41DCF5E14FB14AA73C28227B67D6965287DE5E5BB1C743A7FE7B21F'
+    },
     
   ];
 
