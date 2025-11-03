@@ -145,7 +145,7 @@ const AchievementsSection = () => {
       image: 'https://knowledgeworks.org/wp-content/uploads/2023/08/kate-goodman-smart-technologies-covid-19-scaled-1.jpg',
       skills: [ 'Python','tesorflow','reactjs','tailwind','FastAPI','Flask'],
       description: 'Certification of publication of research paper of EduTwin(AI Augmented digital twin for personalized learning in virtual classrooms.).',
-      verifyUrl: 'https://drive.google.com/file/d/105yPGXKiwzQTe-BICyIxrlAOPq4k83cj/preview'
+      verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=A9311F55024E089FCFD613862A051C576F4D325AAD6E4D6E80A3981B037041C1'
 
     }
   ];
@@ -371,7 +371,7 @@ const AchievementsSection = () => {
             <div className="text-sm text-muted-foreground">Hackathons Participated</div>
           </div>
           <div className="text-center p-6 bg-transparent rounded-2xl border border-transparent hover:border-white/20 shadow-lg shadow-black/30 hover:shadow-cyan-500/40 transition-all duration-300">
-            <div className="text-3xl font-bold text-accent mb-2">5+</div>
+            <div className="text-3xl font-bold text-accent mb-2">7+</div>
             <div className="text-sm text-muted-foreground">Certifications Earned</div>
           </div>
           <div className="text-center p-6 bg-transparent rounded-2xl border border-transparent hover:border-white/20 shadow-lg shadow-black/30 hover:shadow-cyan-500/40 transition-all duration-300">
@@ -379,7 +379,7 @@ const AchievementsSection = () => {
             <div className="text-sm text-muted-foreground">projects in production</div>
           </div>
           <div className="text-center p-6 bg-transparent rounded-2xl border border-transparent hover:border-white/20 shadow-lg shadow-black/30 hover:shadow-cyan-500/40 transition-all duration-300">
-            <div className="text-3xl font-bold text-warning mb-2">2</div>
+            <div className="text-3xl font-bold text-warning mb-2">4</div>
             <div className="text-sm text-muted-foreground">Recognition Received</div>
           </div>
         </div>
