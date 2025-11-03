@@ -183,7 +183,7 @@ const AchievementsSection = () => {
       image: 'https://knowledgeworks.org/wp-content/uploads/2023/08/kate-goodman-smart-technologies-covid-19-scaled-1.jpg',
       skills: [ 'Python','tesorflow','reactjs','tailwind','FastAPI','Flask'],
       description: 'Certification of publication of research paper of EduTwin(AI Augmented digital twin for personalized learning in virtual classrooms.).',
-      verifyUrl: 'https://drive.google.com/file/d/105yPGXKiwzQTe-BICyIxrlAOPq4k83cj/preview'
+      verifyUrl: 'https://drive.google.com/file/d/1A3tjLQ1v_irC4M2qxDBIcAVJaHmZ-4RW/view?usp=drive_link'
     },
 
     {
@@ -195,7 +195,7 @@ const AchievementsSection = () => {
       image: 'https://images.surferseo.art/b775813f-af1a-4f57-a2b8-99484022e6ba.jpeg',
       skills: [ 'Oracle APEX', 'SQL', 'PL/SQL', 'Oracle Cloud Infrastructure (OCI)', 'Low-Code Development', 'Application Deployment'],
       description: 'Earned certification demonstrating advanced proficiency in Oracle Application Express (APEX) and Oracle Cloud Infrastructure (OCI) for developing, securing, and deploying enterprise-grade, low-code web applications.',
-      verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=7CC5C939C41DCF5E14FB14AA73C28227B67D6965287DE5E5BB1C743A7FE7B21F'
+      verifyUrl: 'https://drive.google.com/file/d/1bl5UUgK63kGLewh_TPPxeunR9kFCJzib/preview'
     },
     
   ];
