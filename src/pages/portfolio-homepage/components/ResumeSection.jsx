@@ -24,7 +24,7 @@ const ResumeSection = () => {
   const handleDownload = () => {
     // Create a mock download
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/1Mpq5GbDP75Yf9xTA-ImaAz40z9rSIEQ4/view?usp=drive_link';
+    link.href = 'https://drive.google.com/uc?export=download&id=1Mpq5GbDP75Yf9xTA-ImaAz40z9rSIEQ4';
     link.download = 'swaraj-RESEUME.pdf';
     document.body.appendChild(link);
     link.click();
