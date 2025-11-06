@@ -7,8 +7,8 @@ const ResumeSection = () => {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
   const resumeData = {
-    lastUpdated: 'August 23 2025',
-    fileSize: '2.4 MB',
+    lastUpdated: 'Nov 6 2025',
+    fileSize: '228 KB',
     format: 'PDF',
     sections: [
       'Professional Summary',
@@ -24,8 +24,8 @@ const ResumeSection = () => {
   const handleDownload = () => {
     // Create a mock download
     const link = document.createElement('a');
-    link.href = 'https://swarajladke.github.io/portfolio/Myresume.pdf';
-    link.download = 'Myresume.pdf';
+    link.href = 'https://drive.google.com/file/d/1Mpq5GbDP75Yf9xTA-ImaAz40z9rSIEQ4/view?usp=drive_link';
+    link.download = 'swaraj-RESEUME.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
