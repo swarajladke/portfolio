@@ -73,10 +73,10 @@ const ResumePreviewModal = () => {
   };
 
   const documentStats = {
-    fileSize: "2.4 MB",
+    fileSize: "228 KB",
     format: "PDF",
-    pages: 2,
-    lastUpdated: "August 23, 2025"
+    pages: 1,
+    lastUpdated: "NOV 6, 2025"
   };
 
   return (
