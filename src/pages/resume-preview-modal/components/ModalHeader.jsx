@@ -7,7 +7,7 @@ const ModalHeader = ({ onClose, onDownload, onPrint, isLoading }) => {
     // Create a mock download
     const link = document.createElement('a');
     link.href = '';
-    link.download ="Myresume.pdf";
+    link.download ="https://drive.google.com/file/d/1Mpq5GbDP75Yf9xTA-ImaAz40z9rSIEQ4/view?usp=drive_link";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
