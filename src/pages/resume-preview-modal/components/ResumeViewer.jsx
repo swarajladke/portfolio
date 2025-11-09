@@ -55,7 +55,7 @@ const ResumeViewer = ({ resumeUrl ="https://swarajladke.github.io/portfolio/resu
           </p>
         ) : (
           <iframe
-            src="https://drive.google.com/file/d/1Mpq5GbDP75Yf9xTA-ImaAz40z9rSIEQ4/preview"
+            src="https://drive.google.com/file/d/1vpAqPmaDe8aB4patTkr1FrGMQBRv4Fz_/preview"
             title="Resume"
             width="100%"
             height="1000px"
