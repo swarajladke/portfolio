@@ -13,7 +13,7 @@ const ModalFooter = ({ onClose, onDownload, documentStats }) => {
   const handleDownload = () => {
     // Create a mock download
     const link = document.createElement('a');
-    link.href = '';
+    link.href = 'https://drive.google.com/uc?export=download&id=15T2AY-F9LVqklyXkNb2AIZy9PSFk4rX4';
     link.download = 'Swaraj_Ladke_Resume.pdf';
     document.body.appendChild(link);
     link.click();

@@ -7,7 +7,7 @@ const ModalHeader = ({ onClose, onDownload, onPrint, isLoading }) => {
     // Create a mock download
     const link = document.createElement('a');
     link.href = '';
-    link.download ="https://drive.google.com/file/d/1Mpq5GbDP75Yf9xTA-ImaAz40z9rSIEQ4/view?usp=drive_link";
+    link.download ="https://drive.google.com/uc?export=download&id=15T2AY-F9LVqklyXkNb2AIZy9PSFk4rX4";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

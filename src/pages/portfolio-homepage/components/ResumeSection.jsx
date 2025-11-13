@@ -24,7 +24,7 @@ const ResumeSection = () => {
   const handleDownload = () => {
     // Create a mock download
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=1l-NXRPne-Y5NAznCbB7E-HpIePFd6YDe';
+    link.href = 'https://drive.google.com/uc?export=download&id=15T2AY-F9LVqklyXkNb2AIZy9PSFk4rX4';
     link.download = 'swaraj-RESEUME.pdf';
     document.body.appendChild(link);
     link.click();
@@ -260,7 +260,7 @@ const ResumeSection = () => {
       <ResumePreviewModal
         isOpen={isPreviewOpen}
         onClose={() => setIsPreviewOpen(false)}
-        resumeUrl="https://drive.google.com/file/d/1l-NXRPne-Y5NAznCbB7E-HpIePFd6YDe/preview"
+        resumeUrl="https://drive.google.com/file/d/15T2AY-F9LVqklyXkNb2AIZy9PSFk4rX4/preview"
 
 
       />
