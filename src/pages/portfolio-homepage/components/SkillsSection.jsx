@@ -122,8 +122,8 @@ const SkillsSection = () => {
             return (
               <SkillCard
                 key={skill.name}
-                icon={<div className="w-7 h-7 rounded-md flex items-center justify-center bg-primary/10 text-primary">
-                  <Icon name={skill.icon} size={18} />
+                icon={<div className="w-7 h-7 rounded-md flex items-center justify-center" style={{ backgroundColor: `${skill.color}22` }}>
+                  <Icon name={skill.icon} size={18} style={{ color: skill.color }} />
                 </div>}
                 name={skill.name}
                 category={categoryLabel(skill.category)}
