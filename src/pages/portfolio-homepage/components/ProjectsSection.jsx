@@ -215,6 +215,57 @@ const ProjectsSection = () => {
     
     },
 
+    {
+      id: 9,
+      title: 'AirWrite',
+      category: 'AI',
+      description: 'AirWrite is a gesture-based writing tool built using OpenCV, allowing users to draw and write in the air using hand-tracking. The system converts finger movement into real-time digital ink on a virtual canvas.',
+      image: 'https://www.understood.org/_next/image?url=https%3A%2F%2Fcdn-images.understood.org%2Fp0qf7j048i0q%2F59A537CF942F46C1B18B8E4505058A2E%2F8e0e62a6f709a54d23e92b9847059014%2FAirWriting-WHITELC.jpg&w=3840&q=75',
+      technologies: ['python','numpy','opencv','mediapipe','gesture recognition','virtual canvas'],
+      githubUrl: 'To be updated',
+      liveUrl: 'To be updated',
+      status: 'completed',
+      features: [
+        'Gesture-based writing',
+        'Real-time digital ink',
+        'Virtual canvas',
+        'Hand-tracking',
+        'OpenCV',
+        'MediaPipe',
+        'Gesture recognition',
+        'Virtual canvas'],
+      stats: {
+        averageSpeed: ' To be updated',
+        accuracy: 'To be updated'
+}
+    
+    },
+
+    {
+      id: 10,
+      title: 'EchoDesk',
+      category: 'AI',
+      description: 'EchoDesk is a voice-controlled Windows automation system that lets you open apps, manage files, navigate the OS, and perform complex tasks hands-free. It combines speech recognition, intent parsing, and system-level automation to create a seamless, AI-powered desktop assistant.',
+      image: 'https://www.medicaltranscriptionservicecompany.com/wp-content/uploads/2023/03/5-ways-voice-recognition-is-improving-healthcare.jpg',
+      technologies: ['python','speech recognition','intent parsing','system-level automation','pyautogui','pyaudio','opencv','NLU model','pyttsx3'],
+      githubUrl: 'To be updated',
+      liveUrl: 'To be updated',
+      status: 'In Development',
+      features: [
+        'Voice-controlled automation',
+        'App opening',
+        'File management',
+        'OS navigation',
+        'Complex task execution',
+        'Speech recognition',
+        'Intent parsing',
+        'System-level automation'],
+      stats: {
+        averageSpeed: ' To be updated',
+        accuracy: 'To be updated'
+}
+    
+    }
 
   ];
 
