@@ -69,6 +69,17 @@ const AchievementsSection = () => {
   const certifications = [
     {
       id: 1,
+      title: 'AI for Work and Life 2025',
+      issuer: 'University of North Florida',
+      date: 'Nov 2025',
+      credentialId: '14b4087c14914685b0d218e0204dc194',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ88poVD0cDvjihE32v8ULJkWHN3xSGR8vqAw&s',
+      skills: [ 'prompt engineering', 'AI integration', '', 'Structured decision-making with AI assistance', 'Creation of reusable and adaptive prompt templates'],
+      description: 'Certified in “AI for Work and Life” by the University of North Florida, with hands-on experience in generative AI, prompt engineering, and practical productivity applications.',
+      verifyUrl: 'https://learn.getcertificate.online/certificates/14b4087c14914685b0d218e0204dc194'
+    },
+    {
+      id: 2,
       title: 'Oracle APEX Cloud Developer Certified Professional',
       issuer: 'Oracle',
       date: 'Oct 2025',
@@ -77,63 +88,6 @@ const AchievementsSection = () => {
       skills: [ 'Oracle APEX', 'SQL', 'PL/SQL', 'Oracle Cloud Infrastructure (OCI)', 'Low-Code Development', 'Application Deployment'],
       description: 'Earned certification demonstrating advanced proficiency in Oracle Application Express (APEX) and Oracle Cloud Infrastructure (OCI) for developing, securing, and deploying enterprise-grade, low-code web applications.',
       verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=7CC5C939C41DCF5E14FB14AA73C28227B67D6965287DE5E5BB1C743A7FE7B21F'
-    },
-    {
-      id: 4,
-      title: 'Web Development in React.js',
-      issuer: 'Coursera',
-      date: 'July 2025',
-      credentialId: '3ZF9EFXTT23Q',
-      image: 'https://www.mbloging.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fyynr1uml%2Fproduction%2Fd3f0ff2ab5398aaffb00fa0b3afcb238772f42e7-1024x576.jpg%3Fw%3D1024%26auto%3Dformat&w=3840&q=75',
-      skills: [ 'React', 'JavaScript', 'Web Development', 'Frontend Development'],
-      description: 'Professional certificate covering advanced web development concepts using React.js, including state management, routing, and performance optimization.',
-      verifyUrl: 'https://coursera.org/verify/3ZF9EFXTT23Q'
-    },
-    {
-      id: 5,
-      title: 'Technology Job Simulation-Deloitte',
-      issuer: 'Forage',
-      date: 'June 2025',
-      credentialId: 'bPckrErRrGvhebJW5 ',
-      image: 'https://intersectjobsims.com/wp-content/uploads/2018/05/adults-chairs-colleagues-5151661.jpg?w=656&h=300&crop=1',
-      skills: ['Deloitte', 'Technology Consulting', 'Problem Solving', 'Team Collaboration'],
-      description: 'A hands-on simulation experience with Deloitte, focusing on technology consulting and problem-solving in real-world scenarios.',
-      verifyUrl: 'https://drive.google.com/file/d/1ZlsgW31luqVJeYQS7ULwww9OV4U-vQdU/preview'
-    },
-    {
-      id: 6,
-      title: 'Developer and Technology Job Simulation-Accenture',
-      issuer: 'Forage',
-      date: 'June 2025',
-      credentialId: '2JHoWMZC7Y6aNWQ8',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7_klSz5NLV1-BfwMGU1AoOLWR8loaLRWJtImgncdxhY8B7xDu91evzHQdSJ6CMqdHqRA&usqp=CAU',
-      skills: ['Software Development', 'Problem Solving', 'Team Collaboration', 'Technology Consulting'],
-      description: 'A comprehensive simulation experience focusing on software development and technology consulting, providing insights into real-world challenges and solutions.',
-      verifyUrl: 'https://drive.google.com/file/d/1ipWwwLKsk6PNJCtJOiz1mBhaQPG4RbdU/preview'
-    },
-    {
-      id: 2,
-      title: 'Oracle Cloud Infrastructure 2025 Certified Generative AI Professional',
-      issuer: 'Oracle',
-      date: 'August 2025',
-      credentialId: '102407713OCI25GAIOCP',
-      image: 'https://blogs.cloudare.in/wp-content/uploads/2025/01/4765971.jpg',
-      skills: [ 'Generative AI', 'Oracle Cloud', 'AI Models', 'AI Integration'],
-      description: 'Certification validating expertise in generative AI concepts, Oracle Cloud Infrastructure, and the ability to design and deploy AI-driven solutions.',
-      verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=90D1726627922C232F12843FBCFC54577E5DFE3C7E10B0C29FA5726D815F110E'
-    },
-
-    {
-      id: 7,
-      title: 'Certificate of publication of research paper (AI Augmented DigitalTwin for personalized learning in virtual classrooms',
-      issuer: 'IJSCI',
-      date: 'October 2025',
-      credentialId: '323390829OCI25AICFA',
-      image: 'https://wallpapers.com/images/featured/cloud-storage-background-qnc7mnsd9pjxtquw.jpg',
-      skills: [ 'AI','Machine learning','LLMs','deep learning','FastAPI','RNNs, CNNs LSTMs'],
-      description: 'Oracle-certified in AI and ML fundamentals with hands-on knowledge of Oracle Cloud Infrastructure and intelligent solution development.)',
-      verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=A9311F55024E089FCFD613862A051C576F4D325AAD6E4D6E80A3981B037041C1'
-
     },
 
     {
@@ -147,7 +101,77 @@ const AchievementsSection = () => {
       description: 'Certification of publication of research paper of EduTwin(AI Augmented digital twin for personalized learning in virtual classrooms.).',
       verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=A9311F55024E089FCFD613862A051C576F4D325AAD6E4D6E80A3981B037041C1'
 
-    }
+    },
+    {
+      id: 4,
+      title: 'Oracle Cloud Infrastructure 2025 Certified Generative AI Professional',
+      issuer: 'Oracle',
+      date: 'August 2025',
+      credentialId: '102407713OCI25GAIOCP',
+      image: 'https://blogs.cloudare.in/wp-content/uploads/2025/01/4765971.jpg',
+      skills: [ 'Generative AI', 'Oracle Cloud', 'AI Models', 'AI Integration'],
+      description: 'Certification validating expertise in generative AI concepts, Oracle Cloud Infrastructure, and the ability to design and deploy AI-driven solutions.',
+      verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=90D1726627922C232F12843FBCFC54577E5DFE3C7E10B0C29FA5726D815F110E'
+    },
+
+    {
+      id: 5,
+      title: 'AI and Career  Empowerment',
+      issuer: 'University of Maryland Robert H. Smith School of Business',
+      date: 'NOV 2025',
+      image: 'https://iseminger.com/img/portfolio/introduction-to-machine-learning.jpg',
+      skills: [ 'prompt engineering','Use of AI in career','AI Optimization','Work management using AI','AI integration'],
+      description: 'Certified in “AI and Career Empowerment” from the University of Maryland. Learned how to leverage AI tools for career growth, communication, and strategic professional development.)',
+      verifyUrl: 'https://drive.google.com/file/d/1s18rpKseFUrmoc-bGOU0N6gAmk--5U0w/preview'
+    },
+
+    {
+      id: 6,
+      title: 'Web Development in React.js',
+      issuer: 'Coursera',
+      date: 'July 2025',
+      credentialId: '3ZF9EFXTT23Q',
+      image: 'https://www.mbloging.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fyynr1uml%2Fproduction%2Fd3f0ff2ab5398aaffb00fa0b3afcb238772f42e7-1024x576.jpg%3Fw%3D1024%26auto%3Dformat&w=3840&q=75',
+      skills: [ 'React', 'JavaScript', 'Web Development', 'Frontend Development'],
+      description: 'Professional certificate covering advanced web development concepts using React.js, including state management, routing, and performance optimization.',
+      verifyUrl: 'https://coursera.org/verify/3ZF9EFXTT23Q'
+    },
+    {
+      id: 7,
+      title: 'Technology Job Simulation-Deloitte',
+      issuer: 'Forage',
+      date: 'June 2025',
+      credentialId: 'bPckrErRrGvhebJW5 ',
+      image: 'https://intersectjobsims.com/wp-content/uploads/2018/05/adults-chairs-colleagues-5151661.jpg?w=656&h=300&crop=1',
+      skills: ['Deloitte', 'Technology Consulting', 'Problem Solving', 'Team Collaboration'],
+      description: 'A hands-on simulation experience with Deloitte, focusing on technology consulting and problem-solving in real-world scenarios.',
+      verifyUrl: 'https://drive.google.com/file/d/1ZlsgW31luqVJeYQS7ULwww9OV4U-vQdU/preview'
+    },
+    {
+      id: 8,
+      title: 'Developer and Technology Job Simulation-Accenture',
+      issuer: 'Forage',
+      date: 'June 2025',
+      credentialId: '2JHoWMZC7Y6aNWQ8',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7_klSz5NLV1-BfwMGU1AoOLWR8loaLRWJtImgncdxhY8B7xDu91evzHQdSJ6CMqdHqRA&usqp=CAU',
+      skills: ['Software Development', 'Problem Solving', 'Team Collaboration', 'Technology Consulting'],
+      description: 'A comprehensive simulation experience focusing on software development and technology consulting, providing insights into real-world challenges and solutions.',
+      verifyUrl: 'https://drive.google.com/file/d/1ipWwwLKsk6PNJCtJOiz1mBhaQPG4RbdU/preview'
+    },
+    
+    {
+      id: 9,
+      title: 'Certificate of publication of research paper (AI Augmented DigitalTwin for personalized learning in virtual classrooms',
+      issuer: 'IJSCI',
+      date: 'October 2025',
+      credentialId: '323390829OCI25AICFA',
+      image: 'https://wallpapers.com/images/featured/cloud-storage-background-qnc7mnsd9pjxtquw.jpg',
+      skills: [ 'AI','Machine learning','LLMs','deep learning','FastAPI','RNNs, CNNs LSTMs'],
+      description: 'Oracle-certified in AI and ML fundamentals with hands-on knowledge of Oracle Cloud Infrastructure and intelligent solution development.)',
+      verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=A9311F55024E089FCFD613862A051C576F4D325AAD6E4D6E80A3981B037041C1'
+
+    },
+
   ];
 
   const recognitions = [
