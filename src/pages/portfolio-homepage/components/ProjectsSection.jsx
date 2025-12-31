@@ -265,6 +265,29 @@ const ProjectsSection = () => {
         accuracy: 'To be updated'
 }
     
+    },
+
+    {
+      id: 11,
+      title: 'Agnis API Studio',
+      category: 'Testing',
+      description: 'Agnis API Studio is a modern API workspace inspired by Postman, created for developers to test REST APIs, generate requests, and analyze responses in a streamlined UI.',
+      image: 'https://www.saagtech.com/assets/img/blog/API-testing-course.jpg',
+      technologies: ['python','React','Vite','Tailwind CSS','Axios','React Router','Flask-RESTful','httpx','JSON parsing & response handling','JavaScript','Git & GitHub','Docker','JWT','PostgreSQL','WebSockets','FastAPI'],
+      githubUrl: 'To be updated',
+      liveUrl: 'Deployment in progress',
+      status: 'In Development',
+      features: [
+        'JSON Pretty Output',
+        'Collection & History',
+        'REST API Runner',
+        'Request/Response Viewer',
+        'API Testing Platform'],
+      stats: {
+        averageSpeed: ' To be updated',
+        accuracy: 'To be updated'
+}
+    
     }
 
   ];
