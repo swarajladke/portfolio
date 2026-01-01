@@ -164,11 +164,11 @@ const AchievementsSection = () => {
       title: 'Certificate of publication of research paper (AI Augmented DigitalTwin for personalized learning in virtual classrooms',
       issuer: 'IJSCI',
       date: 'October 2025',
-      credentialId: '323390829OCI25AICFA',
+      credentialId: '518769296831',
       image: 'https://wallpapers.com/images/featured/cloud-storage-background-qnc7mnsd9pjxtquw.jpg',
       skills: [ 'AI','Machine learning','LLMs','deep learning','FastAPI','RNNs, CNNs LSTMs'],
-      description: 'Oracle-certified in AI and ML fundamentals with hands-on knowledge of Oracle Cloud Infrastructure and intelligent solution development.)',
-      verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=A9311F55024E089FCFD613862A051C576F4D325AAD6E4D6E80A3981B037041C1'
+      description: 'Certificate of publication of research paper (AI Augmented DigitalTwin for personalized learning in virtual classrooms',
+      verifyUrl: 'https://drive.google.com/file/d/105yPGXKiwzQTe-BICyIxrlAOPq4k83cj/preview'
 
     },
 
