@@ -269,20 +269,76 @@ const ProjectsSection = () => {
 
     {
       id: 11,
-      title: 'Agnis API Studio',
-      category: 'Testing',
-      description: 'Agnis API Studio is a modern API workspace inspired by Postman, created for developers to test REST APIs, generate requests, and analyze responses in a streamlined UI.',
-      image: 'https://www.saagtech.com/assets/img/blog/API-testing-course.jpg',
-      technologies: ['python','React','Vite','Tailwind CSS','Axios','React Router','Flask-RESTful','httpx','JSON parsing & response handling','JavaScript','Git & GitHub','Docker','JWT','PostgreSQL','WebSockets','FastAPI'],
+      title: 'Agnis Design Studio',
+      category: 'Designing',
+      description: 'Agnis Design Studio is a fast, modern UI/UX design and collaboration platform inspired by Figma, built for seamless creation, real-time collaboration, and efficient product design workflows.',
+      image: 'https://i.ytimg.com/vi/SIoOS6tFw1Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCIOaYi7Bq1g7RFyqaSrlwL_rtO1w',
+      technologies: ['Next.js','Tailwind CSS','shadcn','Fabric.js','TypeScript','Vercel','liveblocks'],
       githubUrl: 'To be updated',
       liveUrl: 'Deployment in progress',
-      status: 'In Development',
+      status: 'Completed',
       features: [
-        'JSON Pretty Output',
-        'Collection & History',
-        'REST API Runner',
-        'Request/Response Viewer',
-        'API Testing Platform'],
+        'Multi Cursors, Cursor Chat, and Reactions',
+        'Real-time collaboration',
+        'Design tools',
+        'File management',
+        'Freeform Drawing',
+        'Complex task execution',
+        'Uploading Images'],
+      stats: {
+        averageSpeed: ' To be updated',
+        accuracy: 'To be updated'
+}
+    
+    },
+
+    {
+      id: 12,
+      title: 'PREDICTX',
+      category: 'Stock-Trading',
+      description: 'Stock Market app built with Next.js, Shadcn, Better Auth, and Inngest. Track prices, set alerts, explore insights, manage watchlists, and automate workflows for notifications and analytics.',
+      image: 'https://repository-images.githubusercontent.com/143637640/398d0a80-7a48-11ea-8cad-5e9a4e77ba55',
+      technologies: ['Next.js','Tailwind CSS','Better Auth','coderabbit','TypeScript','Vercel','shadcn','inngest','MongoDB','Finnhub','nodemailer',],
+      githubUrl: 'To be updated',
+      liveUrl: 'Deployment in progress',
+      status: 'Completed',
+      features: [
+        'Stock Market Dashboard',
+        'Stock Price Tracking',
+        'Stock Market Insights',
+        'Stock Market Analysis',
+        'Stock Market News',
+        'Stock Market Alerts',
+        'Stock Market Watchlists',
+        'Stock Market Analytics'],
+      stats: {
+        averageSpeed: ' To be updated',
+        accuracy: 'To be updated'
+}
+    
+    },
+
+    {
+      id: 13,
+      title: 'Agnis-Drive',
+      category: 'storage-Database',
+      description: 'A storage management and file sharing platform that lets users effortlessly upload, organize, and share files. Built with the latest Next.js 15 and the Appwrite Node SDK, utilizing advanced features for seamless file management.',
+      image: 'https://img.freepik.com/premium-photo/hand-holding-virtual-cloud-icon-black-background-cloud-technology-system-is-computing-sharing-management-uploading-downloading-transferring-information-applications_27634-1477.jpg',
+      technologies: ['Next.js','Tailwind CSS','Appwrite','React 19','TypeScript','Vercel','shadcn'],
+      githubUrl: 'To be updated',
+      liveUrl: 'Deployment in progress',
+      status: 'Completed',
+      features: [
+        'User Authentication with Appwrite',
+        'Storage Dashboard',
+        'File Storage',
+        'File Share',
+        'Database Management',
+        'Storage Analysis',
+        'Storage News',
+        'Storage Alerts',
+        'Storage Watchlists',
+        'Storage Analytics'],
       stats: {
         averageSpeed: ' To be updated',
         accuracy: 'To be updated'
