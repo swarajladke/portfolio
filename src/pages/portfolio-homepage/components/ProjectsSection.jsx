@@ -193,10 +193,10 @@ const ProjectsSection = () => {
 
      {
       id: 8,
-      title: 'Agnis-IDE',
+      title: 'Agnis-Forge',
       category: 'AI',
-      description: 'An AI-powered IDE that can autonomously code, debug, test, and deploy applications with minimal human guidance.',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmR_T5avUt4e9RN0_0OzObnQINutPmBVohXhDiLODKHs3J8rDPeh_b4jwuRIhGZL235BU&usqp=CAU',
+      description: 'Agnis-Forge is a blazing-fast, AI-integrated web IDE built entirely in the browser using Next.js App Router, WebContainers, Monaco Editor, and local LLMs via Ollama. It offers real-time code execution, an AI-powered chat assistant, and support for multiple tech stacks — all wrapped in a stunning developer-first UI.',
+      image: 'https://www.aalpha.net/backend/wp-content/uploads/2020/05/form-of-software-development.jpg',
       technologies: ['Electron','monaco editor','LLMs-To be updated','Agent Orchestration-To be updated','Memory Management-To be updated'],
       githubUrl: 'To be updated',
       liveUrl: 'To be updated',
@@ -275,8 +275,8 @@ const ProjectsSection = () => {
       image: 'https://i.ytimg.com/vi/SIoOS6tFw1Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCIOaYi7Bq1g7RFyqaSrlwL_rtO1w',
       technologies: ['Next.js','Tailwind CSS','shadcn','Fabric.js','TypeScript','Vercel','liveblocks'],
       githubUrl: 'To be updated',
-      liveUrl: 'Deployment in progress',
-      status: 'Completed',
+      liveUrl: 'https://agnis-design-studio.vercel.app/',
+      status: 'Live',
       features: [
         'Multi Cursors, Cursor Chat, and Reactions',
         'Real-time collaboration',
@@ -300,8 +300,8 @@ const ProjectsSection = () => {
       image: 'https://repository-images.githubusercontent.com/143637640/398d0a80-7a48-11ea-8cad-5e9a4e77ba55',
       technologies: ['Next.js','Tailwind CSS','Better Auth','coderabbit','TypeScript','Vercel','shadcn','inngest','MongoDB','Finnhub','nodemailer',],
       githubUrl: 'To be updated',
-      liveUrl: 'Deployment in progress',
-      status: 'Completed',
+      liveUrl: 'https://predictx-eta.vercel.app/',
+      status: 'Live',
       features: [
         'Stock Market Dashboard',
         'Stock Price Tracking',
@@ -326,8 +326,8 @@ const ProjectsSection = () => {
       image: 'https://img.freepik.com/premium-photo/hand-holding-virtual-cloud-icon-black-background-cloud-technology-system-is-computing-sharing-management-uploading-downloading-transferring-information-applications_27634-1477.jpg',
       technologies: ['Next.js','Tailwind CSS','Appwrite','React 19','TypeScript','Vercel','shadcn'],
       githubUrl: 'To be updated',
-      liveUrl: 'Deployment in progress',
-      status: 'Completed',
+      liveUrl: 'https://agnis-drive.vercel.app/',
+      status: 'Live',
       features: [
         'User Authentication with Appwrite',
         'Storage Dashboard',
