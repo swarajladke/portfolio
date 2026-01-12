@@ -274,7 +274,7 @@ const ProjectsSection = () => {
       description: 'Agnis Design Studio is a fast, modern UI/UX design and collaboration platform inspired by Figma, built for seamless creation, real-time collaboration, and efficient product design workflows.',
       image: 'https://i.ytimg.com/vi/SIoOS6tFw1Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCIOaYi7Bq1g7RFyqaSrlwL_rtO1w',
       technologies: ['Next.js','Tailwind CSS','shadcn','Fabric.js','TypeScript','Vercel','liveblocks'],
-      githubUrl: 'To be updated',
+      githubUrl: 'https://github.com/swarajladke/agnis-design-studio',
       liveUrl: 'https://agnis-design-studio.vercel.app/',
       status: 'Live',
       features: [
@@ -299,7 +299,7 @@ const ProjectsSection = () => {
       description: 'Stock Market app built with Next.js, Shadcn, Better Auth, and Inngest. Track prices, set alerts, explore insights, manage watchlists, and automate workflows for notifications and analytics.',
       image: 'https://repository-images.githubusercontent.com/143637640/398d0a80-7a48-11ea-8cad-5e9a4e77ba55',
       technologies: ['Next.js','Tailwind CSS','Better Auth','coderabbit','TypeScript','Vercel','shadcn','inngest','MongoDB','Finnhub','nodemailer',],
-      githubUrl: 'To be updated',
+      githubUrl: 'https://github.com/swarajladke/PREDICTX',
       liveUrl: 'https://predictx-eta.vercel.app/',
       status: 'Live',
       features: [
@@ -325,7 +325,7 @@ const ProjectsSection = () => {
       description: 'A storage management and file sharing platform that lets users effortlessly upload, organize, and share files. Built with the latest Next.js 15 and the Appwrite Node SDK, utilizing advanced features for seamless file management.',
       image: 'https://img.freepik.com/premium-photo/hand-holding-virtual-cloud-icon-black-background-cloud-technology-system-is-computing-sharing-management-uploading-downloading-transferring-information-applications_27634-1477.jpg',
       technologies: ['Next.js','Tailwind CSS','Appwrite','React 19','TypeScript','Vercel','shadcn'],
-      githubUrl: 'To be updated',
+      githubUrl: 'https://github.com/swarajladke/agnis_drive',
       liveUrl: 'https://agnis-drive.vercel.app/',
       status: 'Live',
       features: [
