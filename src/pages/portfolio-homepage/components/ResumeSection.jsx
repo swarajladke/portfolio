@@ -7,8 +7,8 @@ const ResumeSection = () => {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
   const resumeData = {
-    lastUpdated: 'Nov 6 2025',
-    fileSize: '228 KB',
+    lastUpdated: 'Jan 14 2026',
+    fileSize: '148 KB',
     format: 'PDF',
     sections: [
       'Professional Summary',
@@ -24,7 +24,7 @@ const ResumeSection = () => {
   const handleDownload = () => {
     // Create a mock download
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=1LAlMBzcg_wIjSWQLEnvjXlP1DnT1054V';
+    link.href = 'https://drive.google.com/file/d/12ikHCOnQBWnZz6pTDDmi3nG1vFvn20en/preview';
     link.download = 'swaraj-RESEUME.pdf';
     document.body.appendChild(link);
     link.click();
@@ -260,7 +260,7 @@ const ResumeSection = () => {
       <ResumePreviewModal
         isOpen={isPreviewOpen}
         onClose={() => setIsPreviewOpen(false)}
-        resumeUrl="https://drive.google.com/file/d/1LAlMBzcg_wIjSWQLEnvjXlP1DnT1054V/preview"
+        resumeUrl="https://drive.google.com/file/d/12ikHCOnQBWnZz6pTDDmi3nG1vFvn20en/preview"
 
 
       />
