@@ -58,7 +58,7 @@ const ProjectsSection = () => {
         'Product catalog',
         'Smooth animations with customizable colors',
         'Designed to match your theme dynamically (e.g. Pink glow for Elora Pink)',
-      
+
       ],
       stats: {
         users: 'Growing',
@@ -123,7 +123,7 @@ const ProjectsSection = () => {
       category: 'web',
       description: 'An AI-powered music recommender that detects your real-time emotions via webcam using CNN + OpenCV and instantly curates YouTube songs to match your mood.',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe2wTRoc3vW-YSoCJ9_P7SQwqSitIXgZ9ZfixBOs61XecUJJShxTvLJnRKfR8B41sp-Xw&usqp=CAU',
-      technologies: ['TensorFlow', 'OpenCV', 'Flask', 'YouTube API', 'React','keras'],
+      technologies: ['TensorFlow', 'OpenCV', 'Flask', 'YouTube API', 'React', 'keras'],
       githubUrl: 'https://github.com/swarajladke/emoify',
       liveUrl: 'To be updated',
       status: 'Completed',
@@ -143,14 +143,14 @@ const ProjectsSection = () => {
     },
     {
       id: 6,
-      title: 'Casper-(Content Repurposing with AI)',
+      title: 'Recasta-Studios(Content Repurposing with AI)',
       category: 'AI',
       description: 'Turn any video into multiple content formats instantly! 🎬Generate shorts, captions, blog posts, hashtags, and social media threads in seconds.',
       image: 'https://cms.rightblogger.com/wp-content/uploads/2024/05/repurposing-content-with-ai.jpg',
-      technologies: ['JavaScript', 'python', 'React', 'Webpack','FastAPI','AI/ML',],
-      githubUrl: 'To be updated',
-      liveUrl: 'To be updated',
-      status: 'In Development',
+      technologies: ['JavaScript', 'python', 'React', 'Webpack', 'FastAPI', 'AI/ML',],
+      githubUrl: 'https://github.com/swarajladke/recasta_studios',
+      liveUrl: 'https://recastastudios.vercel.app/',
+      status: 'Live',
       features: [
         'Video-to-text transcription',
         'Multi-format content generation',
@@ -162,8 +162,9 @@ const ProjectsSection = () => {
       stats: {
         averageSpeed: 'Under 30 seconds per video',
         accuracy: 'To be updated',
-        modes: 'Multiple (text, video, audio)'
-}
+        modes: 'Multiple (text, video, audio)',
+        update: 'under upgradation to introduce new features'
+      }
     },
 
     {
@@ -172,7 +173,7 @@ const ProjectsSection = () => {
       category: 'AI',
       description: 'AgilePulse is an AI-driven Agile automation tool that acts as a virtual Scrum Master for modern development teams. It streamlines Agile ceremonies, automates sprint tracking, and provides intelligent insights to keep teams aligned and productive.',
       image: 'https://www.xavor.com/wp-content/uploads/2023/04/Agile-Software-Development-%E2%80%93-A-Comprehensive-Overview-min.webp',
-      technologies: ['React18','vite5','react router v6','Python','Redux','Axios','JWT','AI/ML','Docker'],
+      technologies: ['React18', 'vite5', 'react router v6', 'Python', 'Redux', 'Axios', 'JWT', 'AI/ML', 'Docker'],
       githubUrl: 'To be updated',
       liveUrl: 'To be updated',
       status: 'In Development',
@@ -187,17 +188,17 @@ const ProjectsSection = () => {
       stats: {
         averageSpeed: ' To be updated',
         accuracy: 'To be updated'
-}
-    
+      }
+
     },
 
-     {
+    {
       id: 8,
       title: 'Agnis-Forge',
       category: 'AI',
       description: 'Agnis-Forge is a blazing-fast, AI-integrated web IDE built entirely in the browser using Next.js App Router, WebContainers, Monaco Editor, and local LLMs via Ollama. It offers real-time code execution, an AI-powered chat assistant, and support for multiple tech stacks — all wrapped in a stunning developer-first UI.',
       image: 'https://www.aalpha.net/backend/wp-content/uploads/2020/05/form-of-software-development.jpg',
-      technologies: ['Electron','monaco editor','LLMs-To be updated','Agent Orchestration-To be updated','Memory Management-To be updated'],
+      technologies: ['Electron', 'monaco editor', 'LLMs-To be updated', 'Agent Orchestration-To be updated', 'Memory Management-To be updated'],
       githubUrl: 'To be updated',
       liveUrl: 'To be updated',
       status: 'In Development',
@@ -211,8 +212,8 @@ const ProjectsSection = () => {
       stats: {
         averageSpeed: ' To be updated',
         accuracy: 'To be updated'
-}
-    
+      }
+
     },
 
     {
@@ -221,7 +222,7 @@ const ProjectsSection = () => {
       category: 'AI',
       description: 'AirWrite is a gesture-based writing tool built using OpenCV, allowing users to draw and write in the air using hand-tracking. The system converts finger movement into real-time digital ink on a virtual canvas.',
       image: 'https://www.understood.org/_next/image?url=https%3A%2F%2Fcdn-images.understood.org%2Fp0qf7j048i0q%2F59A537CF942F46C1B18B8E4505058A2E%2F8e0e62a6f709a54d23e92b9847059014%2FAirWriting-WHITELC.jpg&w=3840&q=75',
-      technologies: ['python','numpy','opencv','mediapipe','gesture recognition','virtual canvas'],
+      technologies: ['python', 'numpy', 'opencv', 'mediapipe', 'gesture recognition', 'virtual canvas'],
       githubUrl: 'To be updated',
       liveUrl: 'To be updated',
       status: 'completed',
@@ -237,8 +238,8 @@ const ProjectsSection = () => {
       stats: {
         averageSpeed: ' To be updated',
         accuracy: 'To be updated'
-}
-    
+      }
+
     },
 
     {
@@ -247,7 +248,7 @@ const ProjectsSection = () => {
       category: 'AI',
       description: 'EchoDesk is a voice-controlled Windows automation system that lets you open apps, manage files, navigate the OS, and perform complex tasks hands-free. It combines speech recognition, intent parsing, and system-level automation to create a seamless, AI-powered desktop assistant.',
       image: 'https://www.medicaltranscriptionservicecompany.com/wp-content/uploads/2023/03/5-ways-voice-recognition-is-improving-healthcare.jpg',
-      technologies: ['python','speech recognition','intent parsing','system-level automation','pyautogui','pyaudio','opencv','NLU model','pyttsx3'],
+      technologies: ['python', 'speech recognition', 'intent parsing', 'system-level automation', 'pyautogui', 'pyaudio', 'opencv', 'NLU model', 'pyttsx3'],
       githubUrl: 'To be updated',
       liveUrl: 'To be updated',
       status: 'In Development',
@@ -263,8 +264,8 @@ const ProjectsSection = () => {
       stats: {
         averageSpeed: ' To be updated',
         accuracy: 'To be updated'
-}
-    
+      }
+
     },
 
     {
@@ -273,7 +274,7 @@ const ProjectsSection = () => {
       category: 'Designing',
       description: 'Agnis Design Studio is a fast, modern UI/UX design and collaboration platform inspired by Figma, built for seamless creation, real-time collaboration, and efficient product design workflows.',
       image: 'https://i.ytimg.com/vi/SIoOS6tFw1Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCIOaYi7Bq1g7RFyqaSrlwL_rtO1w',
-      technologies: ['Next.js','Tailwind CSS','shadcn','Fabric.js','TypeScript','Vercel','liveblocks'],
+      technologies: ['Next.js', 'Tailwind CSS', 'shadcn', 'Fabric.js', 'TypeScript', 'Vercel', 'liveblocks'],
       githubUrl: 'https://github.com/swarajladke/agnis-design-studio',
       liveUrl: 'https://agnis-design-studio.vercel.app/',
       status: 'Live',
@@ -288,8 +289,8 @@ const ProjectsSection = () => {
       stats: {
         averageSpeed: ' To be updated',
         accuracy: 'To be updated'
-}
-    
+      }
+
     },
 
     {
@@ -298,7 +299,7 @@ const ProjectsSection = () => {
       category: 'Stock-Trading',
       description: 'Stock Market app built with Next.js, Shadcn, Better Auth, and Inngest. Track prices, set alerts, explore insights, manage watchlists, and automate workflows for notifications and analytics.',
       image: 'https://repository-images.githubusercontent.com/143637640/398d0a80-7a48-11ea-8cad-5e9a4e77ba55',
-      technologies: ['Next.js','Tailwind CSS','Better Auth','coderabbit','TypeScript','Vercel','shadcn','inngest','MongoDB','Finnhub','nodemailer',],
+      technologies: ['Next.js', 'Tailwind CSS', 'Better Auth', 'coderabbit', 'TypeScript', 'Vercel', 'shadcn', 'inngest', 'MongoDB', 'Finnhub', 'nodemailer',],
       githubUrl: 'https://github.com/swarajladke/PREDICTX',
       liveUrl: 'https://predictx-eta.vercel.app/',
       status: 'Live',
@@ -314,8 +315,8 @@ const ProjectsSection = () => {
       stats: {
         averageSpeed: ' To be updated',
         accuracy: 'To be updated'
-}
-    
+      }
+
     },
 
     {
@@ -324,7 +325,7 @@ const ProjectsSection = () => {
       category: 'storage-Database',
       description: 'A storage management and file sharing platform that lets users effortlessly upload, organize, and share files. Built with the latest Next.js 15 and the Appwrite Node SDK, utilizing advanced features for seamless file management.',
       image: 'https://img.freepik.com/premium-photo/hand-holding-virtual-cloud-icon-black-background-cloud-technology-system-is-computing-sharing-management-uploading-downloading-transferring-information-applications_27634-1477.jpg',
-      technologies: ['Next.js','Tailwind CSS','Appwrite','React 19','TypeScript','Vercel','shadcn'],
+      technologies: ['Next.js', 'Tailwind CSS', 'Appwrite', 'React 19', 'TypeScript', 'Vercel', 'shadcn'],
       githubUrl: 'https://github.com/swarajladke/agnis_drive',
       liveUrl: 'https://agnis-drive.vercel.app/',
       status: 'Live',
@@ -342,14 +343,14 @@ const ProjectsSection = () => {
       stats: {
         averageSpeed: ' To be updated',
         accuracy: 'To be updated'
-}
-    
+      }
+
     }
 
   ];
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
+  const filteredProjects = activeFilter === 'all'
+    ? projects
     : projects.filter(project => project.category === activeFilter);
 
   const handleProjectClick = (project, event) => {
@@ -442,11 +443,10 @@ const ProjectsSection = () => {
               <button
                 key={filter.id}
                 onClick={() => setActiveFilter(filter.id)}
-                className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center space-x-2 ${
-                  activeFilter === filter.id
-                    ? 'bg-primary text-primary-foreground shadow-elevation-1'
-                    : 'bg-card text-muted-foreground hover:text-foreground hover:bg-muted border border-border'
-                }`}
+                className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center space-x-2 ${activeFilter === filter.id
+                  ? 'bg-primary text-primary-foreground shadow-elevation-1'
+                  : 'bg-card text-muted-foreground hover:text-foreground hover:bg-muted border border-border'
+                  }`}
               >
                 <Icon name={filter.icon} size={18} />
                 <span>{filter.label}</span>
