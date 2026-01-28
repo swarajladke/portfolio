@@ -270,8 +270,8 @@ const HeroSection = () => {
         }
       `}</style>
       <div className="relative min-h-screen w-full overflow-hidden bg-black">
-        {/* Physically shift background video to avoid text collision and position focal point precisely */}
-        <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none transform scale-[1.2] -translate-y-[35%] translate-x-[20%] md:scale-100 md:translate-y-0 md:translate-x-[-15%] transition-transform duration-700">
+        {/* Background video - hidden on mobile, visible on laptop */}
+        <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none hidden md:block transform md:translate-x-[-15%] transition-transform duration-700">
           <video
             ref={videoRef}
             autoPlay
