@@ -4,6 +4,8 @@ import CursorTrail from './CursorTrail';
 const HeroSection = () => {
   const videoRef = useRef(null);
 
+  const cometRefs = useRef([]);
+
   useEffect(() => {
     const video = videoRef.current;
     if (video) {
@@ -14,37 +16,34 @@ const HeroSection = () => {
   }, []);
 
   useEffect(() => {
-    const createTrailParticle = () => {
+    const createTrailParticles = () => {
       const container = document.getElementById('comet-trail-container');
       if (!container) return;
 
-      const cometOrbit = document.querySelector('.comet-orbit');
-      if (!cometOrbit) return;
+      const comets = document.querySelectorAll('.comet');
+      comets.forEach(comet => {
+        const rect = comet.getBoundingClientRect();
+        const containerRect = container.getBoundingClientRect();
 
-      const comet = cometOrbit.querySelector('.comet');
-      if (!comet) return;
+        const x = rect.left + rect.width / 2 - containerRect.left;
+        const y = rect.top + rect.height / 2 - containerRect.top;
 
-      const rect = comet.getBoundingClientRect();
-      const containerRect = container.getBoundingClientRect();
+        const particle = document.createElement('div');
+        particle.className = 'trail-particle';
+        particle.style.left = `${x}px`;
+        particle.style.top = `${y}px`;
 
-      const x = rect.left + rect.width / 2 - containerRect.left;
-      const y = rect.top + rect.height / 2 - containerRect.top;
+        container.appendChild(particle);
 
-      const particle = document.createElement('div');
-      particle.className = 'trail-particle';
-      particle.style.left = `${x}px`;
-      particle.style.top = `${y}px`;
-
-      container.appendChild(particle);
-
-      setTimeout(() => {
-        if (particle.parentNode) {
-          particle.parentNode.removeChild(particle);
-        }
-      }, 2000);
+        setTimeout(() => {
+          if (particle.parentNode) {
+            particle.parentNode.removeChild(particle);
+          }
+        }, 2000);
+      });
     };
 
-    const interval = setInterval(createTrailParticle, 50);
+    const interval = setInterval(createTrailParticles, 50);
     return () => clearInterval(interval);
   }, []);
 
@@ -58,6 +57,14 @@ const HeroSection = () => {
           }
           100% {
             transform: rotate(360deg) translateX(var(--orbit-dist, 25vw)) rotate(-360deg);
+          }
+        }
+        @keyframes orbitReverse {
+          0% {
+            transform: rotate(360deg) translateX(var(--orbit-dist, 25vw)) rotate(-360deg);
+          }
+          100% {
+            transform: rotate(0deg) translateX(var(--orbit-dist, 25vw)) rotate(0deg);
           }
         }
         @keyframes trailFade {
@@ -157,6 +164,15 @@ const HeroSection = () => {
           width: 100%;
           height: 100%;
           animation: orbit 16s linear infinite;
+        }
+        .comet-orbit-reverse {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          animation: orbitReverse 20s linear infinite;
         }
         .trail-particle {
           position: absolute;
@@ -291,10 +307,15 @@ const HeroSection = () => {
           alt="Decorative Overlay"
           className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-12 top-[65%] md:top-[60%] -translate-y-1/2 h-[35vh] md:h-[90vh] w-auto max-w-[100vw] md:max-w-[50vw] z-10 pointer-events-none select-none opacity-20 md:opacity-90 transition-all duration-700"
         />
-        {/* Comet animation orbiting around the image */}
+        {/* Comet animations orbiting around the image */}
         <div className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-12 top-[65%] md:top-[60%] -translate-y-1/2 w-[85vw] h-[85vw] md:w-[50vw] md:h-[50vw] pointer-events-none" style={{ zIndex: 15 }}>
           <div className="comet-orbit">
             <div className="comet">
+              <div className="comet-tail"></div>
+            </div>
+          </div>
+          <div className="comet-orbit-reverse">
+            <div className="comet" style={{ filter: 'brightness(1.2)' }}>
               <div className="comet-tail"></div>
             </div>
           </div>
