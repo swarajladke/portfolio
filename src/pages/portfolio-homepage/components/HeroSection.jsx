@@ -26,7 +26,7 @@ const HeroSection = () => {
 
       const rect = comet.getBoundingClientRect();
       const containerRect = container.getBoundingClientRect();
-      
+
       const x = rect.left + rect.width / 2 - containerRect.left;
       const y = rect.top + rect.height / 2 - containerRect.top;
 
@@ -34,7 +34,7 @@ const HeroSection = () => {
       particle.className = 'trail-particle';
       particle.style.left = `${x}px`;
       particle.style.top = `${y}px`;
-      
+
       container.appendChild(particle);
 
       setTimeout(() => {
@@ -54,10 +54,10 @@ const HeroSection = () => {
       <style>{`
         @keyframes orbit {
           0% {
-            transform: rotate(0deg) translateX(25vw) rotate(0deg);
+            transform: rotate(0deg) translateX(var(--orbit-dist, 25vw)) rotate(0deg);
           }
           100% {
-            transform: rotate(360deg) translateX(25vw) rotate(-360deg);
+            transform: rotate(360deg) translateX(var(--orbit-dist, 25vw)) rotate(-360deg);
           }
         }
         @keyframes trailFade {
@@ -72,42 +72,42 @@ const HeroSection = () => {
         }
         @keyframes starOrbit1 {
           0% {
-            transform: rotate(0deg) translateX(20vw) rotate(0deg);
+            transform: rotate(0deg) translateX(var(--star-dist-1, 20vw)) rotate(0deg);
           }
           100% {
-            transform: rotate(360deg) translateX(20vw) rotate(-360deg);
+            transform: rotate(360deg) translateX(var(--star-dist-1, 20vw)) rotate(-360deg);
           }
         }
         @keyframes starOrbit2 {
           0% {
-            transform: rotate(0deg) translateX(18vw) rotate(0deg);
+            transform: rotate(0deg) translateX(var(--star-dist-2, 18vw)) rotate(0deg);
           }
           100% {
-            transform: rotate(-360deg) translateX(18vw) rotate(360deg);
+            transform: rotate(-360deg) translateX(var(--star-dist-2, 18vw)) rotate(360deg);
           }
         }
         @keyframes starOrbit3 {
           0% {
-            transform: rotate(0deg) translateX(22vw) rotate(0deg);
+            transform: rotate(0deg) translateX(var(--star-dist-3, 22vw)) rotate(0deg);
           }
           100% {
-            transform: rotate(360deg) translateX(22vw) rotate(-360deg);
+            transform: rotate(360deg) translateX(var(--star-dist-3, 22vw)) rotate(-360deg);
           }
         }
         @keyframes starOrbit4 {
           0% {
-            transform: rotate(0deg) translateX(16vw) rotate(0deg);
+            transform: rotate(0deg) translateX(var(--star-dist-4, 16vw)) rotate(0deg);
           }
           100% {
-            transform: rotate(-360deg) translateX(16vw) rotate(360deg);
+            transform: rotate(-360deg) translateX(var(--star-dist-4, 16vw)) rotate(360deg);
           }
         }
         @keyframes starOrbit5 {
           0% {
-            transform: rotate(0deg) translateX(24vw) rotate(0deg);
+            transform: rotate(0deg) translateX(var(--star-dist-5, 24vw)) rotate(0deg);
           }
           100% {
-            transform: rotate(360deg) translateX(24vw) rotate(-360deg);
+            transform: rotate(360deg) translateX(var(--star-dist-5, 24vw)) rotate(-360deg);
           }
         }
         .star {
@@ -245,17 +245,40 @@ const HeroSection = () => {
           border-radius: 50px;
           filter: blur(1px);
         }
+        :root {
+          --orbit-dist: 30vw;
+          --star-dist-1: 25vw;
+          --star-dist-2: 22vw;
+          --star-dist-3: 28vw;
+          --star-dist-4: 18vw;
+          --star-dist-5: 32vw;
+        }
+        @media (min-width: 768px) {
+          :root {
+            --orbit-dist: 25vw;
+            --star-dist-1: 20vw;
+            --star-dist-2: 18vw;
+            --star-dist-3: 22vw;
+            --star-dist-4: 16vw;
+            --star-dist-5: 24vw;
+          }
+        }
+        @media (max-width: 767px) {
+          .hero-video {
+            object-position: center center !important;
+          }
+        }
       `}</style>
       <div className="relative min-h-screen w-full overflow-hidden bg-black">
-        {/* Physically shift background video further right */}
-        <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none" style={{ transform: 'translateX(-15%)' }}>
+        {/* Physically shift background video to avoid text collision and position focal point precisely */}
+        <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none transform scale-[1.2] -translate-y-[35%] translate-x-[20%] md:scale-100 md:translate-y-0 md:translate-x-[-15%] transition-transform duration-700">
           <video
             ref={videoRef}
             autoPlay
             loop
             muted
             playsInline
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover hero-video"
             style={{ objectPosition: '100% 200%' }}
           >
             <source src="assets/videos/bk3.mp4" type="video/mp4" />
@@ -263,13 +286,13 @@ const HeroSection = () => {
           </video>
         </div>
         {/* Overlay SVG on top of the video */}
-        <img 
-          src="assets/images/heroi-bg.svg" 
-          alt="Decorative Overlay" 
-          className="absolute right-12 top-[60%] -translate-y-1/2 h-[90vh] w-auto max-w-[50vw] z-10 pointer-events-none select-none opacity-90" 
+        <img
+          src="assets/images/heroi-bg.svg"
+          alt="Decorative Overlay"
+          className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-12 top-[65%] md:top-[60%] -translate-y-1/2 h-[35vh] md:h-[90vh] w-auto max-w-[100vw] md:max-w-[50vw] z-10 pointer-events-none select-none opacity-20 md:opacity-90 transition-all duration-700"
         />
         {/* Comet animation orbiting around the image */}
-        <div className="absolute right-12 top-[60%] -translate-y-1/2 w-[50vw] h-[50vw] pointer-events-none" style={{ zIndex: 15 }}>
+        <div className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-12 top-[65%] md:top-[60%] -translate-y-1/2 w-[85vw] h-[85vw] md:w-[50vw] md:h-[50vw] pointer-events-none" style={{ zIndex: 15 }}>
           <div className="comet-orbit">
             <div className="comet">
               <div className="comet-tail"></div>
@@ -277,9 +300,9 @@ const HeroSection = () => {
           </div>
         </div>
         {/* Trail container for persistent trail effect */}
-        <div id="comet-trail-container" className="absolute right-12 top-[60%] -translate-y-1/2 w-[50vw] h-[50vw] pointer-events-none" style={{ zIndex: 14 }}></div>
+        <div id="comet-trail-container" className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-12 top-[65%] md:top-[60%] -translate-y-1/2 w-[85vw] h-[85vw] md:w-[50vw] md:h-[50vw] pointer-events-none" style={{ zIndex: 14 }}></div>
         {/* Stars orbiting around the image */}
-        <div className="absolute right-12 top-[60%] -translate-y-1/2 w-[50vw] h-[50vw] pointer-events-none" style={{ zIndex: 12 }}>
+        <div className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-12 top-[65%] md:top-[60%] -translate-y-1/2 w-[85vw] h-[85vw] md:w-[50vw] md:h-[50vw] pointer-events-none" style={{ zIndex: 12 }}>
           <div className="star-orbit star-orbit-1">
             <div className="star star-large"></div>
           </div>
@@ -306,11 +329,11 @@ const HeroSection = () => {
           </div>
         </div>
         {/* Hero Content - left aligned */}
-        <div className="relative z-30 w-full max-w-2xl px-6 pt-64 pb-8 flex flex-col items-start ml-0">
+        <div className="relative z-30 w-full max-w-2xl px-6 pt-32 md:pt-64 pb-8 flex flex-col items-start ml-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight bg-gradient-to-r from-purple-300 via-blue-400 to-teal-200 text-transparent bg-clip-text text-left">Transforming <span className="text-white drop-shadow-md">Ideas</span> into Seamless User <span className="text-white drop-shadow-md">Experience</span></h1>
           <p className="mt-5 text-lg text-white/90 max-w-lg text-left">Hi I'm swaraj ladke, a Full Stack Software Engineer specializing in building modern web applications. Check out my projects and skills.</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <button 
+            <button
               onClick={() => {
                 const element = document.querySelector('#projects');
                 if (element) {
@@ -328,7 +351,7 @@ const HeroSection = () => {
                 </svg>
               </span>
             </button>
-            <button 
+            <button
               onClick={() => {
                 const element = document.querySelector('#contact');
                 if (element) {
