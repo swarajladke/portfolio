@@ -1,27 +1,21 @@
 import os
+import json
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Optional
 from dotenv import load_dotenv
-import google.generativeai as genai
+from groq import Groq
 
 from resume_data import SYSTEM_PROMPT
 
 # Load environment variables
 load_dotenv()
 
-# Configure Gemini
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-if not GEMINI_API_KEY:
-    print("⚠️  WARNING: GEMINI_API_KEY not set. Chat will return an error.")
-else:
-    genai.configure(api_key=GEMINI_API_KEY)
-
 app = FastAPI(
-    title="Swaraj's Resume Chat API",
-    description="AI-powered chat to interact with Swaraj Ladke's professional resume",
-    version="1.0.0",
+    title="Swaraj's Resume Chat API (Groq Edition)",
+    description="AI-powered chat using Groq to interact with Swaraj Ladke's professional resume",
+    version="1.1.0",
 )
 
 # CORS middleware
@@ -50,49 +44,66 @@ class ChatResponse(BaseModel):
     reply: str
 
 
+# --- Helper to get API Key dynamically ---
+def get_api_key():
+    # Priority: Environment variables (Hugging Face Secrets) -> local .env
+    api_key = os.getenv("GROQ_API_KEY")
+    return api_key
+
+
 # --- Routes ---
 @app.get("/api/health")
 async def health_check():
-    return {"status": "ok", "service": "resume-chat-api"}
+    key_status = "configured" if get_api_key() else "missing"
+    return {"status": "ok", "service": "resume-chat-api-groq", "key": key_status}
 
 
 @app.post("/api/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
-    if not GEMINI_API_KEY:
+    api_key = get_api_key()
+    if not api_key:
         raise HTTPException(
             status_code=500,
-            detail="GEMINI_API_KEY is not configured. Please set it in the backend/.env file.",
+            detail="GROQ_API_KEY is not configured in environment variables or Secrets.",
         )
 
     try:
-        model = genai.GenerativeModel(
-            model_name="gemini-2.0-flash",
-            system_instruction=SYSTEM_PROMPT,
+        client = Groq(api_key=api_key)
+        
+        # Build conversation history for Groq
+        messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+        
+        for msg in request.history or []:
+            messages.append({"role": msg.role, "content": msg.content})
+            
+        # Add the current user message
+        messages.append({"role": "user", "content": request.message})
+
+        # Call Groq API
+        chat_completion = client.chat.completions.create(
+            messages=messages,
+            model="llama-3.3-70b-versatile",
+            temperature=0.5,
+            max_tokens=1024,
+            top_p=1,
+            stream=False,
         )
 
-        # Build conversation history for Gemini
-        gemini_history = []
-        for msg in request.history or []:
-            gemini_history.append(
-                {"role": "user" if msg.role == "user" else "model", "parts": [msg.content]}
-            )
+        reply = chat_completion.choices[0].message.content
 
-        # Start a chat session
-        chat_session = model.start_chat(history=gemini_history)
+        if not reply:
+            return ChatResponse(reply="I'm sorry, I couldn't generate a response. Please try rephrasing your question.")
 
-        # Send the new message
-        response = chat_session.send_message(request.message)
-
-        return ChatResponse(reply=response.text)
+        return ChatResponse(reply=reply)
 
     except Exception as e:
-        print(f"❌ Chat error: {e}")
-        raise HTTPException(status_code=500, detail=f"AI processing error: {str(e)}")
+        error_msg = str(e)
+        print(f"❌ Groq Chat error: {error_msg}")
+        raise HTTPException(status_code=500, detail=f"Groq API Error: {error_msg}")
 
 
 @app.get("/api/suggestions")
 async def get_suggestions():
-    """Returns suggested questions for the chat UI."""
     return {
         "suggestions": [
             "What are Swaraj's top skills?",
@@ -107,4 +118,5 @@ async def get_suggestions():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    # Important for Hugging Face: Port 7860 is the default
+    uvicorn.run("main:app", host="0.0.0.0", port=7860, reload=True)
