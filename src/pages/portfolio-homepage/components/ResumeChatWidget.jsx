@@ -1,7 +1,10 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import Icon from '../../../components/AppIcon';
 
-const CHAT_API_URL = import.meta.env.VITE_CHAT_API_URL || 'http://localhost:8000';
+const VITE_URL = import.meta.env.VITE_CHAT_API_URL;
+const CHAT_API_URL = VITE_URL ? (VITE_URL.endsWith('/') ? VITE_URL.slice(0, -1) : VITE_URL) : 'http://localhost:8000';
+
+console.log('🤖 Resume AI Chat: Connecting to', CHAT_API_URL);
 
 const ResumeChatWidget = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,15 +26,22 @@ const ResumeChatWidget = () => {
     // Fetch suggestions on mount
     useEffect(() => {
         fetch(`${CHAT_API_URL}/api/suggestions`)
-            .then((res) => res.json())
-            .then((data) => setSuggestions(data.suggestions || []))
-            .catch(() =>
+            .then((res) => {
+                if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+                return res.json();
+            })
+            .then((data) => {
+                console.log('🤖 Resume AI: Suggestions loaded', data);
+                setSuggestions(data.suggestions || []);
+            })
+            .catch((err) => {
+                console.error('🤖 Resume AI: Failed to load suggestions:', err.message);
                 setSuggestions([
                     "What are Swaraj's top skills?",
                     'Tell me about his projects',
                     'What certifications does he have?',
-                ])
-            );
+                ]);
+            });
     }, []);
 
     // Scroll to bottom when messages change
@@ -72,7 +82,7 @@ const ResumeChatWidget = () => {
                     body: JSON.stringify({ message: text, history: history.slice(0, -1) }),
                 })
                     .then((res) => {
-                        if (!res.ok) throw new Error('API error');
+                        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
                         return res.json();
                     })
                     .then((data) => {
@@ -81,13 +91,14 @@ const ResumeChatWidget = () => {
                             { role: 'assistant', content: data.reply },
                         ]);
                     })
-                    .catch(() => {
+                    .catch((err) => {
+                        console.error('🤖 Resume AI: Chat error:', err);
                         setMessages((prev) => [
                             ...prev,
                             {
                                 role: 'assistant',
                                 content:
-                                    "Sorry, I'm having trouble connecting right now. Please try again or reach out to Swaraj directly at swarajladke20@gmail.com",
+                                    `Sorry, I'm having trouble connecting to the AI. (Error: ${err.message}). Take a look at the console for more details or reach out to Swaraj at swarajladke20@gmail.com`,
                             },
                         ]);
                     })
