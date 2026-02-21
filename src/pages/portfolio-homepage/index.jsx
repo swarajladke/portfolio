@@ -9,6 +9,7 @@ import AchievementsSection from './components/AchievementsSection';
 import ResumeSection from './components/ResumeSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import ResumeChatWidget from './components/ResumeChatWidget';
 import { CSSStarBackground } from '../../components/CSSStarBackground';
 
 const PortfolioHomepage = () => {
@@ -83,6 +84,9 @@ const PortfolioHomepage = () => {
           style={{ animationDelay: '4s' }}
         ></div>
       </div>
+
+      {/* Resume AI Chat Widget */}
+      <ResumeChatWidget />
     </div>
   );
 };

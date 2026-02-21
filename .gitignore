@@ -6,3 +6,11 @@ package-lock.json
 .vscode/
 .idea/
 vite.config.*s.*
+.env
+.env.*
+!.env.example
+backend/.env
+backend/__pycache__/
+backend/*.pyc
+backend/venv/
+.python-version

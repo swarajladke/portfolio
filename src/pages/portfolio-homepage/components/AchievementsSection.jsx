@@ -46,7 +46,7 @@ const AchievementsSection = () => {
       category: 'AI/ML Track',
       description: 'Experimenting with Dendritic Optimization — an AI framework inspired by how brain dendrites learn and adapt.',
       image: 'https://codewave.com/insights/wp-content/uploads/2025/02/Understanding-Machine-Learning-Frameworks-for-Model-Development.png',
-      technologies: [ 'Python', 'PyTorch', 'TensorFlow', 'NumPy', 'Flask (API layer)', 'Streamlit (dashboard)'],
+      technologies: ['Python', 'PyTorch', 'TensorFlow', 'NumPy', 'Flask (API layer)', 'Streamlit (dashboard)'],
       prize: '$18,500',
       team: 'solo',
       participants: '300+'
@@ -74,7 +74,7 @@ const AchievementsSection = () => {
       date: 'Nov 2025',
       credentialId: '14b4087c14914685b0d218e0204dc194',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ88poVD0cDvjihE32v8ULJkWHN3xSGR8vqAw&s',
-      skills: [ 'prompt engineering', 'AI integration', '', 'Structured decision-making with AI assistance', 'Creation of reusable and adaptive prompt templates'],
+      skills: ['prompt engineering', 'AI integration', '', 'Structured decision-making with AI assistance', 'Creation of reusable and adaptive prompt templates'],
       description: 'Certified in “AI for Work and Life” by the University of North Florida, with hands-on experience in generative AI, prompt engineering, and practical productivity applications.',
       verifyUrl: 'https://learn.getcertificate.online/certificates/14b4087c14914685b0d218e0204dc194'
     },
@@ -85,7 +85,7 @@ const AchievementsSection = () => {
       date: 'Oct 2025',
       credentialId: '102407713APEX24CDOCP',
       image: 'https://images.surferseo.art/b775813f-af1a-4f57-a2b8-99484022e6ba.jpeg',
-      skills: [ 'Oracle APEX', 'SQL', 'PL/SQL', 'Oracle Cloud Infrastructure (OCI)', 'Low-Code Development', 'Application Deployment'],
+      skills: ['Oracle APEX', 'SQL', 'PL/SQL', 'Oracle Cloud Infrastructure (OCI)', 'Low-Code Development', 'Application Deployment'],
       description: 'Earned certification demonstrating advanced proficiency in Oracle Application Express (APEX) and Oracle Cloud Infrastructure (OCI) for developing, securing, and deploying enterprise-grade, low-code web applications.',
       verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=7CC5C939C41DCF5E14FB14AA73C28227B67D6965287DE5E5BB1C743A7FE7B21F'
     },
@@ -97,7 +97,7 @@ const AchievementsSection = () => {
       date: 'October 2025',
       credentialId: '518769296831',
       image: 'https://www.xlncacademy.com/Blogs/admin/postimages/a02ef84e7525c7107f2f989197eb9d05.png',
-      skills: [ 'Python','tesorflow','reactjs','tailwind','FastAPI','Flask'],
+      skills: ['Python', 'tesorflow', 'reactjs', 'tailwind', 'FastAPI', 'Flask'],
       description: 'Certification of publication of research paper of EduTwin(AI Augmented digital twin for personalized learning in virtual classrooms.).',
       verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=A9311F55024E089FCFD613862A051C576F4D325AAD6E4D6E80A3981B037041C1'
 
@@ -109,7 +109,7 @@ const AchievementsSection = () => {
       date: 'August 2025',
       credentialId: '102407713OCI25GAIOCP',
       image: 'https://blogs.cloudare.in/wp-content/uploads/2025/01/4765971.jpg',
-      skills: [ 'Generative AI', 'Oracle Cloud', 'AI Models', 'AI Integration'],
+      skills: ['Generative AI', 'Oracle Cloud', 'AI Models', 'AI Integration'],
       description: 'Certification validating expertise in generative AI concepts, Oracle Cloud Infrastructure, and the ability to design and deploy AI-driven solutions.',
       verifyUrl: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=90D1726627922C232F12843FBCFC54577E5DFE3C7E10B0C29FA5726D815F110E'
     },
@@ -120,7 +120,7 @@ const AchievementsSection = () => {
       issuer: 'University of Maryland Robert H. Smith School of Business',
       date: 'NOV 2025',
       image: 'https://iseminger.com/img/portfolio/introduction-to-machine-learning.jpg',
-      skills: [ 'prompt engineering','Use of AI in career','AI Optimization','Work management using AI','AI integration'],
+      skills: ['prompt engineering', 'Use of AI in career', 'AI Optimization', 'Work management using AI', 'AI integration'],
       description: 'Certified in “AI and Career Empowerment” from the University of Maryland. Learned how to leverage AI tools for career growth, communication, and strategic professional development.)',
       verifyUrl: 'https://drive.google.com/file/d/1s18rpKseFUrmoc-bGOU0N6gAmk--5U0w/preview'
     },
@@ -132,7 +132,7 @@ const AchievementsSection = () => {
       date: 'July 2025',
       credentialId: '3ZF9EFXTT23Q',
       image: 'https://www.mbloging.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fyynr1uml%2Fproduction%2Fd3f0ff2ab5398aaffb00fa0b3afcb238772f42e7-1024x576.jpg%3Fw%3D1024%26auto%3Dformat&w=3840&q=75',
-      skills: [ 'React', 'JavaScript', 'Web Development', 'Frontend Development'],
+      skills: ['React', 'JavaScript', 'Web Development', 'Frontend Development'],
       description: 'Professional certificate covering advanced web development concepts using React.js, including state management, routing, and performance optimization.',
       verifyUrl: 'https://coursera.org/verify/3ZF9EFXTT23Q'
     },
@@ -158,7 +158,7 @@ const AchievementsSection = () => {
       description: 'A comprehensive simulation experience focusing on software development and technology consulting, providing insights into real-world challenges and solutions.',
       verifyUrl: 'https://drive.google.com/file/d/1ipWwwLKsk6PNJCtJOiz1mBhaQPG4RbdU/preview'
     },
-    
+
     {
       id: 9,
       title: 'Certificate of publication of research paper (AI Augmented DigitalTwin for personalized learning in virtual classrooms',
@@ -166,7 +166,7 @@ const AchievementsSection = () => {
       date: 'October 2025',
       credentialId: '518769296831',
       image: 'https://wallpapers.com/images/featured/cloud-storage-background-qnc7mnsd9pjxtquw.jpg',
-      skills: [ 'AI','Machine learning','LLMs','deep learning','FastAPI','RNNs, CNNs LSTMs'],
+      skills: ['AI', 'Machine learning', 'LLMs', 'deep learning', 'FastAPI', 'RNNs, CNNs LSTMs'],
       description: 'Certificate of publication of research paper (AI Augmented DigitalTwin for personalized learning in virtual classrooms',
       verifyUrl: 'https://drive.google.com/file/d/105yPGXKiwzQTe-BICyIxrlAOPq4k83cj/preview'
 
@@ -183,7 +183,7 @@ const AchievementsSection = () => {
       description: 'Developed a dynamic glowing VS Code theme engine that adapts to user preferences and enhances coding experience with customizable glow effects.',
       image: 'https://www.gitkraken.com/wp-content/uploads/2024/04/Best-VS-Code-themes-hero-2.png',
       category: 'VS Code Theme Development',
-      View:'https://vscodethemes.com/e/swarajladke.elora/elora-cyan'
+      View: 'https://vscodethemes.com/e/swarajladke.elora/elora-cyan'
     },
 
     {
@@ -194,10 +194,10 @@ const AchievementsSection = () => {
       description: 'Achieved Oracle Cloud Infrastructure 2025 Certified Generative AI Professional certification, demonstrating expertise in generative AI concepts and Oracle Cloud services.',
       image: 'https://revistayume.com/wp-content/uploads/2023/06/Oracle.jpg',
       category: 'Generative AI',
-      View:'https://drive.google.com/file/d/1SlMy-_3kPjxeOiHzoJ5ct2bYwsYqC82W/preview'
+      View: 'https://drive.google.com/file/d/1SlMy-_3kPjxeOiHzoJ5ct2bYwsYqC82W/preview'
 
     },
-    
+
     {
       id: 3,
       title: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
@@ -206,7 +206,7 @@ const AchievementsSection = () => {
       credentialId: '518769296831',
       image: 'https://www.xlncacademy.com/Blogs/admin/postimages/a02ef84e7525c7107f2f989197eb9d05.png',
       category: 'Artificial intelligence',
-      skills: [ 'Python','tesorflow','reactjs','tailwind','FastAPI','Flask'],
+      skills: ['Python', 'tesorflow', 'reactjs', 'tailwind', 'FastAPI', 'Flask'],
       description: 'Certification of publication of research paper of EduTwin(AI Augmented digital twin for personalized learning in virtual classrooms.).',
       verifyUrl: 'https://drive.google.com/file/d/1A3tjLQ1v_irC4M2qxDBIcAVJaHmZ-4RW/view?usp=drive_link'
     },
@@ -219,11 +219,11 @@ const AchievementsSection = () => {
       credentialId: '102407713APEX24CDOCP',
       image: 'https://images.surferseo.art/b775813f-af1a-4f57-a2b8-99484022e6ba.jpeg',
       category: 'Cloud',
-      skills: [ 'Oracle APEX', 'SQL', 'PL/SQL', 'Oracle Cloud Infrastructure (OCI)', 'Low-Code Development', 'Application Deployment'],
+      skills: ['Oracle APEX', 'SQL', 'PL/SQL', 'Oracle Cloud Infrastructure (OCI)', 'Low-Code Development', 'Application Deployment'],
       description: 'Earned certification demonstrating advanced proficiency in Oracle Application Express (APEX) and Oracle Cloud Infrastructure (OCI) for developing, securing, and deploying enterprise-grade, low-code web applications.',
       verifyUrl: 'https://drive.google.com/file/d/1bl5UUgK63kGLewh_TPPxeunR9kFCJzib/preview'
     },
-    
+
   ];
 
   const getTabContent = () => {
@@ -269,11 +269,10 @@ const AchievementsSection = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center space-x-2 shadow-lg ${
-                  isActive
+                className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center space-x-2 shadow-lg ${isActive
                     ? 'bg-transparent border border-white/20 text-primary hover:shadow-cyan-500/40'
                     : 'bg-transparent border border-transparent text-muted-foreground hover:text-foreground hover:border-white/20 hover:shadow-cyan-500/40'
-                }`}
+                  }`}
               >
                 <Icon name={tab.icon} size={18} />
                 <span>{tab.label}</span>
@@ -399,7 +398,7 @@ const AchievementsSection = () => {
             <div className="text-sm text-muted-foreground">Certifications Earned</div>
           </div>
           <div className="text-center p-6 bg-transparent rounded-2xl border border-transparent hover:border-white/20 shadow-lg shadow-black/30 hover:shadow-cyan-500/40 transition-all duration-300">
-            <div className="text-3xl font-bold text-success mb-2">2</div>
+            <div className="text-3xl font-bold text-success mb-2">6</div>
             <div className="text-sm text-muted-foreground">projects in production</div>
           </div>
           <div className="text-center p-6 bg-transparent rounded-2xl border border-transparent hover:border-white/20 shadow-lg shadow-black/30 hover:shadow-cyan-500/40 transition-all duration-300">

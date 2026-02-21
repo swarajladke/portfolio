@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Icon from '../AppIcon';
 import Button from './Button';
 
-const ResumePreviewModal = ({ isOpen, onClose, resumeUrl }) => {
+const ResumePreviewModal = ({ isOpen, onClose, resumeUrl, downloadUrl }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
 
@@ -11,6 +11,17 @@ const ResumePreviewModal = ({ isOpen, onClose, resumeUrl }) => {
       document.body.style.overflow = 'hidden';
       setIsLoading(true);
       setError(false);
+
+      // Timeout fallback: if iframe doesn't load in 15s, show error
+      const timeout = setTimeout(() => {
+        setIsLoading(false);
+        setError(true);
+      }, 15000);
+
+      return () => {
+        clearTimeout(timeout);
+        document.body.style.overflow = 'unset';
+      };
     } else {
       document.body.style.overflow = 'unset';
     }
@@ -45,19 +56,21 @@ const ResumePreviewModal = ({ isOpen, onClose, resumeUrl }) => {
   };
 
   const handleDownload = () => {
+    const url = downloadUrl || resumeUrl || '/assets/resume.pdf';
     const link = document.createElement('a');
-    link.href = resumeUrl || '/assets/resume.pdf';
-    link.download = 'Resume.pdf';
+    link.href = url;
+    link.download = 'Swaraj-Ladke-Resume.pdf';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   const handlePrint = () => {
-    const iframe = document.getElementById('resume-iframe');
-    if (iframe && iframe.contentWindow) {
-      iframe.contentWindow.print();
-    }
+    // Open the PDF in a new tab for printing (avoids cross-origin issues)
+    const url = downloadUrl || resumeUrl || '/assets/resume.pdf';
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   const handleIframeLoad = () => {
@@ -140,7 +153,7 @@ const ResumePreviewModal = ({ isOpen, onClose, resumeUrl }) => {
                 </div>
               </div>
             ) : (
-              <div className="relative h-full">
+              <div className="relative h-full min-h-[400px]">
                 {isLoading && (
                   <div className="absolute inset-0 flex items-center justify-center bg-muted/50 rounded-xl">
                     <div className="flex flex-col items-center space-y-4">
