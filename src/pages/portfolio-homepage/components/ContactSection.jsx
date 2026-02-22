@@ -108,7 +108,11 @@ const ContactSection = () => {
         body: JSON.stringify(formData),
       });
 
-      if (!response.ok) throw new Error('Failed to send message');
+      const data = await response.json();
+
+      if (!response.ok || data.status === 'error') {
+        throw new Error(data.detail || 'Failed to send message');
+      }
 
       // Reset form
       setFormData({
@@ -118,10 +122,10 @@ const ContactSection = () => {
         message: ''
       });
 
-      alert('Thank you! Your message has been sent successfully. I will get back to you soon.');
+      alert('Thank you! Your message has been sent successfully and Swaraj has been notified via Telegram.');
     } catch (error) {
       console.error('Contact Form Error:', error);
-      alert('Sorry, there was an issue sending your message. Please try again or reach out via LinkedIn.');
+      alert(`Issue sending your message: ${error.message}. Please try again or reach out via LinkedIn.`);
     } finally {
       setIsSubmitting(false);
     }
