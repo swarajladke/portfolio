@@ -1,5 +1,8 @@
 import os
 import logging
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -18,8 +21,8 @@ load_dotenv()
 
 app = FastAPI(
     title="Swaraj's Resume Chat API (Groq Edition)",
-    description="AI-powered chat using Groq to interact with Swaraj Ladke's professional resume",
-    version="1.2.1",
+    description="AI-powered chat using Groq and Contact Form handler",
+    version="1.3.0",
 )
 
 # CORS middleware
@@ -32,105 +35,120 @@ app.add_middleware(
     expose_headers=["*"],
 )
 
-
 # --- Models ---
 class Message(BaseModel):
-    role: str  # "user" or "assistant"
+    role: str
     content: str
-
 
 class ChatRequest(BaseModel):
     message: str
     history: Optional[List[Message]] = []
 
-
 class ChatResponse(BaseModel):
     reply: str
 
+class ContactRequest(BaseModel):
+    name: str
+    email: str
+    subject: str
+    message: str
 
 # --- Helper to get API Key ---
 def get_api_key():
     return os.getenv("GROQ_API_KEY")
 
+# --- Email Helper ---
+def send_email_notification(data: ContactRequest):
+    sender_email = os.getenv("SENDER_EMAIL") # Your gmail
+    sender_password = os.getenv("SENDER_PASSWORD") # Your Gmail App Password
+    receiver_email = os.getenv("RECEIVER_EMAIL", "swarajladke20@gmail.com")
+
+    if not sender_email or not sender_password:
+        logger.warning("Email credentials not configured. Skipping email notification.")
+        return False
+
+    try:
+        msg = MIMEMultipart()
+        msg['From'] = f"Portfolio Contact <{sender_email}>"
+        msg['To'] = receiver_email
+        msg['Subject'] = f"🚀 New Portfolio Message: {data.subject}"
+
+        body = f"""
+        New message from your portfolio website!
+        
+        From: {data.name} ({data.email})
+        Subject: {data.subject}
+        
+        Message:
+        ------------------------------------------
+        {data.message}
+        ------------------------------------------
+        
+        Reply directly to: {data.email}
+        """
+        msg.attach(MIMEText(body, 'plain'))
+
+        # Use Gmail SMTP
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login(sender_email, sender_password)
+        server.send_message(msg)
+        server.quit()
+        logger.info(f"✅ Email notification sent to {receiver_email}")
+        return True
+    except Exception as e:
+        logger.error(f"❌ Failed to send email: {e}")
+        return False
 
 # --- Routes ---
 @app.get("/api/health")
 async def health_check():
-    key_status = "configured" if get_api_key() else "missing"
-    return {"status": "ok", "service": "resume-chat-api-groq", "version": "1.2.1", "key": key_status}
-
+    return {"status": "ok", "service": "resume-api", "version": "1.3.0"}
 
 @app.post("/api/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
     api_key = get_api_key()
     if not api_key:
-        logger.error("GROQ_API_KEY is missing")
-        raise HTTPException(status_code=500, detail="GROQ_API_KEY is not configured.")
+        raise HTTPException(status_code=500, detail="GROQ_API_KEY missing")
 
     try:
-        # --- PROXY FIX FOR HUGGING FACE ---
-        # Some environments inject proxy settings that conflict with Groq's internal client.
-        # We explicitly clear them for this request context if they exist.
-        proxies = {
-            "http_proxy": os.environ.pop("http_proxy", None),
-            "https_proxy": os.environ.pop("https_proxy", None),
-            "HTTP_PROXY": os.environ.pop("HTTP_PROXY", None),
-            "HTTPS_PROXY": os.environ.pop("HTTPS_PROXY", None),
-        }
-        
-        # Initialize client with the API key
-        # Newer versions of Groq SDK have fixed the 'proxies' argument bug.
+        # Clear proxies for Hugging Face compatibility
+        proxies = {k: os.environ.pop(k, None) for k in ["http_proxy", "https_proxy", "HTTP_PROXY", "HTTPS_PROXY"]}
         client = Groq(api_key=api_key)
-        
-        # Restore proxy env vars after initialization to avoid breaking other system parts
-        for key, value in proxies.items():
-            if value:
-                os.environ[key] = value
+        for k, v in proxies.items(): 
+            if v: os.environ[k] = v
 
-        # Build conversation history
         messages = [{"role": "system", "content": SYSTEM_PROMPT}]
-        
         for msg in request.history or []:
-            role = "assistant" if msg.role.lower() == "assistant" else "user"
-            messages.append({"role": role, "content": msg.content})
-            
+            messages.append({"role": msg.role, "content": msg.content})
         messages.append({"role": "user", "content": request.message})
 
-        logger.info(f"Sending request to Groq (Llama 3.3 70B)")
-
-        # Call Groq API
         chat_completion = client.chat.completions.create(
             messages=messages,
             model="llama-3.3-70b-versatile",
             temperature=0.5,
             max_tokens=1024,
         )
-
-        reply = chat_completion.choices[0].message.content
-
-        if not reply:
-            return ChatResponse(reply="I'm sorry, I couldn't generate a response.")
-
-        return ChatResponse(reply=reply)
-
+        return ChatResponse(reply=chat_completion.choices[0].message.content)
     except Exception as e:
-        error_msg = str(e)
-        logger.error(f"Groq API Error: {error_msg}")
-        return ChatResponse(reply=f"⚠️ AI Server Error: {error_msg}")
+        return ChatResponse(reply=f"⚠️ AI Error: {str(e)}")
 
+@app.post("/api/contact")
+async def contact_form(request: ContactRequest):
+    logger.info(f"📬 Received message from {request.name}")
+    
+    # Send email in background (or just call it)
+    email_sent = send_email_notification(request)
+    
+    return {
+        "status": "success", 
+        "message": "Message received!",
+        "email_notified": email_sent
+    }
 
 @app.get("/api/suggestions")
 async def get_suggestions():
-    return {
-        "suggestions": [
-            "What are Swaraj's top skills?",
-            "Tell me about his projects",
-            "What certifications does he have?",
-            "What hackathons has he participated in?",
-            "Is he available for hire?",
-        ]
-    }
-
+    return {"suggestions": ["Skills?", "Projects?", "Certifications?"]}
 
 if __name__ == "__main__":
     import uvicorn

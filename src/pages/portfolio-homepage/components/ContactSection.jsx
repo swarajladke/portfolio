@@ -95,21 +95,36 @@ const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-    setIsSubmitting(false);
-    
-    // You could add a success notification here
-    alert('Thank you for your message! I\'ll get back to you soon.');
+
+    try {
+      const apiUrl = import.meta.env.VITE_CHAT_API_URL || 'http://localhost:8000';
+      const cleanUrl = apiUrl.endsWith('/') ? apiUrl.slice(0, -1) : apiUrl;
+
+      const response = await fetch(`${cleanUrl}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) throw new Error('Failed to send message');
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+
+      alert('Thank you! Your message has been sent successfully. I will get back to you soon.');
+    } catch (error) {
+      console.error('Contact Form Error:', error);
+      alert('Sorry, there was an issue sending your message. Please try again or reach out via LinkedIn.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -133,7 +148,7 @@ const ContactSection = () => {
                 Let's Start a Conversation
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I'm always excited to discuss new opportunities, innovative projects, and potential collaborations. Whether you're looking for a fullstack developer, AI/ML expertise, or just want to connect with 
+                I'm always excited to discuss new opportunities, innovative projects, and potential collaborations. Whether you're looking for a fullstack developer, AI/ML expertise, or just want to connect with
                 a fellow tech enthusiast, I'd love to hear from you.
               </p>
               <p className="text-muted-foreground leading-relaxed">
@@ -173,7 +188,7 @@ const ContactSection = () => {
                     onClick={() => window.open(social.url, '_blank')}
                     className="flex items-center space-x-3 p-4 rounded-2xl bg-transparent border border-transparent shadow-lg shadow-black/30 hover:border-white/20 hover:shadow-cyan-500/40 transition-all duration-300 group text-left"
                   >
-                    <div 
+                    <div
                       className="w-10 h-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
                       style={{ backgroundColor: `${social.color}20` }}
                     >
@@ -266,7 +281,7 @@ const ContactSection = () => {
                 <Icon name="Clock" size={16} className="text-primary flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-sm text-muted-foreground">
-                    <strong className="text-foreground">Response Time:</strong> I typically respond within 24-48 hours. 
+                    <strong className="text-foreground">Response Time:</strong> I typically respond within 24-48 hours.
                     For urgent matters, feel free to reach out via LinkedIn or email directly.
                   </p>
                 </div>
@@ -281,7 +296,7 @@ const ContactSection = () => {
             <Icon name="Rocket" size={32} className="text-primary mx-auto mb-4" />
             <h3 className="text-2xl font-semibold text-foreground mb-4">Ready to Build Something Amazing?</h3>
             <p className="text-muted-foreground mb-6">
-              Whether it's a cutting-edge web application, an AI-powered solution, or an innovative startup idea, 
+              Whether it's a cutting-edge web application, an AI-powered solution, or an innovative startup idea,
               I'm here to help bring your vision to life. Let's create the future together!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
