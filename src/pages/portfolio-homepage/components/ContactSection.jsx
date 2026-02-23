@@ -97,12 +97,16 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      const apiUrl = import.meta.env.VITE_CHAT_API_URL || 'http://localhost:8000';
-      const cleanUrl = apiUrl.endsWith('/') ? apiUrl.slice(0, -1) : apiUrl;
+      const formspreeId = import.meta.env.VITE_FORMSPREE_ID;
 
-      const response = await fetch(`${cleanUrl}/api/contact`, {
+      if (!formspreeId || formspreeId === 'your_formspree_id_here') {
+        throw new Error('Formspree ID is not configured. Please set VITE_FORMSPREE_ID in your .env file.');
+      }
+
+      const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
         method: 'POST',
         headers: {
+          'Accept': 'application/json',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
@@ -110,8 +114,8 @@ const ContactSection = () => {
 
       const data = await response.json();
 
-      if (!response.ok || data.status === 'error') {
-        throw new Error(data.detail || 'Failed to send message');
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
       }
 
       // Reset form
@@ -122,10 +126,10 @@ const ContactSection = () => {
         message: ''
       });
 
-      alert('Thank you! Your message has been sent successfully and Swaraj has been notified via Telegram.');
+      alert('Thank you! Your message has been sent successfully. I will get back to you soon.');
     } catch (error) {
       console.error('Contact Form Error:', error);
-      alert(`Issue sending your message: ${error.message}. Please try again or reach out via LinkedIn.`);
+      alert(`Issue sending your message: ${error.message}. Please check your configuration or reach out via LinkedIn.`);
     } finally {
       setIsSubmitting(false);
     }
