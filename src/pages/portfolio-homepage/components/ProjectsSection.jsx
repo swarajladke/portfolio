@@ -125,7 +125,7 @@ const ProjectsSection = () => {
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe2wTRoc3vW-YSoCJ9_P7SQwqSitIXgZ9ZfixBOs61XecUJJShxTvLJnRKfR8B41sp-Xw&usqp=CAU',
       technologies: ['TensorFlow', 'OpenCV', 'Flask', 'YouTube API', 'React', 'keras'],
       githubUrl: 'https://github.com/swarajladke/emoify',
-      liveUrl: 'huggingface.co/spaces/swaraj020/Emoify',
+      liveUrl: 'https://huggingface.co/spaces/swaraj020/Emoify',
       status: 'Live',
       features: [
         'Real-time emotion detection',
