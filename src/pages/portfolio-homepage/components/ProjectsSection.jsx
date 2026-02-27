@@ -125,8 +125,8 @@ const ProjectsSection = () => {
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe2wTRoc3vW-YSoCJ9_P7SQwqSitIXgZ9ZfixBOs61XecUJJShxTvLJnRKfR8B41sp-Xw&usqp=CAU',
       technologies: ['TensorFlow', 'OpenCV', 'Flask', 'YouTube API', 'React', 'keras'],
       githubUrl: 'https://github.com/swarajladke/emoify',
-      liveUrl: 'To be updated',
-      status: 'Completed',
+      liveUrl: 'huggingface.co/spaces/swaraj020/Emoify',
+      status: 'Live',
       features: [
         'Real-time emotion detection',
         'Personalized music recommendations',
@@ -137,8 +137,6 @@ const ProjectsSection = () => {
       stats: {
         averageResponseTime: '1-2 seconds',
         accuracy: '85% emotion detection accuracy (based on test cases)',
-        users: 'Growing',
-        playlists: '100+ curated playlists'
       }
     },
     {
@@ -340,6 +338,29 @@ const ProjectsSection = () => {
         'Storage Alerts',
         'Storage Watchlists',
         'Storage Analytics'],
+      stats: {
+        averageSpeed: ' To be updated',
+        accuracy: 'To be updated'
+      }
+
+    },
+    {
+      id: 14,
+      title: 'Live-chat-webapp',
+      category: 'Chat-App',
+      description: 'A real-time chat application built with Next.js and convex, featuring instant messaging, user authentication, and real-time updates.',
+      image: 'https://files.ably.io/ghost/prod/2023/06/the-ultimate-guide-to-chat-app-architecture.png',
+      technologies: ['Next.js', 'Tailwind CSS', 'convex', 'React 19', 'TypeScript', 'Vercel', 'shadcn'],
+      githubUrl: 'https://github.com/swarajladke/live-chat-webapp.',
+      liveUrl: 'https://live-chat-webapp-xi.vercel.app/',
+      status: 'Live',
+      features: [
+        'Real-time messaging',
+        'User Authentication',
+        'Real-time updates',
+        'Message Timestamps',
+        'Online/Offline Status',
+        'Smart Auto-Scroll'],
       stats: {
         averageSpeed: ' To be updated',
         accuracy: 'To be updated'
