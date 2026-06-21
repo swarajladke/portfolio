@@ -45,32 +45,32 @@ const AIProjectsSection = () => {
       title: 'Agnis AI',
       category: 'AI',
       status: 'Research Phase',
-      description: 'Agnis AI is an advanced self-adaptive AI system designed to push beyond the limits of traditional Large Language Models. Its goal is not only to understand and respond, but also to evolve over time, adapt its behavior, and operate as a multi-capability intelligence layer.',
+      description: 'AGNIS (Autonomous Gated Neural Inference System) is a ground-up attempt to build a biologically-plausible Deep Learning framework. It discards backpropagation in favor of Predictive Coding and SNAP-ATP (Synchronized Aggressive Target Propagation) using local Hebbian updates to solve catastrophic forgetting.',
       image: 'https://cdn.mos.cms.futurecdn.net/v2/t:0,l:240,cw:1440,ch:1080,q:80,w:1440/VFLt5vHV7aCoLrLGjP9Qwm.jpg',
-      technologies: ['To be updated'],
+      technologies: ['Python', 'PyTorch', 'Predictive Coding', 'Hebbian Learning', 'SNAP-ATP', 'CUDA'],
       keyFeatures: [
-        'Self-adaptive learning algorithms',
-        'Multi-modal data processing',
-        'Contextual understanding and reasoning',
-        'Dynamic knowledge graph integration',
-        'Real-time decision making',
-        'Multi-agent coordination',
+        'Backprop-free Hebbian Learning',
+        'Iterative Settlement Mechanism',
+        'Synaptic Homeostasis & Clamping',
+        'Spectral Stable Recurrence',
+        'Zero-Forgetting Continual Learning',
+        'Thermal Guardian Protocol'
       ],
       challenges: [
-        'Scalability of learning algorithms',
-        'Data privacy and security',
-        'Bias mitigation in AI models',
-        'Interoperability with existing systems'
+        'CPU Iterative Settlement bottleneck (50 steps per token)',
+        'Synaptic clamping to prevent Hebbian explosion',
+        'Achieving hardware acceleration via CUDA port'
       ],
-      impact: 'Agnis AI aims to redefine the capabilities of AI systems, enabling them to operate autonomously across various domains, enhancing efficiency and decision-making processes in real-world applications.',
+      impact: 'AGNIS achieved 92.0% bilingual retention (Italian/Russian) without catastrophic forgetting, offering a viable alternative to the Transformer architecture for continual learning.',
       publications: [
-        'To be published in the Journal of Artificial Intelligence Research (Draft)',
-        'International Conference on Advanced AI Systems (Planned)'
+        'AGNIS_V5_RESEARCH_PAPER.md (Internal Draft)',
+        'Autonomous SLM Research Study (2026)'
       ],
       metrics: {
-        adaptability: 'To be updated',
-        performance: 'To be updated',
-        capabilities: 'To be updated',
+        architecture: 'Predictive Coding',
+        training: 'SNAP-ATP Target Propagation',
+        retention: '92% Bilingual Retention',
+        inference: '40+ Tokens/sec (RTX 3060)'
       }
     },
     {

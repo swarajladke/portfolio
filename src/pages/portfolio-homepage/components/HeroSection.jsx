@@ -15,37 +15,7 @@ const HeroSection = () => {
     }
   }, []);
 
-  useEffect(() => {
-    const createTrailParticles = () => {
-      const container = document.getElementById('comet-trail-container');
-      if (!container) return;
 
-      const comets = document.querySelectorAll('.comet');
-      comets.forEach(comet => {
-        const rect = comet.getBoundingClientRect();
-        const containerRect = container.getBoundingClientRect();
-
-        const x = rect.left + rect.width / 2 - containerRect.left;
-        const y = rect.top + rect.height / 2 - containerRect.top;
-
-        const particle = document.createElement('div');
-        particle.className = 'trail-particle';
-        particle.style.left = `${x}px`;
-        particle.style.top = `${y}px`;
-
-        container.appendChild(particle);
-
-        setTimeout(() => {
-          if (particle.parentNode) {
-            particle.parentNode.removeChild(particle);
-          }
-        }, 2000);
-      });
-    };
-
-    const interval = setInterval(createTrailParticles, 50);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <>
@@ -67,16 +37,7 @@ const HeroSection = () => {
             transform: rotate(0deg) translateX(var(--orbit-dist, 25vw)) rotate(0deg);
           }
         }
-        @keyframes trailFade {
-          0% {
-            opacity: 1;
-            transform: scale(1);
-          }
-          100% {
-            opacity: 0;
-            transform: scale(0.3);
-          }
-        }
+
         @keyframes starOrbit1 {
           0% {
             transform: rotate(0deg) translateX(var(--star-dist-1, 20vw)) rotate(0deg);
@@ -174,16 +135,7 @@ const HeroSection = () => {
           height: 100%;
           animation: orbitReverse 20s linear infinite;
         }
-        .trail-particle {
-          position: absolute;
-          width: 4px;
-          height: 4px;
-          background: radial-gradient(circle, #00FFFF 0%, transparent 100%);
-          border-radius: 50%;
-          box-shadow: 0 0 8px #00FFFF, 0 0 16px rgba(0, 255, 255, 0.6);
-          animation: trailFade 2s ease-out forwards;
-          pointer-events: none;
-        }
+
         .comet {
           position: absolute;
           top: 0;

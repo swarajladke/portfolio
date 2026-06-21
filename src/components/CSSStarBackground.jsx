@@ -7,11 +7,11 @@ export const CSSStarBackground = () => {
     const container = containerRef.current;
     if (!container) return;
 
-    // Create multiple layers of twinkling stars - static positions for visibility
+    // Create fewer layers of twinkling stars for better performance
     const layers = [
-      { count: 35, speed: 20, size: 1, opacity: 1 }, // Far stars: fewer
-      { count: 22, speed: 40, size: 1.5, opacity: 1 }, // Mid stars: fewer
-      { count: 10, speed: 60, size: 2, opacity: 1 }, // Near stars: fewer
+      { count: 15, speed: 20, size: 1, opacity: 1 }, // Far stars
+      { count: 10, speed: 40, size: 1.5, opacity: 1 }, // Mid stars
+      { count: 5, speed: 60, size: 2, opacity: 1 }, // Near stars
     ];
 
     const stars = [];
@@ -29,8 +29,8 @@ export const CSSStarBackground = () => {
         const duration = layer.speed + Math.random() * 10;
         const delay = Math.random() * duration;
         // Random twinkle delay and duration so stars don't twinkle at the same time
-        const twinkleDelay = Math.random() * 5; // Random delay between 0-5 seconds
-        const twinkleDuration = 2 + Math.random() * 3; // Random duration between 2-5 seconds
+        const twinkleDelay = Math.random() * 5; 
+        const twinkleDuration = 2 + Math.random() * 3; 
         
         star.style.left = `${startX}%`;
         star.style.top = `${startY}%`;
@@ -68,54 +68,17 @@ export const CSSStarBackground = () => {
           position: absolute;
           background: white;
           border-radius: 50%;
-          box-shadow: 0 0 10px rgba(255, 255, 255, 1),
-                      0 0 20px rgba(255, 255, 255, 0.9),
-                      0 0 30px rgba(255, 255, 255, 0.7),
-                      0 0 40px rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
           animation: twinkle 3s infinite ease-in-out;
-          filter: brightness(1.5);
-          opacity: 1 !important;
-        }
-        
-        @keyframes moveStar {
-          0%, 100% {
-            transform: translate(0, 0) scale(1);
-            opacity: 1;
-          }
+          will-change: opacity;
         }
         
         @keyframes twinkle {
           0%, 100% {
-            opacity: 0.6;
-            transform: scale(1);
-            box-shadow: 0 0 6px rgba(255, 255, 255, 0.8),
-                        0 0 12px rgba(255, 255, 255, 0.6),
-                        0 0 18px rgba(255, 255, 255, 0.4),
-                        0 0 24px rgba(255, 255, 255, 0.2);
-          }
-          25% {
-            opacity: 0.9;
-            transform: scale(1.3);
-            box-shadow: 0 0 10px rgba(255, 255, 255, 1),
-                        0 0 20px rgba(255, 255, 255, 0.9),
-                        0 0 30px rgba(255, 255, 255, 0.7),
-                        0 0 40px rgba(255, 255, 255, 0.5);
+            opacity: 0.3;
           }
           50% {
             opacity: 1;
-            transform: scale(1.6);
-            box-shadow: 0 0 14px rgba(255, 255, 255, 1),
-                        0 0 28px rgba(255, 255, 255, 1),
-                        0 0 42px rgba(255, 255, 255, 0.8),
-                        0 0 56px rgba(255, 255, 255, 0.6);
-          }
-          75% {
-            opacity: 0.9;
-            transform: scale(1.3);
-            box-shadow: 0 0 10px rgba(255, 255, 255, 1),
-                        0 0 20px rgba(255, 255, 255, 0.9),
-                        0 0 30px rgba(255, 255, 255, 0.7),
-                        0 0 40px rgba(255, 255, 255, 0.5);
           }
         }
         
@@ -130,36 +93,6 @@ export const CSSStarBackground = () => {
         
         .star:nth-child(7n) {
           animation-duration: var(--animation-duration, 30s), 1.5s;
-        }
-        
-        .star:nth-child(11n) {
-          animation-duration: var(--animation-duration, 30s), 5s;
-        }
-        
-        .star:nth-child(13n) {
-          animation-duration: var(--animation-duration, 30s), 2.5s;
-        }
-        
-        /* Add pulsing glow effect */
-        .star::after {
-          content: '';
-          position: absolute;
-          inset: -2px;
-          border-radius: 50%;
-          background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
-          animation: pulseGlow 2s infinite ease-in-out;
-          opacity: 0;
-        }
-        
-        @keyframes pulseGlow {
-          0%, 100% {
-            opacity: 0;
-            transform: scale(0.8);
-          }
-          50% {
-            opacity: 0.6;
-            transform: scale(1.5);
-          }
         }
       `}</style>
     </div>

@@ -96,25 +96,25 @@ const ProjectsSection = () => {
       id: 4,
       title: 'Agnis AI',
       category: 'ai',
-      description: 'Agnis AI is an advanced self-adaptive AI system designed to push beyond the limits of traditional Large Language Models. Its goal is not only to understand and respond, but also to evolve over time, adapt its behavior, and operate as a multi-capability intelligence layer..',
+      description: 'AGNIS (Autonomous Gated Neural Inference System) is a ground-up attempt to build a biologically-plausible Deep Learning framework. It discards backpropagation in favor of Predictive Coding and SNAP-ATP (Synchronized Aggressive Target Propagation) using local Hebbian updates to solve catastrophic forgetting.',
       image: 'https://cdn.mos.cms.futurecdn.net/v2/t:0,l:240,cw:1440,ch:1080,q:80,w:1440/VFLt5vHV7aCoLrLGjP9Qwm.jpg',
-      technologies: ['To be updated'],
-      githubUrl: 'https://github.com/swarajladke/ai-portfolio-builder',
+      technologies: ['Python', 'PyTorch', 'Predictive Coding', 'Hebbian Learning', 'SNAP-ATP', 'CUDA'],
+      githubUrl: 'https://github.com/swarajladke/Neural-Networks',
       liveUrl: 'To be updated',
       status: 'In Development',
       features: [
-        'Multi-capability intelligence',
-        'Self-adaptive learning',
-        'Context-aware responses',
-        'Real-time data integration',
-        'Scalable architecture',
-        'Continuous improvement'
+        'Backprop-free Hebbian Learning',
+        'Iterative Settlement Mechanism',
+        'Synaptic Homeostasis & Clamping',
+        'Spectral Stable Recurrence',
+        'Zero-Forgetting Continual Learning',
+        'Thermal Guardian Protocol'
       ],
       stats: {
-        capabilities: 'To be updated',
-        performance: 'To be updated',
-        adaptability: 'To be updated',
-        userEngagement: 'To be updated'
+        architecture: 'Predictive Coding',
+        training: 'SNAP-ATP Target Propagation',
+        retention: '92% Bilingual Retention',
+        inference: '40+ Tokens/sec (RTX 3060)'
       }
     },
     {
@@ -366,8 +366,30 @@ const ProjectsSection = () => {
         accuracy: 'To be updated'
       }
 
+    },
+    {
+      id: 15,
+      title: 'HireFlow AI',
+      category: 'ai',
+      description: 'An AI-driven automated recruitment ecosystem. Replaces manual screening with an AI-powered ATS, featuring customized MCQ assessments, an AI behavioral interview module, and a real-time coding challenge environment.',
+      image: 'assets/images/hireflow-ai.png',
+      technologies: ['React.js', 'Vite', 'Flask', 'SQLAlchemy', 'JWT', 'Brevo API', 'AI/ML'],
+      githubUrl: 'https://github.com/swarajladke/Automated-Recruitment-System',
+      liveUrl: 'To be updated',
+      status: 'Completed',
+      features: [
+        'AI-ATS Resume Screening',
+        'Custom MCQ Assessments',
+        'Voice/Video AI Behavioral Interview',
+        'Real-time Coding Challenge',
+        'HR Admin Command Center',
+        'Visual Recruitment Funnel'
+      ],
+      stats: {
+        modules: '3 Assessment Types',
+        automation: '100% Automated Screening'
+      }
     }
-
   ];
 
   const filteredProjects = activeFilter === 'all'

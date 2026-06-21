@@ -45,7 +45,7 @@ const AchievementsSection = () => {
       date: 'Oct to jan 2026',
       category: 'AI/ML Track',
       description: 'Experimenting with Dendritic Optimization — an AI framework inspired by how brain dendrites learn and adapt.',
-      image: 'https://codewave.com/insights/wp-content/uploads/2025/02/Understanding-Machine-Learning-Frameworks-for-Model-Development.png',
+      image: 'assets/images/pytorch-hackathon.png',
       technologies: ['Python', 'PyTorch', 'TensorFlow', 'NumPy', 'Flask (API layer)', 'Streamlit (dashboard)'],
       prize: '$18,500',
       team: 'solo',
