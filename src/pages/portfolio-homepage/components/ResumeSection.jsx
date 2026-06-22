@@ -3,8 +3,8 @@ import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
 import ResumePreviewModal from '../../../components/ui/ResumePreviewModal';
 
-const RESUME_DOWNLOAD_URL = 'https://drive.google.com/uc?export=download&id=12ikHCOnQBWnZz6pTDDmi3nG1vFvn20en';
-const RESUME_PREVIEW_URL = 'https://drive.google.com/file/d/12ikHCOnQBWnZz6pTDDmi3nG1vFvn20en/preview';
+const RESUME_DOWNLOAD_URL = 'https://drive.google.com/uc?export=download&id=1yMIrK-q_XExKhZe1c9RZpxZCjrvn6yND';
+const RESUME_PREVIEW_URL = 'https://drive.google.com/file/d/1yMIrK-q_XExKhZe1c9RZpxZCjrvn6yND/preview';
 
 const ResumeSection = () => {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
