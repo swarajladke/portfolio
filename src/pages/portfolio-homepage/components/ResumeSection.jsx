@@ -11,8 +11,8 @@ const ResumeSection = () => {
   const [showToast, setShowToast] = useState(false);
 
   const resumeData = {
-    lastUpdated: 'Jan 14 2026',
-    fileSize: '148 KB',
+    lastUpdated: 'Jun 22 2026',
+    fileSize: '125 KB',
     format: 'PDF',
     sections: [
       'Professional Summary',
