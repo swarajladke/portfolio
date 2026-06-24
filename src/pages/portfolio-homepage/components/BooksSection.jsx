@@ -57,13 +57,15 @@ const BooksSection = () => {
               </div>
 
               <div className="flex flex-wrap gap-4 mt-auto">
-                <button 
-                  disabled
-                  className="px-6 py-3 bg-[#161B28] text-white/50 border border-white/10 rounded-xl font-medium flex items-center gap-2 cursor-not-allowed"
+                <a 
+                  href="https://drive.google.com/file/d/1FNL3O_-WSOgwMTgIvRQNpQVdBMy1423h/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 hover:text-cyan-300 border border-cyan-500/30 hover:border-cyan-400 rounded-xl font-bold flex items-center gap-2 transition-all duration-300 shadow-[0_0_15px_rgba(0,191,255,0.15)] hover:shadow-[0_0_25px_rgba(0,191,255,0.3)] hover:-translate-y-1"
                 >
-                  <Icon name="ShoppingCart" size={18} />
-                  Link Coming Soon
-                </button>
+                  <Icon name="ExternalLink" size={18} />
+                  Read Full Book
+                </a>
               </div>
             </div>
           </div>
