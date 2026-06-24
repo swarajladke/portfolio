@@ -139,7 +139,7 @@ const ResumePreviewModal = () => {
                 </div>
               ) : (
                 <ResumeViewer
-                  resumeUrl="https://drive.google.com/file/d/1yMIrK-q_XExKhZe1c9RZpxZCjrvn6yND/preview"
+                  resumeUrl="https://drive.google.com/file/d/14XKrLnOCVTXFzA2_1e-fxtoRugTdr2yY/preview"
                   onError={handleError}
                 />
               )}
