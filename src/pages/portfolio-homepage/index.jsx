@@ -5,6 +5,7 @@ import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
 import ProjectsSection from './components/ProjectsSection';
 import AIProjectsSection from './components/AIProjectsSection';
+import BooksSection from './components/BooksSection';
 import AchievementsSection from './components/AchievementsSection';
 import ResumeSection from './components/ResumeSection';
 import ContactSection from './components/ContactSection';
@@ -56,12 +57,13 @@ const PortfolioHomepage = () => {
         <StickyNavBar />
       </div>
 
-      {/* AboutSection, SkillsSection, ProjectsSection, AIProjectsSection, AchievementsSection, ResumeSection, ContactSection */}
+      {/* AboutSection, SkillsSection, ProjectsSection, AIProjectsSection, BooksSection, AchievementsSection, ResumeSection, ContactSection */}
       <div className="relative z-10">
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />
         <AIProjectsSection />
+        <BooksSection />
         <AchievementsSection />
         <ResumeSection />
         <ContactSection />

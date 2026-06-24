@@ -11,6 +11,7 @@ const StickyNavBar = () => {
     { label: 'About', anchor: '#about', icon: 'User' },
     { label: 'Skills', anchor: '#skills', icon: 'Code' },
     { label: 'Projects', anchor: '#projects', icon: 'FolderOpen' },
+    { label: 'Publications', anchor: '#books', icon: 'BookOpen' },
     { label: 'Achievements', anchor: '#achievements', icon: 'Award' },
     { label: 'Resume', anchor: '#resume', icon: 'FileText' },
     { label: 'Contact', anchor: '#contact', icon: 'Mail' }

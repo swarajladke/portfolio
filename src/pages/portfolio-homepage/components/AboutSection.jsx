@@ -3,7 +3,7 @@ import Icon from '../../../components/AppIcon';
 
 const AboutSection = () => {
   const stats = [
-    { label: 'Projects Completed', value: '5+', icon: 'FolderOpen' },
+    { label: 'Projects Completed', value: '15+', icon: 'FolderOpen' },
     { label: 'Technologies Mastered', value: '15+', icon: 'Code' },
     { label: 'VS extensions', value: '2', icon: 'Terminal' },
     { label: 'Research Papers', value: '2', icon: 'FileText' }
@@ -29,10 +29,10 @@ const AboutSection = () => {
                 Who I Am
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                I'm a passionate Fullstack Developer and AI/ML Enthusiast with a deep love for creating innovative solutions that bridge the gap between human needs and technological possibilities. My journey in tech began with curiosity and has evolved into a mission to build impactful applications.
+                I'm an Applied AI Engineer, Full Stack Developer, and Independent AI Researcher focused on building AI-native products that solve real-world problems. My work spans Large Language Models (LLMs), AI agents, Retrieval-Augmented Generation (RAG), intelligent automation, and full-stack software engineering, combining modern AI capabilities with scalable system design.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                With expertise spanning modern web technologies and artificial intelligence, I specialize in developing scalable applications that not only meet current requirements but anticipate future needs. I believe in writing clean, maintainable code and creating user experiences that delight and inspire.
+                I enjoy taking products from concept to deployment by integrating AI into robust, production-ready applications. From developer tools and recruitment platforms to intelligent assistants and collaborative systems, I build software that is practical, scalable, and designed for real users.
               </p>
             </div>
 
@@ -42,7 +42,10 @@ const AboutSection = () => {
                 What Drives Me
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                I'm driven by the endless possibilities that emerge when creativity meets technology. Whether it's developing AI-powered educational platforms, building efficient web applications, or exploring the frontiers of machine learning, I approach each project with enthusiasm and attention to detail.
+                I'm driven by the evolution of intelligent software and the shift toward AI-native applications. I enjoy exploring how autonomous agents, generative AI, and modern software engineering can redefine the way people build, learn, and work.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Beyond development, I actively pursue independent research in Artificial Intelligence, experimenting with emerging architectures, intelligent systems, and next-generation AI technologies while continuously expanding my expertise through hands-on projects and real-world applications.
               </p>
             </div>
 

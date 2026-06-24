@@ -304,7 +304,7 @@ const HeroSection = () => {
         {/* Hero Content - left aligned */}
         <div className="relative z-30 w-full max-w-2xl px-6 pt-32 md:pt-64 pb-8 flex flex-col items-start ml-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight bg-gradient-to-r from-purple-300 via-blue-400 to-teal-200 text-transparent bg-clip-text text-left">Transforming <span className="text-white drop-shadow-md">Ideas</span> into Seamless User <span className="text-white drop-shadow-md">Experience</span></h1>
-          <p className="mt-5 text-lg text-white/90 max-w-lg text-left">Hi I'm swaraj ladke, a Full Stack Software Engineer specializing in building modern web applications. Check out my projects and skills.</p>
+          <p className="mt-5 text-lg text-white/90 max-w-lg text-left">Hi, I'm Swaraj Ladke, an Applied AI Engineer, Full Stack Developer, and Independent AI Researcher specializing in AI-powered products, autonomous AI systems, developer tools, and scalable software engineering.</p>
           <div className="mt-8 flex flex-wrap gap-4">
             <button
               onClick={() => {
