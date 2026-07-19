@@ -11,6 +11,8 @@ const ContactSection = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
+  const [submitMessage, setSubmitMessage] = useState('');
 
   const socialLinks = [
     {
@@ -95,12 +97,14 @@ const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus(null);
+    setSubmitMessage('');
 
     try {
       const formspreeId = import.meta.env.VITE_FORMSPREE_ID;
 
       if (!formspreeId || formspreeId === 'your_formspree_id_here') {
-        throw new Error('Formspree ID is not configured. Please set VITE_FORMSPREE_ID in your .env file.');
+        throw new Error('Formspree ID is not configured.');
       }
 
       const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
@@ -119,17 +123,13 @@ const ContactSection = () => {
       }
 
       // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-
-      alert('Thank you! Your message has been sent successfully. I will get back to you soon.');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setSubmitStatus('success');
+      setSubmitMessage('Thank you! Your message has been sent successfully. I will get back to you soon. 🎉');
     } catch (error) {
       console.error('Contact Form Error:', error);
-      alert(`Issue sending your message: ${error.message}. Please check your configuration or reach out via LinkedIn.`);
+      setSubmitStatus('error');
+      setSubmitMessage(`Failed to send message: ${error.message}. Please reach out via LinkedIn or email directly.`);
     } finally {
       setIsSubmitting(false);
     }
@@ -281,6 +281,22 @@ const ContactSection = () => {
               >
                 {isSubmitting ? 'Sending Message...' : 'Send Message'}
               </Button>
+
+              {/* Inline submission feedback */}
+              {submitStatus && (
+                <div className={`flex items-start space-x-3 p-4 rounded-xl border ${
+                  submitStatus === 'success'
+                    ? 'bg-green-500/10 border-green-500/30 text-green-400'
+                    : 'bg-red-500/10 border-red-500/30 text-red-400'
+                }`}>
+                  <Icon
+                    name={submitStatus === 'success' ? 'CheckCircle' : 'AlertCircle'}
+                    size={18}
+                    className="flex-shrink-0 mt-0.5"
+                  />
+                  <p className="text-sm leading-relaxed">{submitMessage}</p>
+                </div>
+              )}
             </form>
 
             {/* Additional Info */}
