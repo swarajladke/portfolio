@@ -16,7 +16,7 @@ const ContactSection = () => {
     {
       name: 'LinkedIn',
       icon: 'Linkedin',
-      url: 'https://www.linkedin.com/in/swaraj-ladke-868387315/',
+      url: 'https://www.linkedin.com/in/swarajladke/',
       color: '#0077B5',
       description: 'Professional network and career updates'
     },
@@ -310,7 +310,7 @@ const ContactSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 variant="default"
-                onClick={() => window.open('https://www.linkedin.com/in/swaraj-ladke-868387315/', '_blank')}
+                onClick={() => window.open('https://www.linkedin.com/in/swarajladke/', '_blank')}
                 iconName="Linkedin"
                 iconPosition="left"
                 className="btn-glow"
