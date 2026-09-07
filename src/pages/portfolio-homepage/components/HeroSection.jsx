@@ -101,6 +101,7 @@ const HeroSection = () => {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
+          will-change: transform;
         }
         .star-orbit-1 {
           animation: starOrbit1 25s linear infinite;
@@ -125,6 +126,7 @@ const HeroSection = () => {
           width: 100%;
           height: 100%;
           animation: orbit 16s linear infinite;
+          will-change: transform;
         }
         .comet-orbit-reverse {
           position: absolute;
@@ -134,6 +136,7 @@ const HeroSection = () => {
           width: 100%;
           height: 100%;
           animation: orbitReverse 20s linear infinite;
+          will-change: transform;
         }
 
         .comet {
@@ -234,6 +237,18 @@ const HeroSection = () => {
         @media (max-width: 767px) {
           .hero-video {
             object-position: center center !important;
+          }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .comet-orbit,
+          .comet-orbit-reverse,
+          .star-orbit,
+          .star-orbit-1,
+          .star-orbit-2,
+          .star-orbit-3,
+          .star-orbit-4,
+          .star-orbit-5 {
+            animation: none !important;
           }
         }
       `}</style>

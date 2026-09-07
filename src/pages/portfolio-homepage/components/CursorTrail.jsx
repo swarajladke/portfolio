@@ -18,16 +18,25 @@ function twinkleAmount(i, key) {
 
 const CursorTrail = () => {
   const [positions, setPositions] = useState([]);
+  const [isEnabled, setIsEnabled] = useState(false);
   const raf = useRef(null);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!hasFinePointer || prefersReducedMotion) {
+      return;
+    }
+    setIsEnabled(true);
+
     const handleMouseMove = e => {
       setPositions(prev => [
         { x: e.clientX, y: e.clientY, t: Date.now() },
         ...prev
       ].slice(0, TRAIL_LENGTH));
     };
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       if (raf.current) cancelAnimationFrame(raf.current);
@@ -35,13 +44,16 @@ const CursorTrail = () => {
   }, []);
 
   useEffect(() => {
+    if (!isEnabled) return;
     const animate = () => {
-      setPositions(prev => prev.filter(dot => Date.now() - dot.t < 800));
+      setPositions(prev => (prev.length > 0 ? prev.filter(dot => Date.now() - dot.t < 800) : prev));
       raf.current = requestAnimationFrame(animate);
     };
     raf.current = requestAnimationFrame(animate);
     return () => raf.current && cancelAnimationFrame(raf.current);
-  }, []);
+  }, [isEnabled]);
+
+  if (!isEnabled) return null;
 
   return (
     <div

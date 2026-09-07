@@ -91,8 +91,10 @@ export const CSSStarBackground = () => {
           animation-duration: var(--animation-duration, 30s), 4s;
         }
         
-        .star:nth-child(7n) {
-          animation-duration: var(--animation-duration, 30s), 1.5s;
+        @media (prefers-reduced-motion: reduce) {
+          .star {
+            animation: none !important;
+          }
         }
       `}</style>
     </div>

@@ -69,27 +69,27 @@ const ProjectsSection = () => {
     },
     {
       id: 3,
-      title: 'EduTwin',
+      title: 'Personal Relationship Manager',
       category: 'ai',
-      description: 'AI-powered educational platform that creates personalized learning experiences through adaptive content delivery and intelligent tutoring systems.',
-      image: 'https://knowledgeworks.org/wp-content/uploads/2023/08/kate-goodman-smart-technologies-covid-19-scaled-1.jpg',
-      technologies: ['Python', 'TensorFlow', 'React', 'FastAPI'],
-      githubUrl: 'https://github.com/swarajladke/edutwin',
-      liveUrl: 'To be updated',
-      status: 'In Development',
+      description: 'An autonomous AI agent built for Activepieces that analyzes Gmail history weekly, identifies fading relationships, scores contact decay, and crafts personalized reconnection drafts referencing past conversations directly in Gmail Drafts.',
+      image: 'https://insightscdn.manageengine.com/insights/sites/default/files/media/wp/2025/01/ai-agents.jpg',
+      technologies: ['Activepieces', 'Node.js', 'Gmail API', 'Prompt Engineering', 'LLMs'],
+      githubUrl: 'https://github.com/swarajladke/personal-relationship-manager-AI-Agent',
+      liveUrl: 'https://github.com/swarajladke/personal-relationship-manager-AI-Agent#readme',
+      status: 'Live',
       features: [
-        'Personalized learning paths',
-        'AI-powered content recommendations',
-        'Progress tracking',
-        'Interactive assessments',
-        'Real-time feedback',
-        'Multi-modal learning support'
+        'Automated weekly relationship decay analysis',
+        'Contextual draft generation referencing prior exchanges',
+        'Authentic writing voice calibration',
+        'Strict draft-only safety guard (never auto-sends)',
+        'Cooldown suppression & priority tracking sheet',
+        'Offline verification suite covering 6 edge-case scenarios'
       ],
       stats: {
-        students: 'TO be updated',
-        courses: 'TO be updated',
-        accuracy: 'TO be updated',
-        engagement: 'TO be updated'
+        frequency: 'Weekly Routine',
+        candidates: 'Top 5 Scored',
+        safety: 'Zero Auto-Sends',
+        scenarios: '6 Verified Tests'
       }
     },
     {
@@ -167,52 +167,30 @@ const ProjectsSection = () => {
 
     {
       id: 7,
-      title: 'AgilePulse',
-      category: 'AI',
-      description: 'AgilePulse is an AI-driven Agile automation tool that acts as a virtual Scrum Master for modern development teams. It streamlines Agile ceremonies, automates sprint tracking, and provides intelligent insights to keep teams aligned and productive.',
-      image: 'https://www.xavor.com/wp-content/uploads/2023/04/Agile-Software-Development-%E2%80%93-A-Comprehensive-Overview-min.webp',
-      technologies: ['React18', 'vite5', 'react router v6', 'Python', 'Redux', 'Axios', 'JWT', 'AI/ML', 'Docker'],
-      githubUrl: 'To be updated',
-      liveUrl: 'To be updated',
-      status: 'In Development',
+      title: 'OrbitSight (OrbitAI)',
+      category: 'ai',
+      description: 'Neuromorphic event-based Resident Space Object (RSO) detection system developed for the TII OrbitSight Challenge. Detects satellites and debris in LEO/MEO/GEO from telescope event cameras on CPU in real time (<40ms latency) without neural networks, achieving 0.394 test mAP@0.5.',
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop',
+      technologies: ['Python 3.11', 'OpenCV', 'Scikit-Learn', 'Neuromorphic Vision', 'Docker'],
+      githubUrl: 'https://github.com/swarajladke/OrbitAI',
+      liveUrl: 'https://github.com/swarajladke/OrbitAI#readme',
+      status: 'Completed',
       features: [
-        'AI Scrum Master - Facilitates stand-ups, retrospectives, and sprint planning',
-        'Sprint Intelligence - Auto-generated burndown charts, velocity, and workload balance',
-        'Task Automation - AI-powered task prioritization and assignment',
-        'Real-time Insights - Predictive analytics for sprint success and risk mitigation',
-        'Collaboration Hub - Centralized communication and document sharing',
-        ' Customizable Workflows - Tailor Agile processes to team needs',
+        'Real-time RSO satellite & debris detection (<40ms compute p99)',
+        'Neuromorphic event-stream slicing & 2D count accumulation',
+        'Gated multi-pass architecture: Candidate scoring + Window objectness',
+        'Sensor-adaptive morphology and continuous static starfield suppression',
+        'Dual log-HGBR bounding box regression preserving ranking invariance',
+        'Sub-second cold-start CPU-only container with ~1.5 MB model footprint'
       ],
       stats: {
-        averageSpeed: ' To be updated',
-        accuracy: 'To be updated'
+        'mAP@0.5': '0.394 (Test)',
+        latency: '<40ms (CPU p99)',
+        modelSize: '1.5 MB (No GPU)',
+        benchmark: '21 Sequences (TII Challenge)'
       }
-
     },
 
-    {
-      id: 8,
-      title: 'Agnis-Forge',
-      category: 'AI',
-      description: 'Agnis-Forge is a blazing-fast, AI-integrated web IDE built entirely in the browser using Next.js App Router, WebContainers, Monaco Editor, and local LLMs via Ollama. It offers real-time code execution, an AI-powered chat assistant, and support for multiple tech stacks — all wrapped in a stunning developer-first UI.',
-      image: 'https://www.aalpha.net/backend/wp-content/uploads/2020/05/form-of-software-development.jpg',
-      technologies: ['Electron', 'monaco editor', 'LLMs-To be updated', 'Agent Orchestration-To be updated', 'Memory Management-To be updated'],
-      githubUrl: 'To be updated',
-      liveUrl: 'To be updated',
-      status: 'In Development',
-      features: [
-        'AI Code Generation → Build modules & apps from plain English.',
-        'AI Debugging → Identify & fix bugs autonomously.',
-        'AI Testing → Generate & run test cases automatically.',
-        'AI Deployment → One-click deploy to cloud platforms.',
-        'Real-time Insights - Predictive analytics for sprint success and risk mitigation',
-        'Collaboration Hub - Centralized communication and document sharing'],
-      stats: {
-        averageSpeed: ' To be updated',
-        accuracy: 'To be updated'
-      }
-
-    },
 
     {
       id: 9,
@@ -242,26 +220,27 @@ const ProjectsSection = () => {
 
     {
       id: 10,
-      title: 'EchoDesk',
-      category: 'AI',
-      description: 'EchoDesk is a voice-controlled Windows automation system that lets you open apps, manage files, navigate the OS, and perform complex tasks hands-free. It combines speech recognition, intent parsing, and system-level automation to create a seamless, AI-powered desktop assistant.',
+      title: 'EchoDesk Voice OS Agent',
+      category: 'ai',
+      description: 'EchoDesk is a voice-controlled Windows OS assistant with continuous speech listening, low-latency "Jarvis mode" local command routing, multi-step command chaining, and LLM tool-calling fallback for automated desktop workflows.',
       image: 'https://www.medicaltranscriptionservicecompany.com/wp-content/uploads/2023/03/5-ways-voice-recognition-is-improving-healthcare.jpg',
-      technologies: ['python', 'speech recognition', 'intent parsing', 'system-level automation', 'pyautogui', 'pyaudio', 'opencv', 'NLU model', 'pyttsx3'],
-      githubUrl: 'To be updated',
-      liveUrl: 'To be updated',
-      status: 'In Development',
+      technologies: ['Python', 'Whisper STT', 'LLM Tool Calling', 'PyAutoGUI', 'Windows SAPI', 'OS Automation'],
+      githubUrl: 'https://github.com/swarajladke/EchoDesk',
+      liveUrl: 'https://github.com/swarajladke/EchoDesk#readme',
+      status: 'Live',
       features: [
-        'Voice-controlled automation',
-        'App opening',
-        'File management',
-        'OS navigation',
-        'Complex task execution',
-        'Speech recognition',
-        'Intent parsing',
-        'System-level automation'],
+        'Fast "Jarvis mode" local command routing',
+        'Multi-step command chaining in a single utterance',
+        'Continuous Whisper speech recognition with spoken voice replies',
+        'App and folder opening with fuzzy matching and alias handling',
+        'Workspace autopilot for IDE and developer workflows',
+        'LLM tool-calling fallback for arbitrary system tasks'
+      ],
       stats: {
-        averageSpeed: ' To be updated',
-        accuracy: 'To be updated'
+        routing: 'Low-latency Jarvis mode',
+        stt: 'Whisper STT',
+        speech: 'Windows SAPI voice',
+        platform: 'Windows Desktop'
       }
 
     },
@@ -394,7 +373,7 @@ const ProjectsSection = () => {
 
   const filteredProjects = activeFilter === 'all'
     ? projects
-    : projects.filter(project => project.category === activeFilter);
+    : projects.filter(project => project.category?.toLowerCase() === activeFilter.toLowerCase());
 
   const handleProjectClick = (project, event) => {
     if (isAnimating) return;

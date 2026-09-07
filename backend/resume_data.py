@@ -70,11 +70,11 @@ PROJECTS:
    - Features: Glowing UI adapts to theme color, animated glowing borders, customizable colors, dynamic theme matching
    - Links: GitHub: https://github.com/swarajladke/elora, VS Code Marketplace: https://marketplace.visualstudio.com/items?itemName=swarajladke.elora
 
-3. EduTwin (AI Education Platform) — Status: In Development
-   - AI-powered educational platform with personalized learning through adaptive content delivery and intelligent tutoring
-   - Technologies: Python, TensorFlow, React, FastAPI
-   - Features: Personalized learning paths, AI content recommendations, progress tracking, interactive assessments, real-time feedback
-   - Published Research Paper: "AI Augmented Digital Twin for Personalized Learning in Virtual Classrooms" (IJSCI)
+3. Personal Relationship Manager (Autonomous AI Agent) — Status: Live
+   - Autonomous AI agent built on Activepieces that analyzes Gmail history weekly, scores relationship decay, and drafts personalized reconnection emails in authentic voice directly into Gmail Drafts
+   - Technologies: Activepieces, Node.js, JavaScript, Gmail API, LLMs, Workflow Automation
+   - Features: Weekly relationship decay analysis, contextual draft generation referencing past conversations, bot-filtering, draft-only safety guarantee (never sends autonomously), cooldown suppression
+   - Links: GitHub: https://github.com/swarajladke/personal-relationship-manager-AI-Agent
 
 4. Agnis AI (Self-Adaptive AI System) — Status: In Development
    - Advanced self-adaptive AI system designed to evolve over time, adapt behavior, and operate as a multi-capability intelligence layer
@@ -91,36 +91,35 @@ PROJECTS:
    - Live URL: https://recastastudios.vercel.app/
    - Stats: Under 30 seconds per video processing
 
-7. AgilePulse (AI Scrum Master) — Status: In Development
-   - AI-driven Agile automation tool acting as a virtual Scrum Master for development teams
-   - Technologies: React 18, Vite 5, Python, Redux, JWT, Docker
-   - Features: AI Scrum Master, sprint intelligence, task automation, real-time insights, predictive analytics
+7. OrbitSight / OrbitAI (Neuromorphic Event-Based RSO Detection) — Status: Completed
+   - Neuromorphic event-based Resident Space Object (RSO) detection system developed for the TII OrbitSight Challenge (Abu Dhabi). Detects satellites and orbital debris in LEO/MEO/GEO from telescope event cameras on CPU in real-time (<40ms latency) without neural networks, achieving 0.394 test mAP@0.5.
+   - Technologies: Python 3.11, OpenCV, Scikit-Learn, Neuromorphic Vision, Event Cameras, Docker
+   - Features: Real-time RSO detection (<40ms p99 latency), multi-pass gated candidate + window objectness classification, static starfield suppression, dual log-HGBR bounding box regression, CPU-only container with ~1.5 MB model footprint
+   - Links: GitHub: https://github.com/swarajladke/OrbitAI
 
-8. Agnis-Forge (AI Web IDE) — Status: In Development
-   - Browser-based AI-integrated web IDE using Next.js, WebContainers, Monaco Editor, and local LLMs
-   - Features: AI code generation, AI debugging, AI testing, AI one-click deployment
-
-9. AirWrite (Gesture-Based Writing) — Status: Completed
+8. AirWrite (Gesture-Based Writing) — Status: Completed
    - Gesture-based writing tool using OpenCV for air drawing with hand-tracking
    - Technologies: Python, NumPy, OpenCV, MediaPipe
    - Features: Gesture recognition, real-time digital ink, virtual canvas
 
-10. EchoDesk (Voice-Controlled Desktop) — Status: In Development
-    - Voice-controlled Windows automation system for hands-free app/file/OS management
-    - Technologies: Python, Speech Recognition, PyAutoGUI, PyAudio, OpenCV, pyttsx3
+9. EchoDesk (Voice OS Agent) — Status: Live
+   - Voice-controlled Windows OS assistant with Whisper speech recognition, low-latency "Jarvis mode" local command routing, and LLM tool calling
+   - Technologies: Python, Whisper STT, LLM Tool Calling, PyAutoGUI, Windows SAPI, OS Automation
+   - Features: Jarvis-mode fast routing, multi-step command chaining, app/folder fuzzy matching, browser context workflows, workspace autopilot, spoken replies
+   - Links: GitHub: https://github.com/swarajladke/EchoDesk
 
-11. Agnis Design Studio (UI/UX Platform) — Status: Live
+10. Agnis Design Studio (UI/UX Platform) — Status: Live
     - Fast, modern UI/UX design and collaboration platform inspired by Figma
     - Technologies: Next.js, Tailwind CSS, Fabric.js, TypeScript, Liveblocks
     - Live URL: https://agnis-design-studio.vercel.app/
     - Features: Multi cursors, cursor chat, real-time collaboration, freeform drawing
 
-12. PREDICTX (Stock Market App) — Status: Live
+11. PREDICTX (Stock Market App) — Status: Live
     - Stock market dashboard with price tracking, alerts, insights, watchlists, and analytics
     - Technologies: Next.js, Better Auth, MongoDB, Finnhub, Inngest, Nodemailer
     - Live URL: https://predictx-eta.vercel.app/
 
-13. Agnis-Drive (Cloud Storage) — Status: Live
+12. Agnis-Drive (Cloud Storage) — Status: Live
     - Storage management and file sharing platform built with Next.js 15 and Appwrite
     - Technologies: Next.js, Tailwind CSS, Appwrite, React 19, TypeScript
     - Live URL: https://agnis-drive.vercel.app/

@@ -111,29 +111,80 @@ const ProjectDetailModal = () => {
       liveUrl: 'https://marketplace.visualstudio.com/items?itemName=swarajladke.elora&ssr=false',
       githubUrl: 'https://github.com/swarajladke/elora-ai'
     },
-    'edutwin': {
-      id: 'edutwin',
-      title: 'EduTwin Learning Platform',
-      category: 'Education',
-      status: 'in-progress',
-      image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop',
-      description: `EduTwin is an AI-powered educational platform that creates personalized learning experiences through adaptive content delivery and intelligent tutoring systems.\n\nThe platform leverages machine learning algorithms to understand individual learning patterns and provide customized educational pathways for optimal knowledge retention.`,
-      technologies: ['React', 'Python', 'Django', 'TensorFlow', 'PostgreSQL', 'Redis', 'WebRTC'],
+    'personal-relationship-manager': {
+      id: 'personal-relationship-manager',
+      title: 'Personal Relationship Manager (AI Agent)',
+      category: 'AI / Automation',
+      status: 'Live',
+      image: 'https://insightscdn.manageengine.com/insights/sites/default/files/media/wp/2025/01/ai-agents.jpg',
+      description: `Personal Relationship Manager is an autonomous AI agent built for Activepieces that reads your Gmail history weekly, identifies relationships that are fading and worth reviving, and writes each a personal email draft in your authentic voice referencing real past exchanges.\n\nIt features 5 custom-tested Code steps, synthetic mailbox verification across 6 distinct scenarios, bot noise filtering, cooldown suppression, and a strict safety design that never auto-sends emails.`,
+      technologies: ['Activepieces', 'Node.js', 'Gmail API', 'Prompt Engineering', 'LLMs', 'Workflow Automation'],
       features: [
-        'Adaptive learning algorithms',
-        'Real-time progress tracking',
-        'Interactive virtual classrooms',
-        'AI-powered content recommendations',
-        'Collaborative learning tools',
-        'Assessment automation'
+        'Automated weekly relationship decay analysis',
+        'Contextual draft generation referencing prior exchanges',
+        'Authentic writing voice calibration',
+        'Strict draft-only safety guard (never auto-sends)',
+        'Cooldown suppression & priority tracking sheet',
+        'Offline verification suite covering 6 edge-case scenarios'
       ],
       stats: {
-        students: '800+',
-        courses: '25+',
-        completion: '87%',
-        satisfaction: '4.8/5'
+        frequency: 'Weekly Schedule',
+        candidates: 'Top 5 Reconnections',
+        safety: '100% Draft-Only',
+        accuracy: '6 Verified Scenarios'
       },
-      githubUrl: 'https://github.com/swarajladke/edutwin'
+      githubUrl: 'https://github.com/swarajladke/personal-relationship-manager-AI-Agent',
+      liveUrl: 'https://github.com/swarajladke/personal-relationship-manager-AI-Agent#readme'
+    },
+    'orbitsight': {
+      id: 'orbitsight',
+      title: 'OrbitSight (OrbitAI) — Neuromorphic Event-Based RSO Detection',
+      category: 'AI / Computer Vision',
+      status: 'Completed',
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop',
+      description: `OrbitSight detects resident space objects (RSOs) — satellites and orbital debris in LEO, MEO and GEO — in neuromorphic event-camera recordings from telescope observations.\n\nDeveloped for the TII OrbitSight Challenge (Propulsion and Space Research Center, Abu Dhabi), the system runs on CPU fully offline with no neural network, achieving a test mAP@0.5 of 0.394 with under 40ms compute latency and a model footprint of only ~1.5 MB.`,
+      technologies: ['Python 3.11', 'OpenCV', 'Scikit-Learn (HistGradientBoosting)', 'Neuromorphic Vision', 'Docker', 'Event Cameras'],
+      features: [
+        'Real-time resident space object (RSO) detection (<40ms compute p99)',
+        'Neuromorphic event-stream slicing & 2D count accumulation',
+        'Gated multi-pass architecture: Candidate scoring + Window objectness',
+        'Sensor-adaptive morphology and continuous static starfield suppression',
+        'Dual log-HGBR bounding box regression preserving bit-for-bit ranking invariance',
+        'Sub-second cold-start CPU-only container with ~1.5 MB weight'
+      ],
+      stats: {
+        'mAP@0.5': '0.394 (Test)',
+        latency: '<40ms (CPU p99)',
+        modelSize: '1.5 MB (No GPU)',
+        benchmark: '21 Sequences (TII Challenge)'
+      },
+      githubUrl: 'https://github.com/swarajladke/OrbitAI',
+      liveUrl: 'https://github.com/swarajladke/OrbitAI#readme'
+    },
+    'echodesk': {
+      id: 'echodesk',
+      title: 'EchoDesk Voice OS Agent',
+      category: 'AI / Desktop Automation',
+      status: 'Live',
+      image: 'https://www.medicaltranscriptionservicecompany.com/wp-content/uploads/2023/03/5-ways-voice-recognition-is-improving-healthcare.jpg',
+      description: `EchoDesk is a Windows voice-controlled OS assistant that listens continuously, converts speech to text using Whisper, runs fast local command handlers first in Jarvis mode, and falls back to LLM tool-calling for general tasks.\n\nIt features multi-step utterance command chaining, browser follow-up context across tabs, app/folder fuzzy matching, workspace autopilot for modern IDE flows, and natural spoken replies via Windows SAPI.`,
+      technologies: ['Python', 'Whisper STT', 'LLM Tool Calling', 'PyAutoGUI', 'Windows SAPI', 'OpenRouter API', 'Gemini API'],
+      features: [
+        'Fast "Jarvis mode" command routing',
+        'Multi-step command chaining in one utterance',
+        'Browser follow-up context in the same tab',
+        'App and folder opening with fuzzy matching and alias handling',
+        'Workspace autopilot for IDE and developer workflows',
+        'Reminder scheduling, session memory queries, and spoken feedback'
+      ],
+      stats: {
+        routing: 'Low-latency Jarvis mode',
+        stt: 'Whisper STT',
+        speech: 'Windows SAPI voice',
+        platform: 'Windows Desktop'
+      },
+      githubUrl: 'https://github.com/swarajladke/EchoDesk',
+      liveUrl: 'https://github.com/swarajladke/EchoDesk#readme'
     }
   };
 
