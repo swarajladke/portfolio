@@ -96,30 +96,35 @@ PROJECTS:
    - Technologies: Python 3.11, OpenCV, Scikit-Learn, Neuromorphic Vision, Event Cameras, Docker
    - Features: Real-time RSO detection (<40ms p99 latency), multi-pass gated candidate + window objectness classification, static starfield suppression, dual log-HGBR bounding box regression, CPU-only container with ~1.5 MB model footprint
    - Links: GitHub: https://github.com/swarajladke/OrbitAI
+8. AGNIS (Self-Evolving Autonomous AI Agent) — Status: Live
+   - Autonomous, self-evolving digital intelligence architecture featuring continuous learning, metacognitive reasoning ("Wisdom Cycle"), sandboxed code self-modification, urge-driven background autonomy, and P2P swarm intelligence
+   - Technologies: Python, FastAPI, PyTorch / LoRA, ChromaDB, AST Sandboxing, Swarm Intelligence
+   - Features: Metacognitive "Wisdom Cycle" reasoning (Intuition -> Critique -> Synthesis), AST-based code self-modification in isolated sandboxes, urge-driven background Sentinel daemon, multi-modal ingestion (Web, HN, YouTube, PDFs), P2P swarm consensus voting, Constitutional Safety Core with HMAC Owner Lock
+   - Links: GitHub: https://github.com/swarajladke/AGNIS-Agent
 
-8. AirWrite (Gesture-Based Writing) — Status: Completed
+9. AirWrite (Gesture-Based Writing) — Status: Completed
    - Gesture-based writing tool using OpenCV for air drawing with hand-tracking
    - Technologies: Python, NumPy, OpenCV, MediaPipe
    - Features: Gesture recognition, real-time digital ink, virtual canvas
 
-9. EchoDesk (Voice OS Agent) — Status: Live
-   - Voice-controlled Windows OS assistant with Whisper speech recognition, low-latency "Jarvis mode" local command routing, and LLM tool calling
-   - Technologies: Python, Whisper STT, LLM Tool Calling, PyAutoGUI, Windows SAPI, OS Automation
-   - Features: Jarvis-mode fast routing, multi-step command chaining, app/folder fuzzy matching, browser context workflows, workspace autopilot, spoken replies
-   - Links: GitHub: https://github.com/swarajladke/EchoDesk
+10. EchoDesk (Voice OS Agent) — Status: Live
+    - Voice-controlled Windows OS assistant with Whisper speech recognition, low-latency "Jarvis mode" local command routing, and LLM tool calling
+    - Technologies: Python, Whisper STT, LLM Tool Calling, PyAutoGUI, Windows SAPI, OS Automation
+    - Features: Jarvis-mode fast routing, multi-step command chaining, app/folder fuzzy matching, browser context workflows, workspace autopilot, spoken replies
+    - Links: GitHub: https://github.com/swarajladke/EchoDesk
 
-10. Agnis Design Studio (UI/UX Platform) — Status: Live
+11. Agnis Design Studio (UI/UX Platform) — Status: Live
     - Fast, modern UI/UX design and collaboration platform inspired by Figma
     - Technologies: Next.js, Tailwind CSS, Fabric.js, TypeScript, Liveblocks
     - Live URL: https://agnis-design-studio.vercel.app/
     - Features: Multi cursors, cursor chat, real-time collaboration, freeform drawing
 
-11. PREDICTX (Stock Market App) — Status: Live
+12. PREDICTX (Stock Market App) — Status: Live
     - Stock market dashboard with price tracking, alerts, insights, watchlists, and analytics
     - Technologies: Next.js, Better Auth, MongoDB, Finnhub, Inngest, Nodemailer
     - Live URL: https://predictx-eta.vercel.app/
 
-12. Agnis-Drive (Cloud Storage) — Status: Live
+13. Agnis-Drive (Cloud Storage) — Status: Live
     - Storage management and file sharing platform built with Next.js 15 and Appwrite
     - Technologies: Next.js, Tailwind CSS, Appwrite, React 19, TypeScript
     - Live URL: https://agnis-drive.vercel.app/

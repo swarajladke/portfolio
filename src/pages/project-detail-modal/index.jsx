@@ -185,6 +185,31 @@ const ProjectDetailModal = () => {
       },
       githubUrl: 'https://github.com/swarajladke/EchoDesk',
       liveUrl: 'https://github.com/swarajladke/EchoDesk#readme'
+    },
+    'agnis-agent': {
+      id: 'agnis-agent',
+      title: 'AGNIS: Self-Evolving Autonomous AI Agent',
+      category: 'Autonomous AI / Agentic Systems',
+      status: 'Live',
+      image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop',
+      description: `AGNIS (Autonomous Generative Neural Intelligence System) is a self-evolving, autonomous AI architecture designed to transcend static pre-trained models.\n\nIt features continuous learning, metacognitive reasoning ("Wisdom Cycle": Intuition -> Critique -> Synthesis), sandboxed code self-modification via AST analysis, urge-driven background autonomy via the Sentinel daemon, multi-modal knowledge ingestion into ChromaDB, and P2P swarm intelligence with distributed consensus voting under a strict Constitutional Safety Core and cryptographic HMAC Owner Lock.`,
+      technologies: ['Python', 'FastAPI', 'PyTorch / LoRA', 'ChromaDB', 'AST Sandboxing', 'P2P Swarm', 'HMAC Security'],
+      features: [
+        'Metacognitive Reasoning: 3-stage "Wisdom Cycle" (Intuition -> Critique -> Synthesis)',
+        'Self-Evolution & AST code modification with isolated sandboxing & rollback',
+        'Urge-driven Sentinel daemon (knowledge hunger, evolution drive, eco-awareness)',
+        'Multi-modal knowledge ingestion (Web crawler, Hacker News, YouTube, PDFs)',
+        'P2P Swarm collective intelligence with distributed consensus voting',
+        'Constitutional Safety Core & cryptographic HMAC Owner Lock authorization'
+      ],
+      stats: {
+        reasoning: '3-Stage Wisdom Cycle',
+        evolution: 'AST Sandboxed Patching',
+        memory: 'ChromaDB Vector RAG',
+        safety: 'HMAC Cryptographic Lock'
+      },
+      githubUrl: 'https://github.com/swarajladke/AGNIS-Agent',
+      liveUrl: 'https://github.com/swarajladke/AGNIS-Agent#readme'
     }
   };
 

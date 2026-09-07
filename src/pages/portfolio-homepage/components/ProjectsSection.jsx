@@ -191,6 +191,32 @@ const ProjectsSection = () => {
       }
     },
 
+    {
+      id: 8,
+      title: 'AGNIS: Self-Evolving AI Agent',
+      category: 'ai',
+      description: 'An autonomous, self-evolving digital intelligence architecture featuring continuous learning, metacognitive reasoning ("Wisdom Cycle"), sandboxed code self-modification, urge-driven background autonomy, and P2P swarm intelligence.',
+      image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop',
+      technologies: ['Python', 'FastAPI', 'PyTorch / LoRA', 'ChromaDB', 'AST Sandboxing', 'Swarm Intelligence'],
+      githubUrl: 'https://github.com/swarajladke/AGNIS-Agent',
+      liveUrl: 'https://github.com/swarajladke/AGNIS-Agent#readme',
+      status: 'Live',
+      features: [
+        'Metacognitive Reasoning: 3-stage "Wisdom Cycle" (Intuition -> Critique -> Synthesis)',
+        'Autonomous AST Code Self-Modification with sandboxed syntax and execution testing',
+        'Urge-Driven Background Sentinel daemon (knowledge hunger, evolution drive, eco-mode)',
+        'Multi-Modal Knowledge Ingestion (Web, Hacker News, YouTube, PDFs) via ChromaDB RAG',
+        'P2P Swarm Collective Intelligence with distributed consensus voting protocol',
+        'Constitutional Safety Core with cryptographic HMAC Owner Lock authorization'
+      ],
+      stats: {
+        reasoning: '3-Stage Wisdom Cycle',
+        evolution: 'AST Sandboxed Patching',
+        memory: 'ChromaDB Vector RAG',
+        safety: 'HMAC Cryptographic Lock'
+      }
+    },
+
 
     {
       id: 9,
