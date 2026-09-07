@@ -186,14 +186,39 @@ const ProjectDetailModal = () => {
       githubUrl: 'https://github.com/swarajladke/EchoDesk',
       liveUrl: 'https://github.com/swarajladke/EchoDesk#readme'
     },
+    'agnis-ai': {
+      id: 'agnis-ai',
+      title: 'Agnis AI (Neural Architecture)',
+      category: 'Deep Learning / Neural Architecture',
+      status: 'In Development',
+      image: 'https://cdn.mos.cms.futurecdn.net/v2/t:0,l:240,cw:1440,ch:1080,q:80,w:1440/VFLt5vHV7aCoLrLGjP9Qwm.jpg',
+      description: `AGNIS (Autonomous Gated Neural Inference System) is a biologically-plausible Deep Learning framework that discards backpropagation in favor of Predictive Coding and SNAP-ATP (Synchronized Aggressive Target Propagation) using local Hebbian updates to solve catastrophic forgetting.`,
+      technologies: ['Python', 'PyTorch', 'Predictive Coding', 'Hebbian Learning', 'SNAP-ATP', 'CUDA'],
+      features: [
+        'Backprop-free Hebbian Learning',
+        'Iterative Settlement Mechanism',
+        'Synaptic Homeostasis & Clamping',
+        'Spectral Stable Recurrence',
+        'Zero-Forgetting Continual Learning',
+        'Thermal Guardian Protocol'
+      ],
+      stats: {
+        architecture: 'Predictive Coding',
+        training: 'SNAP-ATP Target Propagation',
+        retention: '92% Bilingual Retention',
+        inference: '40+ Tokens/sec'
+      },
+      githubUrl: 'https://github.com/swarajladke/Neural-Networks',
+      liveUrl: 'To be updated'
+    },
     'agnis-agent': {
       id: 'agnis-agent',
-      title: 'AGNIS: Self-Evolving Neural Architecture',
-      category: 'Self-Evolving Neural Architecture',
+      title: 'AGNIS (Self-Evolving AI Agent)',
+      category: 'Autonomous AI / Agentic Systems',
       status: 'Live',
       image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop',
-      description: `AGNIS (Autonomous Generative Neural Intelligence System) is a self-evolving, autonomous neural architecture designed to transcend static pre-trained models.\n\nIt features continuous learning, metacognitive reasoning ("Wisdom Cycle": Intuition -> Critique -> Synthesis), sandboxed code self-modification via AST analysis, urge-driven background autonomy via the Sentinel daemon, multi-modal knowledge ingestion into ChromaDB, and P2P swarm intelligence with distributed consensus voting under a strict Constitutional Safety Core and cryptographic HMAC Owner Lock.`,
-      technologies: ['Python', 'FastAPI', 'PyTorch / LoRA', 'ChromaDB', 'AST Sandboxing', 'Neural Architecture', 'HMAC Security'],
+      description: `AGNIS (Autonomous Generative Neural Intelligence System) is a self-evolving AI agent architecture designed to transcend static pre-trained models.\n\nIt features continuous learning, metacognitive reasoning ("Wisdom Cycle": Intuition -> Critique -> Synthesis), sandboxed code self-modification via AST analysis, urge-driven background autonomy via the Sentinel daemon, multi-modal knowledge ingestion into ChromaDB, and P2P swarm intelligence with distributed consensus voting under a strict Constitutional Safety Core and cryptographic HMAC Owner Lock.`,
+      technologies: ['Python', 'FastAPI', 'PyTorch / LoRA', 'ChromaDB', 'AST Sandboxing', 'Swarm Intelligence', 'HMAC Security'],
       features: [
         'Metacognitive Reasoning: 3-stage "Wisdom Cycle" (Intuition -> Critique -> Synthesis)',
         'Self-Evolution & AST code modification with isolated sandboxing & rollback',
@@ -203,7 +228,7 @@ const ProjectDetailModal = () => {
         'Constitutional Safety Core & cryptographic HMAC Owner Lock authorization'
       ],
       stats: {
-        architecture: 'Self-Evolving Neural System',
+        architecture: 'Self-Evolving Agent Architecture',
         reasoning: '3-Stage Wisdom Cycle',
         evolution: 'AST Sandboxed Patching',
         memory: 'ChromaDB Vector RAG'

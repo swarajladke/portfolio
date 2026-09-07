@@ -76,9 +76,10 @@ PROJECTS:
    - Features: Weekly relationship decay analysis, contextual draft generation referencing past conversations, bot-filtering, draft-only safety guarantee (never sends autonomously), cooldown suppression
    - Links: GitHub: https://github.com/swarajladke/personal-relationship-manager-AI-Agent
 
-4. Agnis AI (Self-Adaptive AI System) — Status: In Development
-   - Advanced self-adaptive AI system designed to evolve over time, adapt behavior, and operate as a multi-capability intelligence layer
-   - Features: Multi-capability intelligence, self-adaptive learning, context-aware responses, real-time data integration
+4. Agnis AI (Neural Architecture) — Status: In Development
+   - Biologically-plausible deep learning framework using predictive coding, SNAP-ATP target propagation, and local Hebbian updates to solve catastrophic forgetting
+   - Technologies: Python, PyTorch, Predictive Coding, Hebbian Learning, SNAP-ATP, CUDA
+   - Links: GitHub: https://github.com/swarajladke/Neural-Networks
 
 5. Emoify (AI Music Recommender) — Status: Completed
    - AI-powered music recommender using CNN + OpenCV for real-time emotion detection via webcam, curating YouTube songs to match mood
@@ -96,9 +97,10 @@ PROJECTS:
    - Technologies: Python 3.11, OpenCV, Scikit-Learn, Neuromorphic Vision, Event Cameras, Docker
    - Features: Real-time RSO detection (<40ms p99 latency), multi-pass gated candidate + window objectness classification, static starfield suppression, dual log-HGBR bounding box regression, CPU-only container with ~1.5 MB model footprint
    - Links: GitHub: https://github.com/swarajladke/OrbitAI
-8. AGNIS (Self-Evolving Autonomous Neural Architecture) — Status: Live
-   - Autonomous, self-evolving neural architecture featuring continuous learning, metacognitive reasoning ("Wisdom Cycle"), sandboxed code self-modification, urge-driven background autonomy, and P2P swarm intelligence
-   - Technologies: Python, FastAPI, PyTorch / LoRA, ChromaDB, AST Sandboxing, Neural Architecture
+
+8. AGNIS (Self-Evolving AI Agent) — Status: Live
+   - Autonomous, self-evolving AI agent architecture featuring continuous learning, metacognitive reasoning ("Wisdom Cycle"), sandboxed code self-modification, urge-driven background autonomy, and P2P swarm intelligence
+   - Technologies: Python, FastAPI, PyTorch / LoRA, ChromaDB, AST Sandboxing, Swarm Intelligence
    - Features: Metacognitive "Wisdom Cycle" reasoning (Intuition -> Critique -> Synthesis), AST-based code self-modification in isolated sandboxes, urge-driven background Sentinel daemon, multi-modal ingestion (Web, HN, YouTube, PDFs), P2P swarm consensus voting, Constitutional Safety Core with HMAC Owner Lock
    - Links: GitHub: https://github.com/swarajladke/AGNIS-Agent
 

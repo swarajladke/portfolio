@@ -94,7 +94,7 @@ const ProjectsSection = () => {
     },
     {
       id: 4,
-      title: 'Agnis AI',
+      title: 'Agnis AI (Neural Architecture)',
       category: 'ai',
       description: 'AGNIS (Autonomous Gated Neural Inference System) is a ground-up attempt to build a biologically-plausible Deep Learning framework. It discards backpropagation in favor of Predictive Coding and SNAP-ATP (Synchronized Aggressive Target Propagation) using local Hebbian updates to solve catastrophic forgetting.',
       image: 'https://cdn.mos.cms.futurecdn.net/v2/t:0,l:240,cw:1440,ch:1080,q:80,w:1440/VFLt5vHV7aCoLrLGjP9Qwm.jpg',
@@ -193,11 +193,11 @@ const ProjectsSection = () => {
 
     {
       id: 8,
-      title: 'AGNIS',
+      title: 'AGNIS (Self-Evolving AI Agent)',
       category: 'ai',
-      description: 'AGNIS (Autonomous Generative Neural Intelligence System) is a self-evolving, autonomous neural architecture featuring continuous learning, metacognitive reasoning ("Wisdom Cycle"), sandboxed code self-modification, urge-driven background autonomy, and P2P swarm intelligence.',
+      description: 'AGNIS (Autonomous Generative Neural Intelligence System) is a self-evolving AI agent architecture featuring continuous learning, metacognitive reasoning ("Wisdom Cycle"), sandboxed code self-modification, urge-driven background autonomy, and P2P swarm intelligence.',
       image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop',
-      technologies: ['Python', 'FastAPI', 'PyTorch / LoRA', 'ChromaDB', 'AST Sandboxing', 'Neural Architecture'],
+      technologies: ['Python', 'FastAPI', 'PyTorch / LoRA', 'ChromaDB', 'AST Sandboxing', 'Swarm Intelligence'],
       githubUrl: 'https://github.com/swarajladke/AGNIS-Agent',
       liveUrl: 'https://github.com/swarajladke/AGNIS-Agent#readme',
       status: 'Live',
