@@ -96,9 +96,9 @@ PROJECTS:
    - Technologies: Python 3.11, OpenCV, Scikit-Learn, Neuromorphic Vision, Event Cameras, Docker
    - Features: Real-time RSO detection (<40ms p99 latency), multi-pass gated candidate + window objectness classification, static starfield suppression, dual log-HGBR bounding box regression, CPU-only container with ~1.5 MB model footprint
    - Links: GitHub: https://github.com/swarajladke/OrbitAI
-8. AGNIS (Self-Evolving Autonomous AI Agent) — Status: Live
-   - Autonomous, self-evolving digital intelligence architecture featuring continuous learning, metacognitive reasoning ("Wisdom Cycle"), sandboxed code self-modification, urge-driven background autonomy, and P2P swarm intelligence
-   - Technologies: Python, FastAPI, PyTorch / LoRA, ChromaDB, AST Sandboxing, Swarm Intelligence
+8. AGNIS (Self-Evolving Autonomous Neural Architecture) — Status: Live
+   - Autonomous, self-evolving neural architecture featuring continuous learning, metacognitive reasoning ("Wisdom Cycle"), sandboxed code self-modification, urge-driven background autonomy, and P2P swarm intelligence
+   - Technologies: Python, FastAPI, PyTorch / LoRA, ChromaDB, AST Sandboxing, Neural Architecture
    - Features: Metacognitive "Wisdom Cycle" reasoning (Intuition -> Critique -> Synthesis), AST-based code self-modification in isolated sandboxes, urge-driven background Sentinel daemon, multi-modal ingestion (Web, HN, YouTube, PDFs), P2P swarm consensus voting, Constitutional Safety Core with HMAC Owner Lock
    - Links: GitHub: https://github.com/swarajladke/AGNIS-Agent
 

@@ -193,11 +193,11 @@ const ProjectsSection = () => {
 
     {
       id: 8,
-      title: 'AGNIS: Self-Evolving AI Agent',
+      title: 'AGNIS',
       category: 'ai',
-      description: 'An autonomous, self-evolving digital intelligence architecture featuring continuous learning, metacognitive reasoning ("Wisdom Cycle"), sandboxed code self-modification, urge-driven background autonomy, and P2P swarm intelligence.',
+      description: 'AGNIS (Autonomous Generative Neural Intelligence System) is a self-evolving, autonomous neural architecture featuring continuous learning, metacognitive reasoning ("Wisdom Cycle"), sandboxed code self-modification, urge-driven background autonomy, and P2P swarm intelligence.',
       image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop',
-      technologies: ['Python', 'FastAPI', 'PyTorch / LoRA', 'ChromaDB', 'AST Sandboxing', 'Swarm Intelligence'],
+      technologies: ['Python', 'FastAPI', 'PyTorch / LoRA', 'ChromaDB', 'AST Sandboxing', 'Neural Architecture'],
       githubUrl: 'https://github.com/swarajladke/AGNIS-Agent',
       liveUrl: 'https://github.com/swarajladke/AGNIS-Agent#readme',
       status: 'Live',
@@ -210,10 +210,10 @@ const ProjectsSection = () => {
         'Constitutional Safety Core with cryptographic HMAC Owner Lock authorization'
       ],
       stats: {
+        architecture: 'Self-Evolving Neural System',
         reasoning: '3-Stage Wisdom Cycle',
         evolution: 'AST Sandboxed Patching',
-        memory: 'ChromaDB Vector RAG',
-        safety: 'HMAC Cryptographic Lock'
+        memory: 'ChromaDB Vector RAG'
       }
     },
 
