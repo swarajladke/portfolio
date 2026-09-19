@@ -3,16 +3,16 @@ import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
 import ResumePreviewModal from '../../../components/ui/ResumePreviewModal';
 
-const RESUME_DOWNLOAD_URL = 'https://drive.google.com/uc?export=download&id=14XKrLnOCVTXFzA2_1e-fxtoRugTdr2yY';
-const RESUME_PREVIEW_URL = 'https://drive.google.com/file/d/14XKrLnOCVTXFzA2_1e-fxtoRugTdr2yY/preview';
+const RESUME_DOWNLOAD_URL = `${import.meta.env.BASE_URL}assets/resume.pdf`;
+const RESUME_PREVIEW_URL = `${import.meta.env.BASE_URL}assets/resume.pdf`;
 
 const ResumeSection = () => {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
   const [showToast, setShowToast] = useState(false);
 
   const resumeData = {
-    lastUpdated: 'Jun 22 2026',
-    fileSize: '125 KB',
+    lastUpdated: 'Sep 2026',
+    fileSize: '149 KB',
     format: 'PDF',
     sections: [
       'Professional Summary',

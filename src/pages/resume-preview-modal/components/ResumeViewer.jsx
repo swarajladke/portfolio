@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../../../components/ui/Button';
 
-const ResumeViewer = ({ resumeUrl ="https://swarajladke.github.io/portfolio/resume.pdf", onError }) => {
+const ResumeViewer = ({ resumeUrl = `${import.meta.env.BASE_URL}assets/resume.pdf`, onError }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [zoomLevel, setZoomLevel] = useState(100);
   const [hasError, setHasError] = useState(false); // ✅ You missed declaring this state
@@ -55,7 +55,7 @@ const ResumeViewer = ({ resumeUrl ="https://swarajladke.github.io/portfolio/resu
           </p>
         ) : (
           <iframe
-            src="https://drive.google.com/file/d/14XKrLnOCVTXFzA2_1e-fxtoRugTdr2yY/preview"
+            src={resumeUrl}
             title="Resume"
             width="100%"
             height="1000px"

@@ -55,8 +55,10 @@ const ResumePreviewModal = ({ isOpen, onClose, resumeUrl, downloadUrl }) => {
     }
   };
 
+  const defaultResumeUrl = `${import.meta.env.BASE_URL}assets/resume.pdf`;
+
   const handleDownload = () => {
-    const url = downloadUrl || resumeUrl || '/assets/resume.pdf';
+    const url = downloadUrl || resumeUrl || defaultResumeUrl;
     const link = document.createElement('a');
     link.href = url;
     link.download = 'Swaraj-Ladke-Resume.pdf';
@@ -69,7 +71,7 @@ const ResumePreviewModal = ({ isOpen, onClose, resumeUrl, downloadUrl }) => {
 
   const handlePrint = () => {
     // Open the PDF in a new tab for printing (avoids cross-origin issues)
-    const url = downloadUrl || resumeUrl || '/assets/resume.pdf';
+    const url = downloadUrl || resumeUrl || defaultResumeUrl;
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
@@ -164,7 +166,7 @@ const ResumePreviewModal = ({ isOpen, onClose, resumeUrl, downloadUrl }) => {
                 )}
                 <iframe
                   id="resume-iframe"
-                  src={resumeUrl || '/assets/resume.pdf'}
+                  src={resumeUrl || defaultResumeUrl}
                   className="w-full h-full rounded-xl border border-border"
                   title="Resume Preview"
                   onLoad={handleIframeLoad}
