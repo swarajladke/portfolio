@@ -113,25 +113,28 @@ def send_telegram_notification(data: ContactRequest):
 # --- Routes ---
 @app.get("/api/health")
 async def health_check():
+    api_key_configured = bool(os.getenv("GROQ_API_KEY") or os.getenv("API_KEY"))
     return {
         "status": "ok", 
         "service": "resume-api", 
         "version": "1.4.2",
+        "model": os.getenv("CHAT_MODEL", "qwen/qwen3.8-27b"),
         "telegram_configured": bool(os.getenv("TELEGRAM_BOT_TOKEN")) and bool(os.getenv("TELEGRAM_CHAT_ID")),
-        "groq_configured": bool(os.getenv("GROQ_API_KEY"))
+        "groq_configured": api_key_configured
     }
 
 
 @app.post("/api/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
-    api_key = os.getenv("GROQ_API_KEY")
+    api_key = os.getenv("GROQ_API_KEY") or os.getenv("API_KEY")
     if not api_key:
         raise HTTPException(status_code=500, detail="GROQ_API_KEY missing")
 
     try:
         # Clear proxies for Hugging Face compatibility
         proxies = {k: os.environ.pop(k, None) for k in ["http_proxy", "https_proxy", "HTTP_PROXY", "HTTPS_PROXY"]}
-        client = Groq(api_key=api_key)
+        base_url = os.getenv("GROQ_BASE_URL")
+        client = Groq(api_key=api_key, base_url=base_url) if base_url else Groq(api_key=api_key)
         for k, v in proxies.items(): 
             if v: os.environ[k] = v
 
@@ -141,9 +144,11 @@ async def chat(request: ChatRequest):
             messages.append({"role": role, "content": msg.content})
         messages.append({"role": "user", "content": request.message})
 
+        # Defaults directly to qwen/qwen3.8-27b without needing any model specified in Hugging Face Space
+        chat_model = os.getenv("CHAT_MODEL", "qwen/qwen3.8-27b")
         chat_completion = client.chat.completions.create(
             messages=messages,
-            model="llama-3.3-70b-versatile",
+            model=chat_model,
             temperature=0.5,
             max_tokens=1024,
         )
